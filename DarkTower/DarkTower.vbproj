@@ -138,5 +138,26 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrownTile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrayTile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackTile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightGreenTile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenTile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightBlueTile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowTile.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
