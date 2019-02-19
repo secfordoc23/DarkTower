@@ -1,5 +1,5 @@
 ﻿'Program: DarkTower
-'Me: bazaarForm.vb
+'Me: combatModule.vb
 'Date: TBD
 'Author: Jason Welch
 'Purpose: 
@@ -7,11 +7,15 @@
 Option Strict On
 Option Explicit On
 
-Public Class bazaarForm
+
+Module combatModule
+
     '==========================================================================================
     'Name: 
     'Date: 
     'Author: Jason Welch
     'Purpose: 
-End Class
+
+
+End Module
 '================================== No Code Follows ===========================================

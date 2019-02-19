@@ -26,9 +26,15 @@ Partial Class mainForm
         Me.gamePlayMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoadGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BazarrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoveToStartPosition1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoveToStartPosition2ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoveToStartPosition3ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoveToStartPosition4ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.mapGroupBox = New System.Windows.Forms.GroupBox()
         Me.startTile2PictureBox = New System.Windows.Forms.PictureBox()
         Me.startTile1PictureBox = New System.Windows.Forms.PictureBox()
@@ -72,24 +78,18 @@ Partial Class mainForm
         Me.desertTile1PictureBox = New System.Windows.Forms.PictureBox()
         Me.castleTile1PictureBox = New System.Windows.Forms.PictureBox()
         Me.inventoryGroupBox = New System.Windows.Forms.GroupBox()
+        Me.goldKeyCheckBox = New System.Windows.Forms.CheckBox()
+        Me.silverKeyCheckBox = New System.Windows.Forms.CheckBox()
+        Me.bronzeKeyCheckBox = New System.Windows.Forms.CheckBox()
+        Me.beastCheckBox = New System.Windows.Forms.CheckBox()
+        Me.healerCheckBox = New System.Windows.Forms.CheckBox()
         Me.scoutCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.goldCountLabel = New System.Windows.Forms.Label()
+        Me.foodCountLabel = New System.Windows.Forms.Label()
         Me.warriorCountLabel = New System.Windows.Forms.Label()
         Me.goldLabel = New System.Windows.Forms.Label()
         Me.foodLabel = New System.Windows.Forms.Label()
         Me.warriorLabel = New System.Windows.Forms.Label()
-        Me.healerCheckBox = New System.Windows.Forms.CheckBox()
-        Me.beastCheckBox = New System.Windows.Forms.CheckBox()
-        Me.goldKeyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.silverKeyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.bronzeKeyCheckBox = New System.Windows.Forms.CheckBox()
-        Me.MoveToStartPosition1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MoveToStartPosition2ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MoveToStartPosition3ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MoveToStartPosition4ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoadGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gamePlayMenuStrip.SuspendLayout()
         Me.mapGroupBox.SuspendLayout()
         CType(Me.startTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -160,6 +160,18 @@ Partial Class mainForm
         Me.NewGameToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.NewGameToolStripMenuItem.Text = "&New Game"
         '
+        'SaveGameToolStripMenuItem
+        '
+        Me.SaveGameToolStripMenuItem.Name = "SaveGameToolStripMenuItem"
+        Me.SaveGameToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.SaveGameToolStripMenuItem.Text = "&Save Game"
+        '
+        'LoadGameToolStripMenuItem
+        '
+        Me.LoadGameToolStripMenuItem.Name = "LoadGameToolStripMenuItem"
+        Me.LoadGameToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.LoadGameToolStripMenuItem.Text = "&Load Game"
+        '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
@@ -178,6 +190,30 @@ Partial Class mainForm
         Me.BazarrToolStripMenuItem.Name = "BazarrToolStripMenuItem"
         Me.BazarrToolStripMenuItem.Size = New System.Drawing.Size(250, 26)
         Me.BazarrToolStripMenuItem.Text = "&Bazarr"
+        '
+        'MoveToStartPosition1ToolStripMenuItem
+        '
+        Me.MoveToStartPosition1ToolStripMenuItem.Name = "MoveToStartPosition1ToolStripMenuItem"
+        Me.MoveToStartPosition1ToolStripMenuItem.Size = New System.Drawing.Size(250, 26)
+        Me.MoveToStartPosition1ToolStripMenuItem.Text = "Move To Start Position &1"
+        '
+        'MoveToStartPosition2ToolStripMenuItem1
+        '
+        Me.MoveToStartPosition2ToolStripMenuItem1.Name = "MoveToStartPosition2ToolStripMenuItem1"
+        Me.MoveToStartPosition2ToolStripMenuItem1.Size = New System.Drawing.Size(250, 26)
+        Me.MoveToStartPosition2ToolStripMenuItem1.Text = "Move To Start Position &2"
+        '
+        'MoveToStartPosition3ToolStripMenuItem2
+        '
+        Me.MoveToStartPosition3ToolStripMenuItem2.Name = "MoveToStartPosition3ToolStripMenuItem2"
+        Me.MoveToStartPosition3ToolStripMenuItem2.Size = New System.Drawing.Size(250, 26)
+        Me.MoveToStartPosition3ToolStripMenuItem2.Text = "Move To Start Position &3"
+        '
+        'MoveToStartPosition4ToolStripMenuItem3
+        '
+        Me.MoveToStartPosition4ToolStripMenuItem3.Name = "MoveToStartPosition4ToolStripMenuItem3"
+        Me.MoveToStartPosition4ToolStripMenuItem3.Size = New System.Drawing.Size(250, 26)
+        Me.MoveToStartPosition4ToolStripMenuItem3.Text = "Move To Start Position &4"
         '
         'mapGroupBox
         '
@@ -670,8 +706,8 @@ Partial Class mainForm
         Me.inventoryGroupBox.Controls.Add(Me.beastCheckBox)
         Me.inventoryGroupBox.Controls.Add(Me.healerCheckBox)
         Me.inventoryGroupBox.Controls.Add(Me.scoutCheckBox)
-        Me.inventoryGroupBox.Controls.Add(Me.Label2)
-        Me.inventoryGroupBox.Controls.Add(Me.Label1)
+        Me.inventoryGroupBox.Controls.Add(Me.goldCountLabel)
+        Me.inventoryGroupBox.Controls.Add(Me.foodCountLabel)
         Me.inventoryGroupBox.Controls.Add(Me.warriorCountLabel)
         Me.inventoryGroupBox.Controls.Add(Me.goldLabel)
         Me.inventoryGroupBox.Controls.Add(Me.foodLabel)
@@ -682,99 +718,6 @@ Partial Class mainForm
         Me.inventoryGroupBox.TabIndex = 14
         Me.inventoryGroupBox.TabStop = False
         Me.inventoryGroupBox.Text = "Inventory"
-        '
-        'scoutCheckBox
-        '
-        Me.scoutCheckBox.AutoSize = True
-        Me.scoutCheckBox.Enabled = False
-        Me.scoutCheckBox.Location = New System.Drawing.Point(175, 25)
-        Me.scoutCheckBox.Name = "scoutCheckBox"
-        Me.scoutCheckBox.Size = New System.Drawing.Size(70, 24)
-        Me.scoutCheckBox.TabIndex = 6
-        Me.scoutCheckBox.Text = "Scout"
-        Me.scoutCheckBox.ThreeState = True
-        Me.scoutCheckBox.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.SystemColors.Window
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Location = New System.Drawing.Point(90, 106)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 20)
-        Me.Label2.TabIndex = 5
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.SystemColors.Window
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Location = New System.Drawing.Point(90, 66)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 20)
-        Me.Label1.TabIndex = 4
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'warriorCountLabel
-        '
-        Me.warriorCountLabel.BackColor = System.Drawing.SystemColors.Window
-        Me.warriorCountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.warriorCountLabel.Location = New System.Drawing.Point(90, 26)
-        Me.warriorCountLabel.Name = "warriorCountLabel"
-        Me.warriorCountLabel.Size = New System.Drawing.Size(46, 20)
-        Me.warriorCountLabel.TabIndex = 3
-        Me.warriorCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'goldLabel
-        '
-        Me.goldLabel.AutoSize = True
-        Me.goldLabel.Location = New System.Drawing.Point(8, 106)
-        Me.goldLabel.Name = "goldLabel"
-        Me.goldLabel.Size = New System.Drawing.Size(51, 20)
-        Me.goldLabel.TabIndex = 2
-        Me.goldLabel.Text = "Gold: "
-        '
-        'foodLabel
-        '
-        Me.foodLabel.AutoSize = True
-        Me.foodLabel.Location = New System.Drawing.Point(8, 66)
-        Me.foodLabel.Name = "foodLabel"
-        Me.foodLabel.Size = New System.Drawing.Size(54, 20)
-        Me.foodLabel.TabIndex = 1
-        Me.foodLabel.Text = "Food: "
-        '
-        'warriorLabel
-        '
-        Me.warriorLabel.AutoSize = True
-        Me.warriorLabel.Location = New System.Drawing.Point(8, 26)
-        Me.warriorLabel.Name = "warriorLabel"
-        Me.warriorLabel.Size = New System.Drawing.Size(76, 20)
-        Me.warriorLabel.TabIndex = 0
-        Me.warriorLabel.Text = "Warriors: "
-        '
-        'healerCheckBox
-        '
-        Me.healerCheckBox.AutoSize = True
-        Me.healerCheckBox.Enabled = False
-        Me.healerCheckBox.Location = New System.Drawing.Point(175, 65)
-        Me.healerCheckBox.Name = "healerCheckBox"
-        Me.healerCheckBox.Size = New System.Drawing.Size(75, 24)
-        Me.healerCheckBox.TabIndex = 7
-        Me.healerCheckBox.Text = "Healer"
-        Me.healerCheckBox.ThreeState = True
-        Me.healerCheckBox.UseVisualStyleBackColor = True
-        '
-        'beastCheckBox
-        '
-        Me.beastCheckBox.AutoSize = True
-        Me.beastCheckBox.Enabled = False
-        Me.beastCheckBox.Location = New System.Drawing.Point(175, 105)
-        Me.beastCheckBox.Name = "beastCheckBox"
-        Me.beastCheckBox.Size = New System.Drawing.Size(70, 24)
-        Me.beastCheckBox.TabIndex = 8
-        Me.beastCheckBox.Text = "Beast"
-        Me.beastCheckBox.ThreeState = True
-        Me.beastCheckBox.UseVisualStyleBackColor = True
         '
         'goldKeyCheckBox
         '
@@ -812,41 +755,98 @@ Partial Class mainForm
         Me.bronzeKeyCheckBox.ThreeState = True
         Me.bronzeKeyCheckBox.UseVisualStyleBackColor = True
         '
-        'MoveToStartPosition1ToolStripMenuItem
+        'beastCheckBox
         '
-        Me.MoveToStartPosition1ToolStripMenuItem.Name = "MoveToStartPosition1ToolStripMenuItem"
-        Me.MoveToStartPosition1ToolStripMenuItem.Size = New System.Drawing.Size(250, 26)
-        Me.MoveToStartPosition1ToolStripMenuItem.Text = "Move To Start Position &1"
+        Me.beastCheckBox.AutoSize = True
+        Me.beastCheckBox.Enabled = False
+        Me.beastCheckBox.Location = New System.Drawing.Point(175, 105)
+        Me.beastCheckBox.Name = "beastCheckBox"
+        Me.beastCheckBox.Size = New System.Drawing.Size(70, 24)
+        Me.beastCheckBox.TabIndex = 8
+        Me.beastCheckBox.Text = "Beast"
+        Me.beastCheckBox.ThreeState = True
+        Me.beastCheckBox.UseVisualStyleBackColor = True
         '
-        'MoveToStartPosition2ToolStripMenuItem1
+        'healerCheckBox
         '
-        Me.MoveToStartPosition2ToolStripMenuItem1.Name = "MoveToStartPosition2ToolStripMenuItem1"
-        Me.MoveToStartPosition2ToolStripMenuItem1.Size = New System.Drawing.Size(250, 26)
-        Me.MoveToStartPosition2ToolStripMenuItem1.Text = "Move To Start Position &2"
+        Me.healerCheckBox.AutoSize = True
+        Me.healerCheckBox.Enabled = False
+        Me.healerCheckBox.Location = New System.Drawing.Point(175, 65)
+        Me.healerCheckBox.Name = "healerCheckBox"
+        Me.healerCheckBox.Size = New System.Drawing.Size(75, 24)
+        Me.healerCheckBox.TabIndex = 7
+        Me.healerCheckBox.Text = "Healer"
+        Me.healerCheckBox.ThreeState = True
+        Me.healerCheckBox.UseVisualStyleBackColor = True
         '
-        'MoveToStartPosition3ToolStripMenuItem2
+        'scoutCheckBox
         '
-        Me.MoveToStartPosition3ToolStripMenuItem2.Name = "MoveToStartPosition3ToolStripMenuItem2"
-        Me.MoveToStartPosition3ToolStripMenuItem2.Size = New System.Drawing.Size(250, 26)
-        Me.MoveToStartPosition3ToolStripMenuItem2.Text = "Move To Start Position &3"
+        Me.scoutCheckBox.AutoSize = True
+        Me.scoutCheckBox.Enabled = False
+        Me.scoutCheckBox.Location = New System.Drawing.Point(175, 25)
+        Me.scoutCheckBox.Name = "scoutCheckBox"
+        Me.scoutCheckBox.Size = New System.Drawing.Size(70, 24)
+        Me.scoutCheckBox.TabIndex = 6
+        Me.scoutCheckBox.Text = "Scout"
+        Me.scoutCheckBox.ThreeState = True
+        Me.scoutCheckBox.UseVisualStyleBackColor = True
         '
-        'MoveToStartPosition4ToolStripMenuItem3
+        'goldCountLabel
         '
-        Me.MoveToStartPosition4ToolStripMenuItem3.Name = "MoveToStartPosition4ToolStripMenuItem3"
-        Me.MoveToStartPosition4ToolStripMenuItem3.Size = New System.Drawing.Size(250, 26)
-        Me.MoveToStartPosition4ToolStripMenuItem3.Text = "Move To Start Position &4"
+        Me.goldCountLabel.BackColor = System.Drawing.SystemColors.Window
+        Me.goldCountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.goldCountLabel.Location = New System.Drawing.Point(90, 106)
+        Me.goldCountLabel.Name = "goldCountLabel"
+        Me.goldCountLabel.Size = New System.Drawing.Size(46, 20)
+        Me.goldCountLabel.TabIndex = 5
+        Me.goldCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'LoadGameToolStripMenuItem
+        'foodCountLabel
         '
-        Me.LoadGameToolStripMenuItem.Name = "LoadGameToolStripMenuItem"
-        Me.LoadGameToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
-        Me.LoadGameToolStripMenuItem.Text = "&Load Game"
+        Me.foodCountLabel.BackColor = System.Drawing.SystemColors.Window
+        Me.foodCountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.foodCountLabel.Location = New System.Drawing.Point(90, 66)
+        Me.foodCountLabel.Name = "foodCountLabel"
+        Me.foodCountLabel.Size = New System.Drawing.Size(46, 20)
+        Me.foodCountLabel.TabIndex = 4
+        Me.foodCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'SaveGameToolStripMenuItem
+        'warriorCountLabel
         '
-        Me.SaveGameToolStripMenuItem.Name = "SaveGameToolStripMenuItem"
-        Me.SaveGameToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
-        Me.SaveGameToolStripMenuItem.Text = "&Save Game"
+        Me.warriorCountLabel.BackColor = System.Drawing.SystemColors.Window
+        Me.warriorCountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.warriorCountLabel.Location = New System.Drawing.Point(90, 26)
+        Me.warriorCountLabel.Name = "warriorCountLabel"
+        Me.warriorCountLabel.Size = New System.Drawing.Size(46, 20)
+        Me.warriorCountLabel.TabIndex = 3
+        Me.warriorCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'goldLabel
+        '
+        Me.goldLabel.AutoSize = True
+        Me.goldLabel.Location = New System.Drawing.Point(8, 106)
+        Me.goldLabel.Name = "goldLabel"
+        Me.goldLabel.Size = New System.Drawing.Size(51, 20)
+        Me.goldLabel.TabIndex = 2
+        Me.goldLabel.Text = "Gold: "
+        '
+        'foodLabel
+        '
+        Me.foodLabel.AutoSize = True
+        Me.foodLabel.Location = New System.Drawing.Point(8, 66)
+        Me.foodLabel.Name = "foodLabel"
+        Me.foodLabel.Size = New System.Drawing.Size(54, 20)
+        Me.foodLabel.TabIndex = 1
+        Me.foodLabel.Text = "Food: "
+        '
+        'warriorLabel
+        '
+        Me.warriorLabel.AutoSize = True
+        Me.warriorLabel.Location = New System.Drawing.Point(8, 26)
+        Me.warriorLabel.Name = "warriorLabel"
+        Me.warriorLabel.Size = New System.Drawing.Size(76, 20)
+        Me.warriorLabel.TabIndex = 0
+        Me.warriorLabel.Text = "Warriors: "
         '
         'mainForm
         '
@@ -965,8 +965,8 @@ Partial Class mainForm
     Friend WithEvents foodLabel As Label
     Friend WithEvents warriorLabel As Label
     Friend WithEvents scoutCheckBox As CheckBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents goldCountLabel As Label
+    Friend WithEvents foodCountLabel As Label
     Friend WithEvents warriorCountLabel As Label
     Friend WithEvents goldKeyCheckBox As CheckBox
     Friend WithEvents silverKeyCheckBox As CheckBox

@@ -1,17 +1,18 @@
 ﻿'Program: DarkTower
-'Me: bazaarForm.vb
+'Me: dataStorageModule.vb
 'Date: TBD
 'Author: Jason Welch
-'Purpose: 
+'Purpose: Read and Write Game Data from a Text File
 
 Option Strict On
 Option Explicit On
 
-Public Class bazaarForm
+Module dataStorageModule
     '==========================================================================================
     'Name: 
     'Date: 
     'Author: Jason Welch
     'Purpose: 
-End Class
+
+End Module
 '================================== No Code Follows ===========================================
