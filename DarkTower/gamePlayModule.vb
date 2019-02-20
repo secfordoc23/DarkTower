@@ -1,5 +1,5 @@
 ﻿'Program: DarkTower
-'Me: turnModule.vb
+'Me: gamePlayModule.vb
 'Date: TBD
 'Author: Jason Welch
 'Purpose: 
@@ -11,22 +11,35 @@ Module gamePlayModule
     Public currentInventory As Inventory
 
     '==========================================================================================
-    'Name: UpdateInventory()
-    'Date: 2/18/19
+    'Name: RandomEvent
+    'Date: 2/19/19
     'Author: Jason Welch
-    'Purpose: Update Inventory on Main Form from Inventory Object
-    Public Sub UpdateInventory()
-        With currentInventory
-            mainForm.warriorCountLabel.Text = .WarriorCount.ToString
-            mainForm.foodCountLabel.Text = .FoodCount.ToString
-            mainForm.goldCountLabel.Text = .GoldCount.ToString
-            mainForm.scoutCheckBox.Checked = .HaveScout
-            mainForm.healerCheckBox.Checked = .HaveHealer
-            mainForm.beastCheckBox.Checked = .HaveBeast
-            mainForm.bronzeKeyCheckBox.Checked = .HaveBronzeKey
-            mainForm.silverKeyCheckBox.Checked = .HaveSilverKey
-            mainForm.goldKeyCheckBox.Checked = .HaveGoldKey
-        End With
+    'Purpose: Generate a Random Event on Each Turn
+    Public Function RandomEvent() As String
+        Dim rand As New Random
+        Dim randomShort As Short
+
+        randomShort = CShort(rand.Next(100) + 1)
+
+        Select Case randomShort
+            Case 1 To 20
+                Return "Plague"
+            Case 40 To 60
+                Return "Lost"
+            Case 80 To 100
+                Return "Attacked"
+            Case Else
+                Return "Success"
+        End Select
+    End Function
+
+    '==========================================================================================
+    'Name: TakeATurn
+    'Date: 2/19/19
+    'Author: Jason Welch
+    'Purpose: Generate a Random Event
+    Public Sub TakeATurn()
+
     End Sub
 End Module
 '================================== No Code Follows ===========================================

@@ -26,7 +26,7 @@ Public Class mainForm
     'Purpose: 
     Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
         currentInventory = New Inventory
-        UpdateInventory()
+        currentInventory.UpdateInventory()
     End Sub
     '==========================================================================================
     'Name: mainForm_Closing
