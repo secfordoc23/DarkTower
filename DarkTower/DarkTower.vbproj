@@ -104,6 +104,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="gamePlayModule.vb" />
+    <Compile Include="PlayerTurn.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="bazaarForm.resx">
