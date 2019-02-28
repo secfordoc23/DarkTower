@@ -1,3 +1,10 @@
 # DarkTower
-[[_TOC_]]
+
+## Decription
 My rendition of the Dark Tower Board Game written in VB
+
+---
+
+## Game Play
+
+---
