@@ -103,8 +103,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="gamePlayModule.vb" />
     <Compile Include="PlayerTurn.vb" />
+    <Compile Include="startPositionForm.Designer.vb">
+      <DependentUpon>startPositionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="startPositionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="bazaarForm.resx">
@@ -118,6 +123,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="startPositionForm.resx">
+      <DependentUpon>startPositionForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

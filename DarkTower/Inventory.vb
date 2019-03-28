@@ -191,17 +191,15 @@ Public Class Inventory
     'Author: Jason Welch
     'Purpose: Update Inventory on Main Form from Inventory Object
     Public Sub UpdateInventory()
-        With currentInventory
-            mainForm.warriorCountLabel.Text = .WarriorCount.ToString
-            mainForm.foodCountLabel.Text = .FoodCount.ToString
-            mainForm.goldCountLabel.Text = .GoldCount.ToString
-            mainForm.scoutCheckBox.Checked = .HaveScout
-            mainForm.healerCheckBox.Checked = .HaveHealer
-            mainForm.beastCheckBox.Checked = .HaveBeast
-            mainForm.bronzeKeyCheckBox.Checked = .HaveBronzeKey
-            mainForm.silverKeyCheckBox.Checked = .HaveSilverKey
-            mainForm.goldKeyCheckBox.Checked = .HaveGoldKey
-        End With
+        mainForm.warriorCountLabel.Text = warriorCountShort.ToString()
+        mainForm.foodCountLabel.Text = foodCountShort.ToString()
+        mainForm.goldCountLabel.Text = goldCountShort.ToString()
+        mainForm.scoutCheckBox.Checked = haveScoutBoolean
+        mainForm.healerCheckBox.Checked = haveHealerBoolean
+        mainForm.beastCheckBox.Checked = haveBeastBoolean
+        mainForm.bronzeKeyCheckBox.Checked = haveBronzeKeyBoolean
+        mainForm.silverKeyCheckBox.Checked = haveSilverKeyBoolean
+        mainForm.goldKeyCheckBox.Checked = haveGoldKeyBoolean
     End Sub
 End Class
 '================================== No Code Follows ===========================================

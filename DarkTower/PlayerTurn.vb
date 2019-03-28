@@ -8,14 +8,15 @@ Option Strict On
 Option Explicit On
 
 Public Class PlayerTurn
-    Private userInventory As Inventory()
+    Private userInventory As Inventory
+    Private userPositionShort As Short
 
     '==========================================================================================
     'Name: Contructor
     'Date: 2/19/19
     'Author: Jason Welch
     'Purpose: Default Constructor 
-    Public Sub New(ByVal currentInventory As Inventory())
+    Public Sub New(ByVal currentInventory As Inventory)
         userInventory = currentInventory
     End Sub
     '==========================================================================================
@@ -84,5 +85,19 @@ Public Class PlayerTurn
     'Date: 2/19/19
     'Author: Jason Welch
     'Purpose: 
+
+    '==========================================================================================
+    'Name: UserPosition()
+    'Date: 3/28/19
+    'Author: Jason Welch
+    'Purpose: Get and Set userPositionShort
+    Public Property UserPosition() As Short
+        Get
+            Return userPositionShort
+        End Get
+        Set(ByVal value As Short)
+            userPositionShort = value
+        End Set
+    End Property
 End Class
 '================================== No Code Follows ===========================================

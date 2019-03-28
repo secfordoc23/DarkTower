@@ -157,25 +157,25 @@ Partial Class mainForm
         'NewGameToolStripMenuItem
         '
         Me.NewGameToolStripMenuItem.Name = "NewGameToolStripMenuItem"
-        Me.NewGameToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.NewGameToolStripMenuItem.Size = New System.Drawing.Size(159, 26)
         Me.NewGameToolStripMenuItem.Text = "&New Game"
         '
         'SaveGameToolStripMenuItem
         '
         Me.SaveGameToolStripMenuItem.Name = "SaveGameToolStripMenuItem"
-        Me.SaveGameToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.SaveGameToolStripMenuItem.Size = New System.Drawing.Size(159, 26)
         Me.SaveGameToolStripMenuItem.Text = "&Save Game"
         '
         'LoadGameToolStripMenuItem
         '
         Me.LoadGameToolStripMenuItem.Name = "LoadGameToolStripMenuItem"
-        Me.LoadGameToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.LoadGameToolStripMenuItem.Size = New System.Drawing.Size(159, 26)
         Me.LoadGameToolStripMenuItem.Text = "&Load Game"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(159, 26)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'OptionsToolStripMenuItem

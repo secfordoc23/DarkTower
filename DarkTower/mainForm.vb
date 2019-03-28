@@ -9,6 +9,9 @@ Option Explicit On
 Imports System.ComponentModel
 
 Public Class mainForm
+    Private currentInventory As Inventory
+    Private currentPlayer As PlayerTurn
+    Public startPositionShort As Short = 1S
 
     '==========================================================================================
     'Name: mainForm_Load
@@ -27,6 +30,10 @@ Public Class mainForm
     Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
         currentInventory = New Inventory
         currentInventory.UpdateInventory()
+        currentPlayer = New PlayerTurn(currentInventory)
+        startPositionForm.Show()
+        Me.Hide()
+        currentPlayer.UserPosition = startPositionShort
     End Sub
     '==========================================================================================
     'Name: mainForm_Closing
@@ -46,6 +53,10 @@ Public Class mainForm
     'Purpose: Starts program closing process
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Close()
+    End Sub
+
+    Private Sub BazarrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BazarrToolStripMenuItem.Click
+        bazaarForm.Show()
     End Sub
 End Class
 '================================== No Code Follows ===========================================
