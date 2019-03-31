@@ -31,7 +31,7 @@ Partial Class startPositionForm
         'icelandButton
         '
         Me.icelandButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.icelandButton.Location = New System.Drawing.Point(46, 45)
+        Me.icelandButton.Location = New System.Drawing.Point(58, 39)
         Me.icelandButton.Name = "icelandButton"
         Me.icelandButton.Size = New System.Drawing.Size(127, 40)
         Me.icelandButton.TabIndex = 0
@@ -41,7 +41,7 @@ Partial Class startPositionForm
         'forestButton
         '
         Me.forestButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.forestButton.Location = New System.Drawing.Point(46, 91)
+        Me.forestButton.Location = New System.Drawing.Point(58, 85)
         Me.forestButton.Name = "forestButton"
         Me.forestButton.Size = New System.Drawing.Size(127, 40)
         Me.forestButton.TabIndex = 1
@@ -51,7 +51,7 @@ Partial Class startPositionForm
         'plainsButton
         '
         Me.plainsButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.plainsButton.Location = New System.Drawing.Point(46, 137)
+        Me.plainsButton.Location = New System.Drawing.Point(58, 131)
         Me.plainsButton.Name = "plainsButton"
         Me.plainsButton.Size = New System.Drawing.Size(127, 40)
         Me.plainsButton.TabIndex = 2
@@ -61,7 +61,7 @@ Partial Class startPositionForm
         'desertButton
         '
         Me.desertButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.desertButton.Location = New System.Drawing.Point(46, 183)
+        Me.desertButton.Location = New System.Drawing.Point(58, 177)
         Me.desertButton.Name = "desertButton"
         Me.desertButton.Size = New System.Drawing.Size(127, 40)
         Me.desertButton.TabIndex = 3
@@ -72,7 +72,7 @@ Partial Class startPositionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(215, 255)
+        Me.ClientSize = New System.Drawing.Size(242, 255)
         Me.Controls.Add(Me.desertButton)
         Me.Controls.Add(Me.plainsButton)
         Me.Controls.Add(Me.forestButton)

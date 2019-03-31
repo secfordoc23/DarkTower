@@ -16,7 +16,7 @@ Public Class PlayerTurn
     'Date: 2/19/19
     'Author: Jason Welch
     'Purpose: Default Constructor 
-    Public Sub New(ByVal currentInventory As Inventory)
+    Public Sub New(currentInventory As Inventory)
         userInventory = currentInventory
     End Sub
     '==========================================================================================
@@ -24,7 +24,7 @@ Public Class PlayerTurn
     'Date: 2/19/19
     'Author: Jason Welch
     'Purpose: Generate a Random Event 
-    Public Sub TakeATurn(ByVal moveType As Short)
+    Public Sub TakeATurn(moveType As Short)
         Select Case moveType
             Case 0 ' Territory
                 GenerateRandomEvent()
@@ -45,6 +45,7 @@ Public Class PlayerTurn
 
         randomShort = CShort(rand.Next(100) + 1)
 
+        ' Change Return to Message Box For Player Notifcation then call method
         Select Case randomShort
             Case 1 To 20
                 Return "Plague"
@@ -57,7 +58,7 @@ Public Class PlayerTurn
         End Select
     End Function
     '==========================================================================================
-    'Name: CryptEvent
+    'Name: CastleEvent
     'Date: 2/19/19
     'Author: Jason Welch
     'Purpose:  
@@ -86,18 +87,6 @@ Public Class PlayerTurn
     'Author: Jason Welch
     'Purpose: 
 
-    '==========================================================================================
-    'Name: UserPosition()
-    'Date: 3/28/19
-    'Author: Jason Welch
-    'Purpose: Get and Set userPositionShort
-    Public Property UserPosition() As Short
-        Get
-            Return userPositionShort
-        End Get
-        Set(ByVal value As Short)
-            userPositionShort = value
-        End Set
-    End Property
+
 End Class
 '================================== No Code Follows ===========================================

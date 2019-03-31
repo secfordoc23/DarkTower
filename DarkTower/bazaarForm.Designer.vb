@@ -114,7 +114,7 @@ Partial Class bazaarForm
         Me.oneTimeBuyGroupBox.Size = New System.Drawing.Size(172, 166)
         Me.oneTimeBuyGroupBox.TabIndex = 3
         Me.oneTimeBuyGroupBox.TabStop = False
-        Me.oneTimeBuyGroupBox.Text = "One-Time-Buy"
+        Me.oneTimeBuyGroupBox.Text = "One-Time Buy"
         '
         'beastCheckBox
         '

@@ -13,42 +13,38 @@ Public Class startPositionForm
     'Name: icelandButton_Click
     'Date: 3/28/19
     'Author: Jason Welch
-    'Purpose: Set startPositionShort
+    'Purpose: Set start Position to IceLand
     Private Sub icelandButton_Click(sender As Object, e As EventArgs) Handles icelandButton.Click
-        mainForm.startPositionShort = 4S
-        mainForm.Show()
+        mainForm.SetStartPosition(40S)
         Me.Close()
     End Sub
     '==========================================================================================
     'Name: forestButton_Click
     'Date: 3/28/19
     'Author: Jason Welch
-    'Purpose: Set startPositionShort
+    'Purpose: Set start Position to Forest
     Private Sub forestButton_Click(sender As Object, e As EventArgs) Handles forestButton.Click
-        mainForm.startPositionShort = 2S
-        mainForm.Show()
+        mainForm.SetStartPosition(20S)
         Me.Close()
     End Sub
     '==========================================================================================
     'Name: plainsButton_Click
     'Date: 3/28/19
     'Author: Jason Welch
-    'Purpose: Set startPositionShort
+    'Purpose: Set start Position to Plains
     Private Sub plainsButton_Click(sender As Object, e As EventArgs) Handles plainsButton.Click
-        mainForm.startPositionShort = 3S
-        mainForm.Show()
+        mainForm.SetStartPosition(30S)
         Me.Close()
     End Sub
     '==========================================================================================
-    'Name: desertButton_Click(
+    'Name: desertButton_Click
     'Date: 3/28/19
     'Author: Jason Welch
-    'Purpose: Set startPositionShort
+    'Purpose: Set start Position to Desert
     Private Sub desertButton_Click(sender As Object, e As EventArgs) Handles desertButton.Click
-        mainForm.startPositionShort = 1S
-        mainForm.Show()
+        mainForm.SetStartPosition(10S)
         Me.Close()
     End Sub
-    ' Need to Make a Closing Method to Clean up code
+
 End Class
 '================================== No Code Follows ===========================================

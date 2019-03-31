@@ -24,3 +24,4 @@ Public Class bazaarForm
     'Purpose: 
 End Class
 '================================== No Code Follows ===========================================
+' Add Current Gold and Spent Gold to Form

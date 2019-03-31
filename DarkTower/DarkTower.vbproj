@@ -103,6 +103,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PlayerMovement.vb" />
     <Compile Include="PlayerTurn.vb" />
     <Compile Include="startPositionForm.Designer.vb">
       <DependentUpon>startPositionForm.vb</DependentUpon>
@@ -138,7 +139,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BrownTile.png" />
@@ -160,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\YellowTile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\PlayerTile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
