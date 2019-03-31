@@ -1,6 +1,6 @@
 ﻿'Program: DarkTower
 'Me: PlayerMovement.vb
-'Date: TBD
+'Date: 3/30/2019
 'Author: Jason Welch
 'Purpose: A class that controls the movement of a player
 

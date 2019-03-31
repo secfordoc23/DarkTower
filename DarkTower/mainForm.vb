@@ -80,10 +80,16 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets the Users Location
     Public Sub SetPosition(selectedPositionShort As Short)
+        Dim currentTurn As New PlayerTurn(currentInventory)
+
         If currentMove.ValidateMove(currentPositionShort, selectedPositionShort) = True Then
             currentMove.MovePlayer()
             currentPositionShort = selectedPositionShort
-            ' Process Turn
+            If selectedPositionShort = 19 Or selectedPositionShort = 29 Or selectedPositionShort = 39 Or selectedPositionShort = 49 Then
+                currentInventory = currentTurn.TakeATurn(1)
+            Else
+                currentInventory = currentTurn.TakeATurn(0)
+            End If
         End If
     End Sub
     '==========================================================================================
@@ -196,11 +202,12 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Move to tile position
     Private Sub darkTowerTilePictureBox_Click(sender As Object, e As EventArgs) Handles darkTowerTilePictureBox.Click
-        ' Attack the Tower
+        Dim currentTurn As New PlayerTurn(currentInventory)
+
         If currentMove.ValidateMove(currentPositionShort, 0) Then
             If currentInventory.HaveBronzeKey And currentInventory.HaveSilverKey And currentInventory.HaveGoldKey Then
                 If MsgBox("Do you wish to Attack the Dark Tower?", vbYesNo, "The Dark Tower") = vbYes Then
-                    ' Attack the Dark Tower
+                    currentInventory = currentTurn.TakeATurn(2)
                 End If
             Else
                 MsgBox("You DO NOT have all of the Keys to unlock the Dark Tower", vbOKOnly, "The Dark Tower")

@@ -158,7 +158,7 @@ Public Class Inventory
     'Date: 2/18/19
     'Author: Jason Welch
     'Purpose: Returns Distance between current Warrior count and Max value
-    Public Function AvailableWarriors() As Short
+    Public Function HowManyWarriorsToMax() As Short
         Return DistanceToMaxValue(warriorCountShort)
     End Function
     '==========================================================================================
@@ -166,7 +166,7 @@ Public Class Inventory
     'Date: 2/18/19
     'Author: Jason Welch
     'Purpose: Returns Distance between current Food count and Max value
-    Public Function AvailableFood() As Short
+    Public Function HowMuchFoodToMax() As Short
         Return DistanceToMaxValue(foodCountShort)
     End Function
     '==========================================================================================
@@ -174,8 +174,13 @@ Public Class Inventory
     'Date: 2/18/19
     'Author: Jason Welch
     'Purpose: Returns Distance between current Gold count and Max value
-    Public Function AvailableGold() As Short
-        Return DistanceToMaxValue(goldCountShort)
+    Public Function HowMuchGoldToMax() As Short
+        If HaveBeast Then
+            Return DistanceToMaxValue(goldCountShort)
+        Else
+
+        End If
+        
     End Function
     '==========================================================================================
     'Name: DistanceToMaxValue
