@@ -47,6 +47,9 @@ Public Class Inventory
         End Get
         Set(ByVal value As Short)
             warriorCountShort = value
+            If warriorCountShort < 0 Then
+                warriorCountShort = 0
+            End If
         End Set
     End Property
     '==========================================================================================
@@ -60,6 +63,9 @@ Public Class Inventory
         End Get
         Set(ByVal value As Short)
             foodCountShort = value
+            If foodCountShort < 0 Then
+                foodCountShort = 0
+            End If
         End Set
     End Property
     '==========================================================================================
@@ -69,10 +75,17 @@ Public Class Inventory
     'Purpose: Get and Set goldCountShort
     Public Property GoldCount() As Short
         Get
+            If goldCountShort > GoldMax() Then
+                goldCountShort = GoldMax()
+            End If
             Return goldCountShort
         End Get
         Set(ByVal value As Short)
-            goldCountShort = value
+            If goldCountShort > GoldMax() Then
+                goldCountShort = GoldMax()
+            Else
+                goldCountShort = value
+            End If
         End Set
     End Property
     '==========================================================================================
@@ -175,12 +188,7 @@ Public Class Inventory
     'Author: Jason Welch
     'Purpose: Returns Distance between current Gold count and Max value
     Public Function HowMuchGoldToMax() As Short
-        If HaveBeast Then
-            Return DistanceToMaxValue(goldCountShort)
-        Else
-
-        End If
-        
+        Return GoldMax() - goldCountShort
     End Function
     '==========================================================================================
     'Name: DistanceToMaxValue
@@ -195,16 +203,43 @@ Public Class Inventory
     'Date: 2/18/19
     'Author: Jason Welch
     'Purpose: Update Inventory on Main Form from Inventory Object
-    Public Sub UpdateInventory()
-        mainForm.warriorCountLabel.Text = warriorCountShort.ToString()
-        mainForm.foodCountLabel.Text = foodCountShort.ToString()
-        mainForm.goldCountLabel.Text = goldCountShort.ToString()
-        mainForm.scoutCheckBox.Checked = haveScoutBoolean
-        mainForm.healerCheckBox.Checked = haveHealerBoolean
-        mainForm.beastCheckBox.Checked = haveBeastBoolean
-        mainForm.bronzeKeyCheckBox.Checked = haveBronzeKeyBoolean
-        mainForm.silverKeyCheckBox.Checked = haveSilverKeyBoolean
-        mainForm.goldKeyCheckBox.Checked = haveGoldKeyBoolean
-    End Sub
+    'Public Sub UpdateInventory()
+    '    mainForm.warriorCountLabel.Text = warriorCountShort.ToString()
+    '    mainForm.warriorCountLabel.Text = warriorCountShort.ToString()
+    '    mainForm.foodCountLabel.Text = foodCountShort.ToString()
+    '    If goldCountShort > GoldMax() Then
+    '        goldCountShort = GoldMax()
+    '    End If
+    '    mainForm.goldMaxLabel.Text = "/ " & GoldMax().ToString()
+    '    mainForm.goldCountLabel.Text = goldCountShort.ToString()
+    '    mainForm.scoutCheckBox.Checked = haveScoutBoolean
+    '    mainForm.healerCheckBox.Checked = haveHealerBoolean
+    '    mainForm.beastCheckBox.Checked = haveBeastBoolean
+    '    mainForm.bronzeKeyCheckBox.Checked = haveBronzeKeyBoolean
+    '    mainForm.silverKeyCheckBox.Checked = haveSilverKeyBoolean
+    '    mainForm.goldKeyCheckBox.Checked = haveGoldKeyBoolean
+    'End Sub
+
+    '==========================================================================================
+    'Name: GoldMax
+    'Date: 2/18/19
+    'Author: Jason Welch
+    'Purpose: Determines the Max Gold amount
+    Public Function GoldMax() As Short
+        If HaveBeast Then
+            If 50 + (6 * warriorCountShort) > MAX_VALUE_SHORT Then
+                Return MAX_VALUE_SHORT
+            Else
+                Return CShort(50 + (6 * warriorCountShort))
+            End If
+        Else
+            If (6 * warriorCountShort) > MAX_VALUE_SHORT Then
+                Return MAX_VALUE_SHORT
+            Else
+                Return CShort(6 * warriorCountShort)
+            End If
+        End If
+    End Function
+
 End Class
 '================================== No Code Follows ===========================================

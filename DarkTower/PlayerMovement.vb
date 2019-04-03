@@ -53,7 +53,7 @@ Public Class PlayerMovement
                 validMovesList.Add(startPositionShort + 7S)
             Case 12, 22, 32, 42
                 validMovesList.Add(startPositionShort + 5S)
-                validMovesList.Add(startPositionShort * 10S)
+                validMovesList.Add(startPositionShort + 9S)
             Case 13, 23, 33, 43
                 validMovesList.Add(startPositionShort + 7S)
                 validMovesList.Add(startPositionShort + 9S)
@@ -89,8 +89,8 @@ Public Class PlayerMovement
     'Date: 3/30/19
     'Author: Jason Welch
     'Purpose: 
-    Public Sub MovePlayer()
-        Select Case startPositionShort
+    Public Sub MovePlayer(currentStartPositionShort As Short)
+        Select Case currentStartPositionShort
             Case 10
                 setPlayerPositionDesert()
                 If Not selectedPositionShort Mod 10 = 0 Then
@@ -344,6 +344,26 @@ Public Class PlayerMovement
             Case 19
                 mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.GrayTile
         End Select
+    End Sub
+
+    '==========================================================================================
+    'Name: StartPosition
+    'Date: 4/1/19
+    'Author: Jason Welch
+    'Purpose: Sets Players Start position tile
+    Public Sub StartPosition(startPositionShort As Short)
+        Select Case startPositionShort
+            Case 10
+                mainForm.startTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 20
+                mainForm.startTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
+
+            Case 30
+                mainForm.startTile3PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 40
+                mainForm.startTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
+        End Select
+
     End Sub
 End Class
 '================================== No Code Follows ===========================================

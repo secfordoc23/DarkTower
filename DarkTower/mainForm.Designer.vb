@@ -90,6 +90,9 @@ Partial Class mainForm
         Me.goldLabel = New System.Windows.Forms.Label()
         Me.foodLabel = New System.Windows.Forms.Label()
         Me.warriorLabel = New System.Windows.Forms.Label()
+        Me.warriorMaxLabel = New System.Windows.Forms.Label()
+        Me.foodMaxLabel = New System.Windows.Forms.Label()
+        Me.goldMaxLabel = New System.Windows.Forms.Label()
         Me.gamePlayMenuStrip.SuspendLayout()
         Me.mapGroupBox.SuspendLayout()
         CType(Me.startTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -770,6 +773,9 @@ Partial Class mainForm
         '
         'inventoryGroupBox
         '
+        Me.inventoryGroupBox.Controls.Add(Me.goldMaxLabel)
+        Me.inventoryGroupBox.Controls.Add(Me.foodMaxLabel)
+        Me.inventoryGroupBox.Controls.Add(Me.warriorMaxLabel)
         Me.inventoryGroupBox.Controls.Add(Me.goldKeyCheckBox)
         Me.inventoryGroupBox.Controls.Add(Me.silverKeyCheckBox)
         Me.inventoryGroupBox.Controls.Add(Me.bronzeKeyCheckBox)
@@ -793,7 +799,7 @@ Partial Class mainForm
         '
         Me.goldKeyCheckBox.AutoSize = True
         Me.goldKeyCheckBox.Enabled = False
-        Me.goldKeyCheckBox.Location = New System.Drawing.Point(304, 105)
+        Me.goldKeyCheckBox.Location = New System.Drawing.Point(407, 105)
         Me.goldKeyCheckBox.Name = "goldKeyCheckBox"
         Me.goldKeyCheckBox.Size = New System.Drawing.Size(92, 24)
         Me.goldKeyCheckBox.TabIndex = 11
@@ -805,7 +811,7 @@ Partial Class mainForm
         '
         Me.silverKeyCheckBox.AutoSize = True
         Me.silverKeyCheckBox.Enabled = False
-        Me.silverKeyCheckBox.Location = New System.Drawing.Point(304, 65)
+        Me.silverKeyCheckBox.Location = New System.Drawing.Point(407, 65)
         Me.silverKeyCheckBox.Name = "silverKeyCheckBox"
         Me.silverKeyCheckBox.Size = New System.Drawing.Size(96, 24)
         Me.silverKeyCheckBox.TabIndex = 10
@@ -817,7 +823,7 @@ Partial Class mainForm
         '
         Me.bronzeKeyCheckBox.AutoSize = True
         Me.bronzeKeyCheckBox.Enabled = False
-        Me.bronzeKeyCheckBox.Location = New System.Drawing.Point(304, 25)
+        Me.bronzeKeyCheckBox.Location = New System.Drawing.Point(407, 25)
         Me.bronzeKeyCheckBox.Name = "bronzeKeyCheckBox"
         Me.bronzeKeyCheckBox.Size = New System.Drawing.Size(109, 24)
         Me.bronzeKeyCheckBox.TabIndex = 9
@@ -829,7 +835,7 @@ Partial Class mainForm
         '
         Me.beastCheckBox.AutoSize = True
         Me.beastCheckBox.Enabled = False
-        Me.beastCheckBox.Location = New System.Drawing.Point(175, 105)
+        Me.beastCheckBox.Location = New System.Drawing.Point(278, 105)
         Me.beastCheckBox.Name = "beastCheckBox"
         Me.beastCheckBox.Size = New System.Drawing.Size(70, 24)
         Me.beastCheckBox.TabIndex = 8
@@ -841,7 +847,7 @@ Partial Class mainForm
         '
         Me.healerCheckBox.AutoSize = True
         Me.healerCheckBox.Enabled = False
-        Me.healerCheckBox.Location = New System.Drawing.Point(175, 65)
+        Me.healerCheckBox.Location = New System.Drawing.Point(278, 65)
         Me.healerCheckBox.Name = "healerCheckBox"
         Me.healerCheckBox.Size = New System.Drawing.Size(75, 24)
         Me.healerCheckBox.TabIndex = 7
@@ -853,7 +859,7 @@ Partial Class mainForm
         '
         Me.scoutCheckBox.AutoSize = True
         Me.scoutCheckBox.Enabled = False
-        Me.scoutCheckBox.Location = New System.Drawing.Point(175, 25)
+        Me.scoutCheckBox.Location = New System.Drawing.Point(278, 25)
         Me.scoutCheckBox.Name = "scoutCheckBox"
         Me.scoutCheckBox.Size = New System.Drawing.Size(70, 24)
         Me.scoutCheckBox.TabIndex = 6
@@ -917,6 +923,30 @@ Partial Class mainForm
         Me.warriorLabel.Size = New System.Drawing.Size(76, 20)
         Me.warriorLabel.TabIndex = 0
         Me.warriorLabel.Text = "Warriors: "
+        '
+        'warriorMaxLabel
+        '
+        Me.warriorMaxLabel.Location = New System.Drawing.Point(142, 26)
+        Me.warriorMaxLabel.Name = "warriorMaxLabel"
+        Me.warriorMaxLabel.Size = New System.Drawing.Size(35, 20)
+        Me.warriorMaxLabel.TabIndex = 12
+        Me.warriorMaxLabel.Text = "/ 99"
+        '
+        'foodMaxLabel
+        '
+        Me.foodMaxLabel.Location = New System.Drawing.Point(142, 66)
+        Me.foodMaxLabel.Name = "foodMaxLabel"
+        Me.foodMaxLabel.Size = New System.Drawing.Size(35, 20)
+        Me.foodMaxLabel.TabIndex = 13
+        Me.foodMaxLabel.Text = "/ 99"
+        '
+        'goldMaxLabel
+        '
+        Me.goldMaxLabel.Location = New System.Drawing.Point(141, 106)
+        Me.goldMaxLabel.Name = "goldMaxLabel"
+        Me.goldMaxLabel.Size = New System.Drawing.Size(36, 20)
+        Me.goldMaxLabel.TabIndex = 14
+        Me.goldMaxLabel.Text = "/ 0"
         '
         'mainForm
         '
@@ -1049,4 +1079,7 @@ Partial Class mainForm
     Friend WithEvents MoveToStartPosition4ToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents SaveGameToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoadGameToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents goldMaxLabel As Label
+    Friend WithEvents foodMaxLabel As Label
+    Friend WithEvents warriorMaxLabel As Label
 End Class

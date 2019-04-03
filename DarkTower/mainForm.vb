@@ -9,10 +9,9 @@ Option Explicit On
 Imports System.ComponentModel
 
 Public Class mainForm
-    Private currentInventory As Inventory
+    Public currentPlayer As Player
     Private currentTurn As PlayerTurn
     Private currentMove As PlayerMovement
-    Private currentPositionShort As Short = 0S
 
     '==========================================================================================
     'Name: mainForm_Load
@@ -29,9 +28,12 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: 
     Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
-        currentInventory = New Inventory
-        currentInventory.UpdateInventory()
-        currentTurn = New PlayerTurn(currentInventory)
+        currentPlayer = New Player
+        currentPlayer.Inventory = New Inventory
+        currentPlayer.UpdateInventoryDisplay()
+        currentPlayer.HasGameStarted = True
+
+        currentTurn = New PlayerTurn()
         startPositionForm.Show()
     End Sub
     '==========================================================================================
@@ -66,13 +68,13 @@ Public Class mainForm
     'Date: 3/30/2019
     'Author: Jason Welch
     'Purpose: Sets the Users Start Location
-    Public Sub SetStartPosition(startPositionShort As Short)
-        currentPositionShort = startPositionShort
-
-        currentMove = New PlayerMovement(startPositionShort)
-        If currentMove.ValidateMove(currentPositionShort, startPositionShort) = True Then
-            currentMove.MovePlayer()
+    Public Sub SetStartPosition()
+        If currentPlayer.HasGameStarted Then
+            currentPlayer.CurrentPosition = currentPlayer.CurrentStartPositon
+            currentMove = New PlayerMovement(currentPlayer.CurrentStartPositon)
+            currentMove.StartPosition(currentPlayer.CurrentPosition)
         End If
+
     End Sub
     '==========================================================================================
     'Name: SetPosition
@@ -80,16 +82,33 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets the Users Location
     Public Sub SetPosition(selectedPositionShort As Short)
-        Dim currentTurn As New PlayerTurn(currentInventory)
+        Dim currentTurn As New PlayerTurn()
 
-        If currentMove.ValidateMove(currentPositionShort, selectedPositionShort) = True Then
-            currentMove.MovePlayer()
-            currentPositionShort = selectedPositionShort
-            If selectedPositionShort = 19 Or selectedPositionShort = 29 Or selectedPositionShort = 39 Or selectedPositionShort = 49 Then
-                currentInventory = currentTurn.TakeATurn(1)
-            Else
-                currentInventory = currentTurn.TakeATurn(0)
+        If currentPlayer.HasGameStarted Then
+            currentMove = New PlayerMovement(currentPlayer.CurrentStartPositon)
+            If currentMove.ValidateMove(currentPlayer.CurrentPosition, selectedPositionShort) Then
+                currentMove.MovePlayer(currentPlayer.CurrentStartPositon)
+                If selectedPositionShort = 19 Or selectedPositionShort = 29 Or selectedPositionShort = 39 Or selectedPositionShort = 49 Then
+                    currentTurn.TakeATurn(1)
+                Else
+                    currentTurn.TakeATurn(0)
+                End If
+                currentPlayer.CurrentPosition = selectedPositionShort
+                currentPlayer.UpdateInventoryDisplay()
             End If
+        End If
+    End Sub
+
+    '==========================================================================================
+    'Name: MoveToAnotherStartPosition
+    'Date: 3/30/2019
+    'Author: Jason Welch
+    'Purpose: Sets the Users Start Location
+    Public Sub MoveToAnotherStartPosition(selectedPositionShort As Short)
+        If currentPlayer.HasGameStarted Then
+            currentMove = New PlayerMovement(currentPlayer.CurrentStartPositon)
+            currentMove.MovePlayer(currentPlayer.CurrentStartPositon)
+            currentPlayer.CurrentPosition = selectedPositionShort
         End If
     End Sub
     '==========================================================================================
@@ -98,7 +117,8 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets Start Position to 1
     Private Sub MoveToStartPosition1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition1ToolStripMenuItem.Click
-        SetStartPosition(10S)
+        currentPlayer.CurrentStartPositon = 10S
+        MoveToAnotherStartPosition(10S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition2ToolStripMenuItem1_Click
@@ -106,7 +126,8 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets Start Position to 2
     Private Sub MoveToStartPosition2ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition2ToolStripMenuItem1.Click
-        SetStartPosition(20S)
+        currentPlayer.CurrentStartPositon = 20S
+        MoveToAnotherStartPosition(20S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition3ToolStripMenuItem2_Click
@@ -114,7 +135,8 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets Start Position to 3
     Private Sub MoveToStartPosition3ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition3ToolStripMenuItem2.Click
-        SetStartPosition(30S)
+        currentPlayer.CurrentStartPositon = 30S
+        MoveToAnotherStartPosition(30S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition4ToolStripMenuItem3_Click
@@ -122,7 +144,8 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets Start Position to 4
     Private Sub MoveToStartPosition4ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition4ToolStripMenuItem3.Click
-        SetStartPosition(40S)
+        currentPlayer.CurrentStartPositon = 40S
+        MoveToAnotherStartPosition(40S)
     End Sub
     '==========================================================================================
     'Name: desertTile6PictureBox_Click
@@ -202,17 +225,17 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Move to tile position
     Private Sub darkTowerTilePictureBox_Click(sender As Object, e As EventArgs) Handles darkTowerTilePictureBox.Click
-        Dim currentTurn As New PlayerTurn(currentInventory)
+        Dim currentTurn As New PlayerTurn()
 
-        If currentMove.ValidateMove(currentPositionShort, 0) Then
-            If currentInventory.HaveBronzeKey And currentInventory.HaveSilverKey And currentInventory.HaveGoldKey Then
-                If MsgBox("Do you wish to Attack the Dark Tower?", vbYesNo, "The Dark Tower") = vbYes Then
-                    currentInventory = currentTurn.TakeATurn(2)
-                End If
-            Else
-                MsgBox("You DO NOT have all of the Keys to unlock the Dark Tower", vbOKOnly, "The Dark Tower")
-            End If
-        End If
+        'If currentMove.ValidateMove(currentPositionShort, 0) Then
+        '    If currentInventory.HaveBronzeKey And currentInventory.HaveSilverKey And currentInventory.HaveGoldKey Then
+        '        If MsgBox("Do you wish to Attack the Dark Tower?", vbYesNo, "The Dark Tower") = vbYes Then
+        '            currentInventory = currentTurn.TakeATurn(2)
+        '        End If
+        '    Else
+        '        MsgBox("You DO NOT have all of the Keys to unlock the Dark Tower", vbOKOnly, "The Dark Tower")
+        '    End If
+        'End If
     End Sub
     '==========================================================================================
     'Name: forestTile1PictureBox_Click
@@ -430,5 +453,6 @@ Public Class mainForm
     Private Sub icelandTile4PictureBox_Click(sender As Object, e As EventArgs) Handles icelandTile4PictureBox.Click
         SetPosition(44)
     End Sub
+
 End Class
 '================================== No Code Follows ===========================================
