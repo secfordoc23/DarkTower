@@ -20,7 +20,7 @@ Public Class mainForm
     'Purpose: 
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         'splashForm.ShowDialog()
-
+        currentPlayer = New Player
     End Sub
     '==========================================================================================
     'Name: NewGameToolStripMenuItem_Click
@@ -29,6 +29,10 @@ Public Class mainForm
     'Purpose: 
     Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
         currentPlayer = New Player
+
+        currentMove = New PlayerMovement
+        currentMove.ResetMap()
+
         currentPlayer.Inventory = New Inventory
         currentPlayer.UpdateInventoryDisplay()
         currentPlayer.HasGameStarted = True
@@ -68,11 +72,12 @@ Public Class mainForm
     'Date: 3/30/2019
     'Author: Jason Welch
     'Purpose: Sets the Users Start Location
-    Public Sub SetStartPosition()
+    Public Sub SetStartPosition(startPositionShort As Short)
         If currentPlayer.HasGameStarted Then
-            currentPlayer.CurrentPosition = currentPlayer.CurrentStartPositon
-            currentMove = New PlayerMovement(currentPlayer.CurrentStartPositon)
-            currentMove.StartPosition(currentPlayer.CurrentPosition)
+            currentPlayer.CurrentPosition = startPositionShort
+            currentPlayer.CurrentStartPositon = startPositionShort
+            currentPlayer.InitialStartPosition = startPositionShort
+            currentMove.SetInitialStartPosition(startPositionShort)
         End If
 
     End Sub
@@ -85,9 +90,8 @@ Public Class mainForm
         Dim currentTurn As New PlayerTurn()
 
         If currentPlayer.HasGameStarted Then
-            currentMove = New PlayerMovement(currentPlayer.CurrentStartPositon)
-            If currentMove.ValidateMove(currentPlayer.CurrentPosition, selectedPositionShort) Then
-                currentMove.MovePlayer(currentPlayer.CurrentStartPositon)
+            If currentMove.ValidateMove(currentPlayer.CurrentStartPositon, currentPlayer.CurrentPosition, selectedPositionShort) Then
+                currentMove.MovePlayer(currentPlayer.CurrentPosition, selectedPositionShort)
                 If selectedPositionShort = 19 Or selectedPositionShort = 29 Or selectedPositionShort = 39 Or selectedPositionShort = 49 Then
                     currentTurn.TakeATurn(1)
                 Else
@@ -98,18 +102,13 @@ Public Class mainForm
             End If
         End If
     End Sub
-
     '==========================================================================================
-    'Name: MoveToAnotherStartPosition
+    'Name: MoveToStartPosition
     'Date: 3/30/2019
     'Author: Jason Welch
-    'Purpose: Sets the Users Start Location
-    Public Sub MoveToAnotherStartPosition(selectedPositionShort As Short)
-        If currentPlayer.HasGameStarted Then
-            currentMove = New PlayerMovement(currentPlayer.CurrentStartPositon)
-            currentMove.MovePlayer(currentPlayer.CurrentStartPositon)
-            currentPlayer.CurrentPosition = selectedPositionShort
-        End If
+    'Purpose: Sets the Users Location
+    Private Sub MoveToStartPosition(selectedStartPosition As Short)
+        currentMove.MovePlayer(currentPlayer.CurrentPosition, selectedStartPosition)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition1ToolStripMenuItem_Click
@@ -118,7 +117,7 @@ Public Class mainForm
     'Purpose: Sets Start Position to 1
     Private Sub MoveToStartPosition1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition1ToolStripMenuItem.Click
         currentPlayer.CurrentStartPositon = 10S
-        MoveToAnotherStartPosition(10S)
+        SetPosition(10S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition2ToolStripMenuItem1_Click
@@ -127,7 +126,7 @@ Public Class mainForm
     'Purpose: Sets Start Position to 2
     Private Sub MoveToStartPosition2ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition2ToolStripMenuItem1.Click
         currentPlayer.CurrentStartPositon = 20S
-        MoveToAnotherStartPosition(20S)
+        SetPosition(20S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition3ToolStripMenuItem2_Click
@@ -136,7 +135,7 @@ Public Class mainForm
     'Purpose: Sets Start Position to 3
     Private Sub MoveToStartPosition3ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition3ToolStripMenuItem2.Click
         currentPlayer.CurrentStartPositon = 30S
-        MoveToAnotherStartPosition(30S)
+        SetPosition(30S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition4ToolStripMenuItem3_Click
@@ -145,7 +144,7 @@ Public Class mainForm
     'Purpose: Sets Start Position to 4
     Private Sub MoveToStartPosition4ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition4ToolStripMenuItem3.Click
         currentPlayer.CurrentStartPositon = 40S
-        MoveToAnotherStartPosition(40S)
+        SetPosition(40S)
     End Sub
     '==========================================================================================
     'Name: desertTile6PictureBox_Click

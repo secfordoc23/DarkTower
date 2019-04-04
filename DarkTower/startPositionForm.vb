@@ -15,8 +15,7 @@ Public Class startPositionForm
     'Author: Jason Welch
     'Purpose: Set start Position to IceLand
     Private Sub icelandButton_Click(sender As Object, e As EventArgs) Handles icelandButton.Click
-        mainForm.currentPlayer.InitialStartPosition = 40S
-        mainForm.currentPlayer.CurrentStartPositon = 40S
+        mainForm.SetStartPosition(40S)
         Me.Close()
     End Sub
     '==========================================================================================
@@ -25,8 +24,7 @@ Public Class startPositionForm
     'Author: Jason Welch
     'Purpose: Set start Position to Forest
     Private Sub forestButton_Click(sender As Object, e As EventArgs) Handles forestButton.Click
-        mainForm.currentPlayer.InitialStartPosition = 20S
-        mainForm.currentPlayer.CurrentStartPositon = 20S
+        mainForm.SetStartPosition(20S)
         Me.Close()
     End Sub
     '==========================================================================================
@@ -35,8 +33,7 @@ Public Class startPositionForm
     'Author: Jason Welch
     'Purpose: Set start Position to Plains
     Private Sub plainsButton_Click(sender As Object, e As EventArgs) Handles plainsButton.Click
-        mainForm.currentPlayer.InitialStartPosition = 30S
-        mainForm.currentPlayer.CurrentStartPositon = 30S
+        mainForm.SetStartPosition(30S)
         Me.Close()
     End Sub
     '==========================================================================================
@@ -45,17 +42,8 @@ Public Class startPositionForm
     'Author: Jason Welch
     'Purpose: Set start Position to Desert
     Private Sub desertButton_Click(sender As Object, e As EventArgs) Handles desertButton.Click
-        mainForm.currentPlayer.InitialStartPosition = 10S
-        mainForm.currentPlayer.CurrentStartPositon = 10S
+        mainForm.SetStartPosition(10S)
         Me.Close()
-    End Sub
-    '==========================================================================================
-    'Name: desertButton_Click
-    'Date: 4/6/19
-    'Author: Jason Welch
-    'Purpose: Call the SetStartPosition Method on the Main Form
-    Private Sub startPositionForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        mainForm.SetStartPosition()
     End Sub
 End Class
 '================================== No Code Follows ===========================================

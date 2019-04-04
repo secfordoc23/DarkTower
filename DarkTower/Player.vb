@@ -9,7 +9,7 @@ Option Explicit On
 
 Public Class Player
     Private playersCurrentInventory As Inventory
-    Private hasGameStartedBoolean As Boolean
+    Private hasGameStartedBoolean As Boolean = False
     Private initialStartPositionShort As Short
     Private currentStartPositonShort As Short
     Private currentPositionShort As Short

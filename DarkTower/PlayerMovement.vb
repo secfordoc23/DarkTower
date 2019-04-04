@@ -8,28 +8,22 @@ Option Strict On
 Option Explicit On
 
 Public Class PlayerMovement
-    Private startPositionShort As Short
-    Private selectedPositionShort As Short
-    Private currentPositionShort As Short
-    Private validMovesList As New List(Of Short)
     '==========================================================================================
     'Name: Contructor
     'Date: 3/30/19
     'Author: Jason Welch
     'Purpose: Default Constructor 
-    Public Sub New(startPositionShort As Short)
-        Me.startPositionShort = startPositionShort
+    Public Sub New()
+
     End Sub
     '==========================================================================================
     'Name: ValidateMove
     'Date: 3/30/19
     'Author: Jason Welch
     'Purpose: Validates a players Move
-    Public Function ValidateMove(currentPositionShort As Short, selectedPositionShort As Short) As Boolean
+    Public Function ValidateMove(startPositionShort As Short, currentPositionShort As Short, selectedPositionShort As Short) As Boolean
         Dim isValidBoolean As Boolean = False
-        Me.selectedPositionShort = selectedPositionShort
-        Me.currentPositionShort = currentPositionShort
-        validMovesList.Clear()
+        Dim validMovesList As New List(Of Short)
 
         Select Case currentPositionShort
             Case 10, 20, 30, 40
@@ -69,7 +63,7 @@ Public Class PlayerMovement
                 Return isValidBoolean
         End Select
 
-        isValidBoolean = VerifyMoveInList(validMovesList)
+        isValidBoolean = VerifyMoveInList(validMovesList, selectedPositionShort)
         Return isValidBoolean
     End Function
     '==========================================================================================
@@ -77,7 +71,7 @@ Public Class PlayerMovement
     'Date: 3/30/19
     'Author: Jason Welch
     'Purpose: Verifies that move is in List
-    Private Function VerifyMoveInList(validMoveList As List(Of Short)) As Boolean
+    Private Function VerifyMoveInList(validMoveList As List(Of Short), selectedPositionShort As Short) As Boolean
         If validMoveList.Contains(selectedPositionShort) Then
             Return True
         End If
@@ -89,269 +83,235 @@ Public Class PlayerMovement
     'Date: 3/30/19
     'Author: Jason Welch
     'Purpose: 
-    Public Sub MovePlayer(currentStartPositionShort As Short)
-        Select Case currentStartPositionShort
-            Case 10
-                setPlayerPositionDesert()
-                If Not selectedPositionShort Mod 10 = 0 Then
-                    ResetDesertPictureBox()
-                End If
-            Case 20
-                setPlayerPositionForest()
-                If Not selectedPositionShort Mod 10 = 0 Then
-                    ResetForestPictureBox()
-                End If
-            Case 30
-                setPlayerPositionPlains()
-                If Not selectedPositionShort Mod 10 = 0 Then
-                    ResetPlainsPictureBox()
-                End If
-            Case 40
-                setPlayerPositionIceland()
-                If Not selectedPositionShort Mod 10 = 0 Then
-                    ResetIcelandPictureBox()
-                End If
-        End Select
-    End Sub
-    '==========================================================================================
-    'Name: setPlayerPositionDesert
-    'Date: 3/30/19
-    'Author: Jason Welch
-    'Purpose: Sets Tile to Player Tile 
-    Private Sub setPlayerPositionDesert()
+    Public Sub MovePlayer(currentPositionShort As Short, selectedPositionShort As Short)
         Select Case selectedPositionShort
-            Case 10
+            Case 10 ' Start Postion 1
                 mainForm.startTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 16
-                mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 15
-                mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 17
-                mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 14
-                mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 18
-                mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 11
+                mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
             Case 12
                 mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
             Case 13
                 mainForm.desertTile3PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 11
-                mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 19
-                mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
-        End Select
-    End Sub
-    '==========================================================================================
-    'Name: ResetDesertPictureBox
-    'Date: 3/30/19
-    'Author: Jason Welch
-    'Purpose: Resets Tile to Default Background Image
-    Private Sub ResetDesertPictureBox()
-        Select Case currentPositionShort
-            Case 10
-                mainForm.startTile1PictureBox.BackgroundImage = My.Resources.YellowTile
-            Case 16
-                mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.BrownTile
-            Case 15
-                mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.BrownTile
-            Case 17
-                mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.BrownTile
             Case 14
-                mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 15
+                mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 16
+                mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 17
+                mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.PlayerTile
             Case 18
-                mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.BrownTile
-            Case 12
-                mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.BrownTile
-            Case 13
-                mainForm.desertTile3PictureBox.BackgroundImage = My.Resources.BrownTile
-            Case 11
-                mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.BrownTile
-            Case 19
-                mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.GrayTile
-        End Select
-    End Sub
-    '==========================================================================================
-    'Name: setPlayerPositionForest
-    'Date: 3/30/19
-    'Author: Jason Welch
-    'Purpose: Sets Tile to Player Tile 
-    Private Sub setPlayerPositionForest()
-        Select Case selectedPositionShort
-            Case 20
+                mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 19 ' Castle 1
+                mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 20 ' Start Position 2
                 mainForm.startTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 26
-                mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 25
-                mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 27
-                mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 24
-                mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 28
-                mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 21
+                mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
             Case 22
                 mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
             Case 23
                 mainForm.forestTile3PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 21
-                mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 29
-                mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
-        End Select
-    End Sub
-    '==========================================================================================
-    'Name: ResetForestPictureBox
-    'Date: 3/30/19
-    'Author: Jason Welch
-    'Purpose: Resets Tile to Default Background Image
-    Private Sub ResetForestPictureBox()
-        Select Case currentPositionShort
-            Case 20
-                mainForm.startTile2PictureBox.BackgroundImage = My.Resources.YellowTile
-            Case 26
-                mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.GreenTile
-            Case 25
-                mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.GreenTile
-            Case 27
-                mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.GreenTile
             Case 24
-                mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 25
+                mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 26
+                mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 27
+                mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.PlayerTile
             Case 28
-                mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.GreenTile
-            Case 22
-                mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.GreenTile
-            Case 23
-                mainForm.forestTile3PictureBox.BackgroundImage = My.Resources.GreenTile
-            Case 21
-                mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.GreenTile
-            Case 29
-                mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.GrayTile
-        End Select
-    End Sub
-    '==========================================================================================
-    'Name: setPlayerPositionPlains
-    'Date: 3/30/19
-    'Author: Jason Welch
-    'Purpose: Sets Tile to Player Tile 
-    Private Sub setPlayerPositionPlains()
-        Select Case selectedPositionShort
-            Case 30
+                mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 29 ' Castle 2
+                mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 30 ' Start Position 3
                 mainForm.startTile3PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 36
-                mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 35
-                mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 37
-                mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 34
-                mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 38
-                mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 31
+                mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
             Case 32
                 mainForm.plainTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
             Case 33
                 mainForm.plainTile3PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 31
-                mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 39
+            Case 34
+                mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 35
+                mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 36
+                mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 37
+                mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 38
+                mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 39 ' Castle 3
                 mainForm.castleTile3PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 40 ' Start Position 4
+                mainForm.startTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 41
+                mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 42
+                mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 43
+                mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 44
+                mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 45
+                mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 46
+                mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 47
+                mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 48
+                mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.PlayerTile
+            Case 49 ' Castle 4
+                mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
         End Select
+
+        ' Reset Current Position
+        ResetTile(currentPositionShort)
     End Sub
     '==========================================================================================
-    'Name: ResetPlainsPictureBox
+    'Name: ResetTile
     'Date: 3/30/19
     'Author: Jason Welch
-    'Purpose: Resets Tile to Default Background Image
-    Private Sub ResetPlainsPictureBox()
-        Select Case currentPositionShort
-            Case 30
+    'Purpose: Reset a given tile
+    Private Sub ResetTile(currentStartPositionShort As Short)
+        Select Case currentStartPositionShort
+            Case 10 ' Start Postion 1
+                mainForm.startTile1PictureBox.BackgroundImage = My.Resources.YellowTile
+            Case 11
+                mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.BrownTile
+            Case 12
+                mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.BrownTile
+            Case 13
+                mainForm.desertTile3PictureBox.BackgroundImage = My.Resources.BrownTile
+            Case 14
+                mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.BrownTile
+            Case 15
+                mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.BrownTile
+            Case 16
+                mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.BrownTile
+            Case 17
+                mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.BrownTile
+            Case 18
+                mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.BrownTile
+            Case 19 ' Castle 1
+                mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.GrayTile
+            Case 20 ' Start Position 2
+                mainForm.startTile2PictureBox.BackgroundImage = My.Resources.YellowTile
+            Case 21
+                mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.GreenTile
+            Case 22
+                mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.GreenTile
+            Case 23
+                mainForm.forestTile3PictureBox.BackgroundImage = My.Resources.GreenTile
+            Case 24
+                mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.GreenTile
+            Case 25
+                mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.GreenTile
+            Case 26
+                mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.GreenTile
+            Case 27
+                mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.GreenTile
+            Case 28
+                mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.GreenTile
+            Case 29 ' Castle 2
+                mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.GrayTile
+            Case 30 ' Start Position 3
                 mainForm.startTile3PictureBox.BackgroundImage = My.Resources.YellowTile
-            Case 36
-                mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.LightGreenTile
-            Case 35
-                mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.LightGreenTile
-            Case 37
-                mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.LightGreenTile
-            Case 34
-                mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.LightGreenTile
-            Case 38
-                mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.LightGreenTile
+            Case 31
+                mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.LightGreenTile
             Case 32
                 mainForm.plainTile2PictureBox.BackgroundImage = My.Resources.LightGreenTile
             Case 33
                 mainForm.plainTile3PictureBox.BackgroundImage = My.Resources.LightGreenTile
-            Case 31
-                mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.LightGreenTile
-            Case 39
+            Case 34
+                mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.LightGreenTile
+            Case 35
+                mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.LightGreenTile
+            Case 36
+                mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.LightGreenTile
+            Case 37
+                mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.LightGreenTile
+            Case 38
+                mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.LightGreenTile
+            Case 39 ' Castle 3
                 mainForm.castleTile3PictureBox.BackgroundImage = My.Resources.GrayTile
-        End Select
-    End Sub
-    '==========================================================================================
-    'Name: setPlayerPositionIceland
-    'Date: 3/30/19
-    'Author: Jason Welch
-    'Purpose: Sets Tile to Player Tile 
-    Private Sub setPlayerPositionIceland()
-        Select Case selectedPositionShort
-            Case 10
-                mainForm.startTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 16
-                mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 15
-                mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 17
-                mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 14
-                mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 18
-                mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 12
-                mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 13
-                mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 11
-                mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
-            Case 19
-                mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.PlayerTile
-        End Select
-    End Sub
-    '==========================================================================================
-    'Name: ResetIcelandPictureBox
-    'Date: 3/30/19
-    'Author: Jason Welch
-    'Purpose: Resets Tile to Default Background Image
-    Private Sub ResetIcelandPictureBox()
-        Select Case currentPositionShort
-            Case 10
+            Case 40 ' Start Position 4
                 mainForm.startTile4PictureBox.BackgroundImage = My.Resources.YellowTile
-            Case 16
-                mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.LightBlueTile
-            Case 15
-                mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.LightBlueTile
-            Case 17
-                mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.LightBlueTile
-            Case 14
-                mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.LightBlueTile
-            Case 18
-                mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.LightBlueTile
-            Case 12
-                mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.LightBlueTile
-            Case 13
-                mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.LightBlueTile
-            Case 11
+            Case 41
                 mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.LightBlueTile
-            Case 19
+            Case 42
+                mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.LightBlueTile
+            Case 43
+                mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.LightBlueTile
+            Case 44
+                mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.LightBlueTile
+            Case 45
+                mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.LightBlueTile
+            Case 46
+                mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.LightBlueTile
+            Case 47
+                mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.LightBlueTile
+            Case 48
+                mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.LightBlueTile
+            Case 49 ' Castle 4
                 mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.GrayTile
         End Select
     End Sub
-
     '==========================================================================================
-    'Name: StartPosition
+    'Name: ResetMap
+    'Date: 4/4/19
+    'Author: Jason Welch
+    'Purpose: Reset the all the tiles on the Map
+    Public Sub ResetMap()
+        mainForm.startTile1PictureBox.BackgroundImage = My.Resources.YellowTile
+        mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.BrownTile
+        mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.BrownTile
+        mainForm.desertTile3PictureBox.BackgroundImage = My.Resources.BrownTile
+        mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.BrownTile
+        mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.BrownTile
+        mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.BrownTile
+        mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.BrownTile
+        mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.BrownTile
+        mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.GrayTile
+        mainForm.startTile2PictureBox.BackgroundImage = My.Resources.YellowTile
+        mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.GreenTile
+        mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.GreenTile
+        mainForm.forestTile3PictureBox.BackgroundImage = My.Resources.GreenTile
+        mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.GreenTile
+        mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.GreenTile
+        mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.GreenTile
+        mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.GreenTile
+        mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.GreenTile
+        mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.GrayTile
+        mainForm.startTile3PictureBox.BackgroundImage = My.Resources.YellowTile
+        mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.LightGreenTile
+        mainForm.plainTile2PictureBox.BackgroundImage = My.Resources.LightGreenTile
+        mainForm.plainTile3PictureBox.BackgroundImage = My.Resources.LightGreenTile
+        mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.LightGreenTile
+        mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.LightGreenTile
+        mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.LightGreenTile
+        mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.LightGreenTile
+        mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.LightGreenTile
+        mainForm.castleTile3PictureBox.BackgroundImage = My.Resources.GrayTile
+        mainForm.startTile4PictureBox.BackgroundImage = My.Resources.YellowTile
+        mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.LightBlueTile
+        mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.LightBlueTile
+        mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.LightBlueTile
+        mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.LightBlueTile
+        mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.LightBlueTile
+        mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.LightBlueTile
+        mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.LightBlueTile
+        mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.LightBlueTile
+        mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.GrayTile
+    End Sub
+    '==========================================================================================
+    'Name: SetInitialStartPosition
     'Date: 4/1/19
     'Author: Jason Welch
     'Purpose: Sets Players Start position tile
-    Public Sub StartPosition(startPositionShort As Short)
+    Public Sub SetInitialStartPosition(startPositionShort As Short)
         Select Case startPositionShort
             Case 10
                 mainForm.startTile1PictureBox.BackgroundImage = My.Resources.PlayerTile
