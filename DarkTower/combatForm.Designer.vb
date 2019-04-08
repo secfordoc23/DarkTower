@@ -22,43 +22,43 @@ Partial Class combatForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.combatLogListBox = New System.Windows.Forms.ListBox()
+        Me.okButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'combatLogListBox
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 18
-        Me.ListBox1.Location = New System.Drawing.Point(12, 12)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(422, 346)
-        Me.ListBox1.TabIndex = 0
+        Me.combatLogListBox.FormattingEnabled = True
+        Me.combatLogListBox.ItemHeight = 18
+        Me.combatLogListBox.Location = New System.Drawing.Point(12, 12)
+        Me.combatLogListBox.Name = "combatLogListBox"
+        Me.combatLogListBox.Size = New System.Drawing.Size(422, 346)
+        Me.combatLogListBox.TabIndex = 0
         '
-        'Button1
+        'okButton
         '
-        Me.Button1.Location = New System.Drawing.Point(152, 364)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 42)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.okButton.Location = New System.Drawing.Point(174, 364)
+        Me.okButton.Name = "okButton"
+        Me.okButton.Size = New System.Drawing.Size(117, 42)
+        Me.okButton.TabIndex = 1
+        Me.okButton.Text = "OK"
+        Me.okButton.UseVisualStyleBackColor = True
         '
         'combatForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(454, 418)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.okButton)
+        Me.Controls.Add(Me.combatLogListBox)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "combatForm"
-        Me.Text = "combatForm"
+        Me.Text = "Battle with Brigands!"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents combatLogListBox As ListBox
+    Friend WithEvents okButton As Button
 End Class

@@ -104,6 +104,10 @@ Public Class Player
         defeatedCastlesList.Add(castleShort)
     End Sub
 
+    Public Function GetDefeatedCastleList() As List(Of Short)
+        Return defeatedCastlesList
+    End Function
+
     '==========================================================================================
     'Name: HasCastleBeenDefeated
     'Date: 4/6/19
