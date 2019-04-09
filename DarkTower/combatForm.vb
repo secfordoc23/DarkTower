@@ -16,5 +16,9 @@ Public Class combatForm
         combatLogListBox.Items.Clear()
         warriorCountShort = combat.Attack(warriorCountShort, maxBragandCountShort)
     End Sub
+
+    Private Sub okButton_Click(sender As Object, e As EventArgs) Handles okButton.Click
+        Close()
+    End Sub
 End Class
 '================================== No Code Follows ===========================================

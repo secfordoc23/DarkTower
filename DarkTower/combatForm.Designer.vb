@@ -24,11 +24,11 @@ Partial Class combatForm
     Private Sub InitializeComponent()
         Me.combatLogListBox = New System.Windows.Forms.ListBox()
         Me.okButton = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
+        Me.SuspendLayout
         '
         'combatLogListBox
         '
-        Me.combatLogListBox.FormattingEnabled = True
+        Me.combatLogListBox.FormattingEnabled = true
         Me.combatLogListBox.ItemHeight = 18
         Me.combatLogListBox.Location = New System.Drawing.Point(12, 12)
         Me.combatLogListBox.Name = "combatLogListBox"
@@ -42,22 +42,22 @@ Partial Class combatForm
         Me.okButton.Size = New System.Drawing.Size(117, 42)
         Me.okButton.TabIndex = 1
         Me.okButton.Text = "OK"
-        Me.okButton.UseVisualStyleBackColor = True
+        Me.okButton.UseVisualStyleBackColor = true
         '
         'combatForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9!, 18!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(454, 418)
         Me.Controls.Add(Me.okButton)
         Me.Controls.Add(Me.combatLogListBox)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "combatForm"
         Me.Text = "Battle with Brigands!"
-        Me.ResumeLayout(False)
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
     Friend WithEvents combatLogListBox As ListBox
     Friend WithEvents okButton As Button

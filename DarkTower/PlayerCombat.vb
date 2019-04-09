@@ -57,20 +57,22 @@ Public Class PlayerCombat
     'Purpose:
     Private Function Combat(brigandCountShort As Short, warriorCountShort As Short) As Short
         Dim battleResultsString As String
-        While brigandCountShort > 0 And mainForm.currentPlayer.Inventory.WarriorCount <> 0S
+        While brigandCountShort > 0 And warriorCountShort > 0S
 
             If WonFight() Then
                 brigandCountShort = CShort(brigandCountShort / 2)
                 battleResultsString = "Won"
             Else
-                mainForm.currentPlayer.Inventory.WarriorCount -= 1S
+                warriorCountShort -= 1S
                 battleResultsString = "Lost"
             End If
-            MsgBox("Warriors: " & mainForm.currentPlayer.Inventory.WarriorCount & " Brigands: " & brigandCountShort, vbOKOnly, "Combat " & battleResultsString)
+            combatForm.combatLogListBox.Items.Add(battleResultsString & " - Warriors: " & warriorCountShort & " Brigands: " & brigandCountShort)
         End While
 
         If warriorCountShort = 0 Then
-            Return 0
+            combatForm.combatLogListBox.Items.Add("Battle Lost!")
+        Else
+            combatForm.combatLogListBox.Items.Add("Battle Won!")
         End If
 
         Return warriorCountShort

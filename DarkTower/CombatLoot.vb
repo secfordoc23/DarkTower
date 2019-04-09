@@ -17,7 +17,11 @@ Public Class CombatLoot
     Public Sub New()
         rand = New Random()
     End Sub
-
+    '==========================================================================================
+    'Name: CastleLoot
+    'Date: 4/7/19
+    'Author: Jason Welch
+    'Purpose: 
     Public Function CastleLoot(defeatedCastleList As List(Of Short)) As Inventory
         Dim combatInventory As New Inventory
 
@@ -41,11 +45,19 @@ Public Class CombatLoot
 
         Return combatInventory
     End Function
-
+    '==========================================================================================
+    'Name: RandomAttackLoot
+    'Date: 4/7/19
+    'Author: Jason Welch
+    'Purpose: 
     Public Function RandomAttackLoot() As Short
         Return GenerateGold(25)
     End Function
-
+    '==========================================================================================
+    'Name: GenerateGold
+    'Date: 4/7/19
+    'Author: Jason Welch
+    'Purpose: 
     Private Function GenerateGold(maxGold As Short) As Short
         Return CShort(rand.Next(1, maxGold))
     End Function

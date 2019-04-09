@@ -11,6 +11,7 @@ Imports System.ComponentModel
 Public Class mainForm
     Public currentPlayer As Player
     Private currentMove As PlayerMovement
+    Private loot As CombatLoot
 
     Private Const MAX_BRIGANDS_RANDOM_ATTACK As Short = 25S
     Private Const MAX_BRIGANDS_CASTLE As Short = 50S
@@ -94,18 +95,62 @@ Public Class mainForm
                 currentMove.MovePlayer(currentPlayer.CurrentPosition, selectedPositionShort)
                 If selectedPositionShort = 19 Or selectedPositionShort = 29 Or selectedPositionShort = 39 Or selectedPositionShort = 49 Then
                     If Not currentPlayer.HasCastleBeenDefeated(selectedPositionShort) Then
-
+                        TakeATurn(1)
+                        If currentPlayer.Inventory.WarriorCount <> 0 Then
+                            loot = New CombatLoot
+                            With loot.CastleLoot(currentPlayer.GetDefeatedCastleList())
+                                currentPlayer.Inventory.GoldCount = .GoldCount
+                                currentPlayer.Inventory.HaveBronzeKey = .HaveBronzeKey
+                                currentPlayer.Inventory.HaveSilverKey = .HaveSilverKey
+                                currentPlayer.Inventory.HaveGoldKey = .HaveGoldKey
+                            End With
+                        End If
                     Else
                         MsgBox("You have already defeated this Castle!", vbOKOnly, "Castle Defeated!")
                     End If
                 Else
-
+                    TakeATurn(0)
+                    If currentPlayer.Inventory.WarriorCount <> 0 Then
+                        loot = New CombatLoot
+                        currentPlayer.Inventory.GoldCount = loot.RandomAttackLoot()
+                    End If
                 End If
                 currentPlayer.CurrentPosition = selectedPositionShort
                 currentPlayer.Inventory.FoodCount -= 1S
                 currentPlayer.UpdateInventoryDisplay()
             End If
         End If
+    End Sub
+    '==========================================================================================
+    'Name: TakeATurn
+    'Date: 2/19/19
+    'Author: Jason Welch
+    'Purpose: Generate a Random Event 
+    Private Sub TakeATurn(moveType As Short)
+
+        If currentPlayer.Inventory.GoldCount = 0 And currentPlayer.Inventory.WarriorCount = 0 Then
+            moveType = -1
+        ElseIf currentPlayer.Inventory.FoodCount = 0 Then
+            StarvationEvent()
+        End If
+
+        Select Case moveType
+            Case 0 ' Territory
+                GenerateRandomEvent()
+            Case 1 ' Castle
+                combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
+                combatForm.maxBragandCountShort = MAX_BRIGANDS_CASTLE
+                combatForm.Show()
+                currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
+            Case 2 ' Dark Tower
+                combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
+                combatForm.maxBragandCountShort = MAX_BRIGANDS_DARK_TOWER
+                combatForm.Show()
+                currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
+            Case Else
+                MsgBox("You have lost the game. Please start a new game or load a previous game.", vbOKOnly, "You Have Lost the Game!")
+        End Select
+
     End Sub
     '==========================================================================================
     'Name: RandomEvent
@@ -124,7 +169,10 @@ Public Class mainForm
             Case 40 To 60
                 LostEvent()
             Case 80 To 100
-                AttackEvent(Player.Inventory.WarriorCount)
+                combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
+                combatForm.maxBragandCountShort = MAX_BRIGANDS_RANDOM_ATTACK
+                combatForm.Show()
+                currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
             Case Else
                 ' Success
         End Select
@@ -136,12 +184,12 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: 
     Private Sub PlagueEvent()
-        If mainForm.currentPlayer.Inventory.HaveHealer Then
+        If currentPlayer.Inventory.HaveHealer Then
             MsgBox("You Healer has stopped the Plague.  You gain 2 Warriors", vbOKOnly, "Plague Strikes!")
-            mainForm.currentPlayer.Inventory.WarriorCount += 2S
+            currentPlayer.Inventory.WarriorCount += 2S
         Else
             MsgBox("You have been hit by the Plague! You lose 2 Warriors", vbOKOnly, "Plague Strikes!")
-            mainForm.currentPlayer.Inventory.WarriorCount -= 2S
+            currentPlayer.Inventory.WarriorCount -= 2S
         End If
     End Sub
 
@@ -151,12 +199,12 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: 
     Private Sub LostEvent()
-        If mainForm.currentPlayer.Inventory.HaveScout Then
+        If currentPlayer.Inventory.HaveScout Then
             MsgBox("Your Scout has found a faster path to your destination.  You gain 2 Food.", vbOKOnly, "Lost in Uncharted Territories!")
-            mainForm.currentPlayer.Inventory.FoodCount += 2S
+            currentPlayer.Inventory.FoodCount += 2S
         Else
             MsgBox("You got lost along your journey! You lose 2 Food.", vbOKOnly, "Lost in Uncharted Territories!")
-            mainForm.currentPlayer.Inventory.FoodCount -= 2S
+            currentPlayer.Inventory.FoodCount -= 2S
         End If
     End Sub
 
@@ -167,7 +215,7 @@ Public Class mainForm
     'Purpose: Substracts 1 warrior from user inventory
     Private Sub StarvationEvent()
         MsgBox("Your Warriors are Starving!", vbOKOnly, "Starvation!")
-        mainForm.currentPlayer.Inventory.WarriorCount -= 1S
+        currentPlayer.Inventory.WarriorCount -= 1S
     End Sub
 
     '==========================================================================================
@@ -292,7 +340,6 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Move to tile position
     Private Sub darkTowerTilePictureBox_Click(sender As Object, e As EventArgs) Handles darkTowerTilePictureBox.Click
-        Dim currentTurn As New PlayerTurn(currentPlayer)
 
         'If currentMove.ValidateMove(currentPositionShort, 0) Then
         '    If currentInventory.HaveBronzeKey And currentInventory.HaveSilverKey And currentInventory.HaveGoldKey Then

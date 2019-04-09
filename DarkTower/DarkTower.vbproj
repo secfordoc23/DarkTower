@@ -111,7 +111,6 @@
     <Compile Include="Player.vb" />
     <Compile Include="PlayerCombat.vb" />
     <Compile Include="PlayerMovement.vb" />
-    <Compile Include="PlayerTurn.vb" />
     <Compile Include="startPositionForm.Designer.vb">
       <DependentUpon>startPositionForm.vb</DependentUpon>
     </Compile>
