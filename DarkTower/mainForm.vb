@@ -99,7 +99,7 @@ Public Class mainForm
                         If currentPlayer.Inventory.WarriorCount <> 0 Then
                             loot = New CombatLoot
                             With loot.CastleLoot(currentPlayer.GetDefeatedCastleList())
-                                currentPlayer.Inventory.GoldCount = .GoldCount
+                                currentPlayer.Inventory.GoldCount += .GoldCount
                                 currentPlayer.Inventory.HaveBronzeKey = .HaveBronzeKey
                                 currentPlayer.Inventory.HaveSilverKey = .HaveSilverKey
                                 currentPlayer.Inventory.HaveGoldKey = .HaveGoldKey
