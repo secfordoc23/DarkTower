@@ -225,6 +225,8 @@ Public Class mainForm
     'Purpose: Sets the Users Location
     Private Sub MoveToStartPosition(selectedStartPosition As Short)
         currentMove.MovePlayer(currentPlayer.CurrentPosition, selectedStartPosition)
+        currentPlayer.CurrentPosition = selectedStartPosition
+        currentPlayer.CurrentStartPositon = selectedStartPosition
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition1ToolStripMenuItem_Click
@@ -232,8 +234,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets Start Position to 1
     Private Sub MoveToStartPosition1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition1ToolStripMenuItem.Click
-        currentPlayer.CurrentStartPositon = 10S
-        SetPosition(10S)
+        MoveToStartPosition(10S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition2ToolStripMenuItem1_Click
@@ -241,8 +242,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets Start Position to 2
     Private Sub MoveToStartPosition2ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition2ToolStripMenuItem1.Click
-        currentPlayer.CurrentStartPositon = 20S
-        SetPosition(20S)
+        MoveToStartPosition(20S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition3ToolStripMenuItem2_Click
@@ -250,8 +250,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets Start Position to 3
     Private Sub MoveToStartPosition3ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition3ToolStripMenuItem2.Click
-        currentPlayer.CurrentStartPositon = 30S
-        SetPosition(30S)
+        MoveToStartPosition(30S)
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition4ToolStripMenuItem3_Click
@@ -259,8 +258,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets Start Position to 4
     Private Sub MoveToStartPosition4ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition4ToolStripMenuItem3.Click
-        currentPlayer.CurrentStartPositon = 40S
-        SetPosition(40S)
+        MoveToStartPosition(40S)
     End Sub
     '==========================================================================================
     'Name: desertTile6PictureBox_Click
