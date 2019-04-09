@@ -9,81 +9,28 @@ Option Explicit On
 
 Public Class PlayerCombat
 
-    Private rand As New Random()
+    Private rand As Random
     '==========================================================================================
     'Name: Contructor
     'Date: 4/6/19
     'Author: Jason Welch
     'Purpose: Default Constructor 
     Public Sub New()
-
+        rand = New Random()
     End Sub
     '==========================================================================================
     'Name: RandomAttack
     'Date: 4/6/19
     'Author: Jason Welch
     'Purpose:
-    Public Function RandomAttack(warriorCountShort as Short) as Tuple(Of Short,Short)
-        Dim brigandCountShort As Short = CShort(rand.Next(1, 25))
-        Dim goldCountShort As Short
+    Public Function Attack(warriorCountShort As Short, maxBrigandCount As Short) As Short
+        Dim brigandCountShort As Short = GetBrigandCount(maxBrigandCount)
 
-        MsgBox("You are being attacked by " & brigandCountShort & " Brigands!", vbOKOnly, "Combat with Brigands!")
-        warriorCountShort = Combat(brigandCountShort, warriorCountShort)
-        If mainForm.currentPlayer.Inventory.WarriorCount <> 0 Then
-            goldCountShort = CShort(rand.Next(1, 25))
-        Else
-            MsgBox("Your warriors fought valiently, but the enemy was to strong!", vbOKOnly, "You Lost the Combat!")
-        End If
-        Return Tuple.Create(warriorCountShort, goldCountShort)
-    End Function
-    '==========================================================================================
-    'Name: CastleBattle
-    'Date: 4/6/19
-    'Author: Jason Welch
-    'Purpose:
-    Public Function CastleBattle(warriorCountShort As Short, defeatedCastleList As List(Of Short)) As Inventory
-        Dim brigandCountShort As Short = CShort(rand.Next(1, 50))
-        Dim combatInventory As new Inventory
-        combatInventory.WarriorCount = Combat(brigandCountShort, warriorCountShort)
-        If warriorCountShort <> 0 Then
-            combatInventory.GoldCount = CShort(rand.Next(1, 50))
-            If defeatedCastleList.Count = 0 Then
-                combatInventory.HaveBronzeKey = True
-                combatInventory.HaveSilverKey = False
-                combatInventory.HaveGoldKey = False
-            ElseIf defeatedCastleList.Count = 1 Then
-                combatInventory.HaveBronzeKey = True
-                combatInventory.HaveSilverKey = True
-                combatInventory.HaveGoldKey = False
-            ElseIf defeatedCastleList.Count = 2 Then
-                combatInventory.HaveBronzeKey = True
-                combatInventory.HaveSilverKey = True
-                combatInventory.HaveGoldKey = True
-            Else
-                ' User has all of the keys so do nothing
-            End If
-        Else
-            MsgBox("Your warriors fought valiently, but the enemy was to strong!", vbOKOnly, "You Lost the Combat!")
-        End If
+        combatForm.combatLogListBox.Items.Add("You are being attacked by " & brigandCountShort & " Brigands!")
 
-        Return combatInventory
+        Return Combat(brigandCountShort, warriorCountShort)
     End Function
-    '==========================================================================================
-    'Name: DarkTowerBattle
-    'Date: 4/6/19
-    'Author: Jason Welch
-    'Purpose:
-    Public Function DarkTowerBattle(warriorCountShort As Short) as Short
-        Dim brigandCountShort As Short = CShort(rand.Next(1, 99))
 
-        warriorCountShort = Combat(brigandCountShort, warriorCountShort)
-        If warriorCountShort <> 0 Then
-            MsgBox("You have extinguished evil in all the Land. Thank you for playing Dark Tower.", vbOKOnly, "You Have Defeated the Dark Tower!")
-        Else
-            MsgBox("Your warriors fought valiently, but the enemy was to strong!", vbOKOnly, "You Lost the Combat!")
-        End If
-        Return warriorCountShort
-    End Function
     '==========================================================================================
     'Name: WonFight
     'Date: 4/6/19
@@ -96,11 +43,19 @@ Public Class PlayerCombat
         Return False
     End Function
     '==========================================================================================
+    'Name: GetBrigandCount
+    'Date: 4/6/19
+    'Author: Jason Welch
+    'Purpose:
+    Private Function GetBrigandCount(maxBrigandsShort As Short) As Short
+        Return CShort(rand.Next(1, maxBrigandsShort))
+    End Function
+    '==========================================================================================
     'Name: Combat
     'Date: 4/6/19
     'Author: Jason Welch
     'Purpose:
-    Private Function Combat(brigandCountShort As Short,warriorCountShort As Short) As Short
+    Private Function Combat(brigandCountShort As Short, warriorCountShort As Short) As Short
         Dim battleResultsString As String
         While brigandCountShort > 0 And mainForm.currentPlayer.Inventory.WarriorCount <> 0S
 
@@ -114,10 +69,10 @@ Public Class PlayerCombat
             MsgBox("Warriors: " & mainForm.currentPlayer.Inventory.WarriorCount & " Brigands: " & brigandCountShort, vbOKOnly, "Combat " & battleResultsString)
         End While
 
-        If warriorCountShort = 0
+        If warriorCountShort = 0 Then
             Return 0
         End If
-    
+
         Return warriorCountShort
     End Function
 End Class

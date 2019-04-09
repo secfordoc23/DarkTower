@@ -265,6 +265,7 @@ Public Class PlayerMovement
     'Author: Jason Welch
     'Purpose: Reset the all the tiles on the Map
     Public Sub ResetMap()
+        ' Location 1
         mainForm.startTile1PictureBox.BackgroundImage = My.Resources.YellowTile
         mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.BrownTile
         mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.BrownTile
@@ -275,6 +276,7 @@ Public Class PlayerMovement
         mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.BrownTile
         mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.BrownTile
         mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.GrayTile
+        ' Location 2
         mainForm.startTile2PictureBox.BackgroundImage = My.Resources.YellowTile
         mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.GreenTile
         mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.GreenTile
@@ -285,6 +287,7 @@ Public Class PlayerMovement
         mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.GreenTile
         mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.GreenTile
         mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.GrayTile
+        ' Location 3
         mainForm.startTile3PictureBox.BackgroundImage = My.Resources.YellowTile
         mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.LightGreenTile
         mainForm.plainTile2PictureBox.BackgroundImage = My.Resources.LightGreenTile
@@ -295,6 +298,7 @@ Public Class PlayerMovement
         mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.LightGreenTile
         mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.LightGreenTile
         mainForm.castleTile3PictureBox.BackgroundImage = My.Resources.GrayTile
+        ' Location 4
         mainForm.startTile4PictureBox.BackgroundImage = My.Resources.YellowTile
         mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.LightBlueTile
         mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.LightBlueTile

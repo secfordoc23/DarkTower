@@ -9,22 +9,27 @@ Option Explicit On
 
 Public Class PlayerTurn
     Private combat As PlayerCombat
-    Private turnInventory As Inventory
+    Private player As Player
+    Private Const MAX_BRIGANDS_RANDOM_ATTACK As Short = 25S
+    Private Const MAX_BRIGANDS_CASTLE As Short = 50S
+    Private Const MAX_BRIGANDS_DARK_TOWER As Short = 99S
+
     '==========================================================================================
     'Name: Contructor
     'Date: 2/19/19
     'Author: Jason Welch
     'Purpose: Default Constructor 
-    Public Sub New(turnInventory As Inventory)
-        Me.turnInventory = turnInventory
+    Public Sub New(currentPlayer As Player)
         combat = New PlayerCombat()
+        player = currentPlayer
     End Sub
     '==========================================================================================
     'Name: TakeATurn
     'Date: 2/19/19
     'Author: Jason Welch
     'Purpose: Generate a Random Event 
-    Public Sub TakeATurn(moveType As Short)
+    Public Function TakeATurn(moveType As Short) As Short
+        Dim warriorCountShort As Short = 0S
         If mainForm.currentPlayer.Inventory.GoldCount = 0 And mainForm.currentPlayer.Inventory.WarriorCount = 0 Then
             moveType = -1
         ElseIf mainForm.currentPlayer.Inventory.FoodCount = 0 Then
@@ -34,17 +39,19 @@ Public Class PlayerTurn
         Select Case moveType
             Case 0 ' Territory
                 GenerateRandomEvent()
-                mainForm.currentPlayer.Inventory.FoodCount -= 1S
             Case 1 ' Castle
-                CastleEvent()
-                mainForm.currentPlayer.Inventory.FoodCount -= 1S
+                combatForm.warriorCountShort = player.Inventory.WarriorCount
+                combatForm.maxBragandCountShort = MAX_BRIGANDS_RANDOM_ATTACK
+                combatForm.Show()
+                warriorCountShort = combatForm.warriorCountShort
             Case 2 ' Dark Tower
-                DarkTowerEvent()
-                mainForm.currentPlayer.Inventory.FoodCount -= 1S
+                combat.Attack(player.Inventory.WarriorCount, 99)
             Case Else
                 MsgBox("You have lost the game. Please start a new game or load a previous game.", vbOKOnly, "You Have Lost the Game!")
         End Select
-    End Sub
+
+        Return warriorCountShort
+    End Function
     '==========================================================================================
     'Name: RandomEvent
     'Date: 2/19/19
@@ -62,27 +69,12 @@ Public Class PlayerTurn
             Case 40 To 60
                 LostEvent()
             Case 80 To 100
-                AttackEvent()
+                AttackEvent(player.Inventory.WarriorCount)
             Case Else
                 ' Success
         End Select
     End Sub
-    '==========================================================================================
-    'Name: CastleEvent
-    'Date: 4/6/19
-    'Author: Jason Welch
-    'Purpose:  
-    Private Sub CastleEvent()
-        combat.CastleBattle()
-    End Sub
-    '==========================================================================================
-    'Name: DarkTowerEvent
-    'Date: 4/6/19
-    'Author: Jason Welch
-    'Purpose:  
-    Private Sub DarkTowerEvent()
-        combat.DarkTowerBattle()
-    End Sub
+
     '==========================================================================================
     'Name: PlagueEvent
     'Date: 4/6/19
@@ -112,14 +104,7 @@ Public Class PlayerTurn
             mainForm.currentPlayer.Inventory.FoodCount -= 2S
         End If
     End Sub
-    '==========================================================================================
-    'Name: AttackEvent
-    'Date: 4/6/19
-    'Author: Jason Welch
-    'Purpose: 
-    Private Sub AttackEvent()
-        combat.RandomAttack()
-    End Sub
+
     '==========================================================================================
     'Name: StarvationEvent
     'Date: 4/6/19
