@@ -9,6 +9,8 @@ Option Explicit On
 
 Public Class CombatLoot
     Private rand As Random
+    Private const MAX_RANDOM_ATTACK_GOLD As Short = 25S
+    Private const MAX_CASTLE_GOLD As Short = 50S
     '==========================================================================================
     'Name: Contructor
     'Date: 4/7/19
@@ -25,7 +27,7 @@ Public Class CombatLoot
     Public Function CastleLoot(defeatedCastleList As List(Of Short)) As Inventory
         Dim combatInventory As New Inventory
 
-        combatInventory.GoldCount = GenerateGold(50)
+        combatInventory.GoldCount = GenerateGold(MAX_CASTLE_GOLD)
 
         If defeatedCastleList.Count = 0 Then
             combatInventory.HaveBronzeKey = True
@@ -51,7 +53,7 @@ Public Class CombatLoot
     'Author: Jason Welch
     'Purpose: 
     Public Function RandomAttackLoot() As Short
-        Return GenerateGold(25)
+        Return GenerateGold(MAX_RANDOM_ATTACK_GOLD)
     End Function
     '==========================================================================================
     'Name: GenerateGold
