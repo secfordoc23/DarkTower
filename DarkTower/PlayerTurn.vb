@@ -9,13 +9,14 @@ Option Explicit On
 
 Public Class PlayerTurn
     Private combat As PlayerCombat
-
+    Private turnInventory As Inventory
     '==========================================================================================
     'Name: Contructor
     'Date: 2/19/19
     'Author: Jason Welch
     'Purpose: Default Constructor 
-    Public Sub New()
+    Public Sub New(turnInventory As Inventory)
+        Me.turnInventory = turnInventory
         combat = New PlayerCombat()
     End Sub
     '==========================================================================================

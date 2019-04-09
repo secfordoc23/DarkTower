@@ -87,7 +87,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets the Users Location
     Public Sub SetPosition(selectedPositionShort As Short)
-        Dim currentTurn As New PlayerTurn()
+        currentTurn = New PlayerTurn()
 
         If currentPlayer.HasGameStarted Then
             If currentMove.ValidateMove(currentPlayer.CurrentStartPositon, currentPlayer.CurrentPosition, selectedPositionShort) Then
