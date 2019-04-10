@@ -11,14 +11,14 @@ Public Class combatForm
     Public maxBragandCountShort As Short = 0
     Public warriorCountShort As Short = 0
 
-    Private Sub combatForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub okButton_Click(sender As Object, e As EventArgs) Handles okButton.Click
+        Close()
+    End Sub
+
+    Private Sub combatForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dim combat As New PlayerCombat
         combatLogListBox.Items.Clear()
         warriorCountShort = combat.Attack(warriorCountShort, maxBragandCountShort)
-    End Sub
-
-    Private Sub okButton_Click(sender As Object, e As EventArgs) Handles okButton.Click
-        Close()
     End Sub
 End Class
 '================================== No Code Follows ===========================================

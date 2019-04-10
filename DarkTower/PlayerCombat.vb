@@ -67,6 +67,7 @@ Public Class PlayerCombat
                 battleResultsString = "Lost"
             End If
             combatForm.combatLogListBox.Items.Add(battleResultsString & " - Warriors: " & warriorCountShort & " Brigands: " & brigandCountShort)
+            Threading.Thread.Sleep(1000)
         End While
 
         If warriorCountShort = 0 Then

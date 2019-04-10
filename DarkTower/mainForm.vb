@@ -140,12 +140,12 @@ Public Class mainForm
             Case 1 ' Castle
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_CASTLE
-                combatForm.Show()
+                combatForm.ShowDialog()
                 currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
             Case 2 ' Dark Tower
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_DARK_TOWER
-                combatForm.Show()
+                combatForm.ShowDialog()
                 currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
             Case Else
                 MsgBox("You have lost the game. Please start a new game or load a previous game.", vbOKOnly, "You Have Lost the Game!")
@@ -171,7 +171,7 @@ Public Class mainForm
             Case 80 To 100
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_RANDOM_ATTACK
-                combatForm.Show()
+                combatForm.ShowDialog()
                 currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
                 If currentPlayer.Inventory.WarriorCount <> 0 Then
                     loot = New CombatLoot
