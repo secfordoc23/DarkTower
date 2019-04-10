@@ -68,7 +68,10 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Shows the Bazaar Form
     Private Sub BazarrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BazarrToolStripMenuItem.Click
+        bazaarForm.currentInventory = currentPlayer.Inventory
         bazaarForm.Show()
+        currentPlayer.Inventory = bazaarForm.currentInventory
+        currentPlayer.UpdateInventoryDisplay
     End Sub
     '==========================================================================================
     'Name: SetStartPosition
