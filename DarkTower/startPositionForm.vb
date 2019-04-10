@@ -16,6 +16,7 @@ Public Class startPositionForm
     'Purpose: Set start Position to IceLand
     Private Sub icelandButton_Click(sender As Object, e As EventArgs) Handles icelandButton.Click
         mainForm.SetStartPosition(40S)
+        mainForm.MoveToStartPosition4ToolStripMenuItem3.Enabled = False
         Me.Close()
     End Sub
     '==========================================================================================
@@ -25,6 +26,7 @@ Public Class startPositionForm
     'Purpose: Set start Position to Forest
     Private Sub forestButton_Click(sender As Object, e As EventArgs) Handles forestButton.Click
         mainForm.SetStartPosition(20S)
+        mainForm.MoveToStartPosition2ToolStripMenuItem1.Enabled = False
         Me.Close()
     End Sub
     '==========================================================================================
@@ -34,6 +36,7 @@ Public Class startPositionForm
     'Purpose: Set start Position to Plains
     Private Sub plainsButton_Click(sender As Object, e As EventArgs) Handles plainsButton.Click
         mainForm.SetStartPosition(30S)
+        mainForm.MoveToStartPosition3ToolStripMenuItem2.Enabled = False
         Me.Close()
     End Sub
     '==========================================================================================
@@ -43,7 +46,19 @@ Public Class startPositionForm
     'Purpose: Set start Position to Desert
     Private Sub desertButton_Click(sender As Object, e As EventArgs) Handles desertButton.Click
         mainForm.SetStartPosition(10S)
+        mainForm.MoveToStartPosition1ToolStripMenuItem.Enabled = False
         Me.Close()
+    End Sub
+    '==========================================================================================
+    'Name: startPositionForm_Load
+    'Date: 4/10/19
+    'Author: Jason Welch
+    'Purpose:
+    Private Sub startPositionForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        mainForm.MoveToStartPosition1ToolStripMenuItem.Enabled = True
+        mainForm.MoveToStartPosition2ToolStripMenuItem1.Enabled = True
+        mainForm.MoveToStartPosition3ToolStripMenuItem2.Enabled = True
+        mainForm.MoveToStartPosition4ToolStripMenuItem3.Enabled = True
     End Sub
 End Class
 '================================== No Code Follows ===========================================

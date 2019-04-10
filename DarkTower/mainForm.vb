@@ -41,7 +41,7 @@ Public Class mainForm
         currentPlayer.UpdateInventoryDisplay()
         currentPlayer.HasGameStarted = True
 
-        startPositionForm.Show()
+        startPositionForm.ShowDialog()
     End Sub
     '==========================================================================================
     'Name: mainForm_Closing
@@ -69,7 +69,7 @@ Public Class mainForm
     'Purpose: Shows the Bazaar Form
     Private Sub BazarrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BazarrToolStripMenuItem.Click
         bazaarForm.currentInventory = currentPlayer.Inventory
-        bazaarForm.Show()
+        bazaarForm.ShowDialog()
         currentPlayer.Inventory = bazaarForm.currentInventory
         currentPlayer.UpdateInventoryDisplay
     End Sub
@@ -239,6 +239,10 @@ Public Class mainForm
     'Purpose: Sets Start Position to 1
     Private Sub MoveToStartPosition1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition1ToolStripMenuItem.Click
         MoveToStartPosition(10S)
+        MoveToStartPosition1ToolStripMenuItem.Enabled = False
+        MoveToStartPosition2ToolStripMenuItem1.Enabled = True
+        MoveToStartPosition3ToolStripMenuItem2.Enabled = True
+        MoveToStartPosition4ToolStripMenuItem3.Enabled = True
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition2ToolStripMenuItem1_Click
@@ -247,6 +251,10 @@ Public Class mainForm
     'Purpose: Sets Start Position to 2
     Private Sub MoveToStartPosition2ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition2ToolStripMenuItem1.Click
         MoveToStartPosition(20S)
+        MoveToStartPosition1ToolStripMenuItem.Enabled = True
+        MoveToStartPosition2ToolStripMenuItem1.Enabled = False
+        MoveToStartPosition3ToolStripMenuItem2.Enabled = True
+        MoveToStartPosition4ToolStripMenuItem3.Enabled = True
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition3ToolStripMenuItem2_Click
@@ -255,6 +263,10 @@ Public Class mainForm
     'Purpose: Sets Start Position to 3
     Private Sub MoveToStartPosition3ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition3ToolStripMenuItem2.Click
         MoveToStartPosition(30S)
+        MoveToStartPosition1ToolStripMenuItem.Enabled = True
+        MoveToStartPosition2ToolStripMenuItem1.Enabled = True
+        MoveToStartPosition3ToolStripMenuItem2.Enabled = False
+        MoveToStartPosition4ToolStripMenuItem3.Enabled = True
     End Sub
     '==========================================================================================
     'Name: MoveToStartPosition4ToolStripMenuItem3_Click
@@ -263,6 +275,10 @@ Public Class mainForm
     'Purpose: Sets Start Position to 4
     Private Sub MoveToStartPosition4ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles MoveToStartPosition4ToolStripMenuItem3.Click
         MoveToStartPosition(40S)
+        MoveToStartPosition1ToolStripMenuItem.Enabled = True
+        MoveToStartPosition2ToolStripMenuItem1.Enabled = True
+        MoveToStartPosition3ToolStripMenuItem2.Enabled = True
+        MoveToStartPosition4ToolStripMenuItem3.Enabled = False
     End Sub
     '==========================================================================================
     'Name: desertTile6PictureBox_Click
