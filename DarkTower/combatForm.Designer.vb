@@ -28,31 +28,37 @@ Partial Class combatForm
         '
         'combatLogListBox
         '
-        Me.combatLogListBox.FormattingEnabled = true
-        Me.combatLogListBox.ItemHeight = 18
-        Me.combatLogListBox.Location = New System.Drawing.Point(12, 12)
+        Me.combatLogListBox.BackColor = System.Drawing.SystemColors.Info
+        Me.combatLogListBox.FormattingEnabled = True
+        Me.combatLogListBox.ItemHeight = 25
+        Me.combatLogListBox.Location = New System.Drawing.Point(16, 17)
+        Me.combatLogListBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.combatLogListBox.Name = "combatLogListBox"
-        Me.combatLogListBox.Size = New System.Drawing.Size(422, 346)
+        Me.combatLogListBox.Size = New System.Drawing.Size(438, 354)
         Me.combatLogListBox.TabIndex = 0
         '
         'okButton
         '
-        Me.okButton.Location = New System.Drawing.Point(174, 364)
+        Me.okButton.BackColor = System.Drawing.SystemColors.Info
+        Me.okButton.Location = New System.Drawing.Point(167, 379)
+        Me.okButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.okButton.Name = "okButton"
-        Me.okButton.Size = New System.Drawing.Size(117, 42)
+        Me.okButton.Size = New System.Drawing.Size(156, 58)
         Me.okButton.TabIndex = 1
         Me.okButton.Text = "OK"
-        Me.okButton.UseVisualStyleBackColor = true
+        Me.okButton.UseVisualStyleBackColor = False
         '
         'combatForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9!, 18!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(454, 418)
+        Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.Game_Background
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(474, 450)
         Me.Controls.Add(Me.okButton)
         Me.Controls.Add(Me.combatLogListBox)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "combatForm"
         Me.Text = "Battle with Brigands!"
         Me.ResumeLayout(false)
