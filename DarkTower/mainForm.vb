@@ -104,16 +104,13 @@ Public Class mainForm
                                 currentPlayer.Inventory.HaveSilverKey = .HaveSilverKey
                                 currentPlayer.Inventory.HaveGoldKey = .HaveGoldKey
                             End With
+                            currentPlayer.AddDefeatedCastle(selectedPositionShort)
                         End If
                     Else
                         MsgBox("You have already defeated this Castle!", vbOKOnly, "Castle Defeated!")
                     End If
                 Else
                     TakeATurn(0)
-                    If currentPlayer.Inventory.WarriorCount <> 0 Then
-                        loot = New CombatLoot
-                        currentPlayer.Inventory.GoldCount = loot.RandomAttackLoot()
-                    End If
                 End If
                 currentPlayer.CurrentPosition = selectedPositionShort
                 currentPlayer.Inventory.FoodCount -= 1S
@@ -173,6 +170,10 @@ Public Class mainForm
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_RANDOM_ATTACK
                 combatForm.Show()
                 currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
+                If currentPlayer.Inventory.WarriorCount <> 0 Then
+                    loot = New CombatLoot
+                    currentPlayer.Inventory.GoldCount += loot.RandomAttackLoot()
+                End If
             Case Else
                 ' Success
         End Select

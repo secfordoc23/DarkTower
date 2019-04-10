@@ -174,6 +174,8 @@
     <None Include="Resources\YellowTile.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Game Background1.jpg" />
+    <None Include="Resources\New Game Background.jpg" />
     <Content Include="Resources\PlayerTile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

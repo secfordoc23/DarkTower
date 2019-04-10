@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="introRichTextBox.Text" xml:space="preserve">
+    <value>The Challenge: to retrieve the Ancient Magic Scepter that has been stolen by a tyrant king. The Scepter is the Power Staff of the Empire, and a kingdom has been offered as reward for its return. The Scepter lies hidden in the Dark Tower, guarded by a fierce band of the tyrant's Brigands. Three magic keys will open the the tower to you. Find the keys in three foreign kingdoms, and you may lay siege to the Dark Tower.
+
+In search of the key, leave the Citadel in your home kingdom with a handful of warriors. On your journey, you will fight battles, lose warriors to plague and starvation, and get hopelessly lost in uncharted territories.
+
+But don't despair! Visit the Bazaars to buy warriors and other supplies. Stop at Castles to discover treasures of gold and magic keys.
+
+Once you discover the three keys, begin your siege of the Dark Tower. Start out by solving the Ancient Riddle of the Keys, then fight the Brigands within!
+
+If you have a stout heart, quick wits and undying courage, you will retrieve the Scepter, save the Empire and win a Kingdom. Dare to Lay Siege to the Dark Tower!</value>
+  </data>
 </root>
