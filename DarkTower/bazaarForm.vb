@@ -29,6 +29,7 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub bazaarForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Computer.Audio.Play(My.Resources.bazaar, AudioPlayMode.WaitToComplete)
         purchaseInventory = currentInventory
         purchaseGoldCountShort = 0
 
@@ -39,11 +40,11 @@ Public Class bazaarForm
             End If
             scoutCheckBox.Checked = .HaveScout
             If .HaveHealer Then
-                healerCheckBox.Enabled = false
+                healerCheckBox.Enabled = False
             End If
             healerCheckBox.Checked = .HaveHealer
             If .HaveBeast Then
-                beastCheckBox.Enabled = false
+                beastCheckBox.Enabled = False
             End If
             beastCheckBox.Checked = .HaveBeast
             For warriorCountShort As Short = 0 To .HowManyWarriorsToMax
@@ -56,7 +57,7 @@ Public Class bazaarForm
         End With
         foodComboBox.SelectedIndex = 0
         warriorComboBox.SelectedIndex = 0
-        
+
 
     End Sub
     '==========================================================================================

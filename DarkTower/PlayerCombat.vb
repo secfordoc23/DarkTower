@@ -26,7 +26,6 @@ Public Class PlayerCombat
     Public Function Attack(warriorCountShort As Short, maxBrigandCount As Short) As Short
         Dim brigandCountShort As Short = GetBrigandCount(maxBrigandCount)
 
-        My.Computer.Audio.Play(My.Resources.battle, AudioPlayMode.WaitToComplete)
         combatForm.combatLogListBox.Items.Add("You are being attacked by " & brigandCountShort & " Brigands!")
 
         Return Combat(brigandCountShort, warriorCountShort)

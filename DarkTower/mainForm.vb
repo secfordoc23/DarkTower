@@ -144,17 +144,20 @@ Public Class mainForm
             Case 0 ' Territory
                 GenerateRandomEvent()
             Case 1 ' Castle
+                My.Computer.Audio.Play(My.Resources.tomb_battle, AudioPlayMode.WaitToComplete)
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_CASTLE
                 combatForm.ShowDialog()
                 currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
             Case 2 ' Dark Tower
+                My.Computer.Audio.Play(My.Resources.sanctuary, AudioPlayMode.WaitToComplete)
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_DARK_TOWER
                 combatForm.ShowDialog()
                 currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
                 If currentPlayer.Inventory.WarriorCount > 0 Then
                     MsgBox("Your have defeated the Dark Tower, and recovered the Stolen Scepter.  Thank you for playing.", vbOKOnly, "You Have Defeated the Dark Tower!")
+                    currentPlayer.HasGameStarted = False
                 End If
             Case Else
                 MsgBox("You have lost the game. Please start a new game or load a previous game.", vbOKOnly, "You Have Lost the Game!")
@@ -178,6 +181,7 @@ Public Class mainForm
             Case 40 To 60
                 LostEvent()
             Case 80 To 100
+                My.Computer.Audio.Play(My.Resources.battle, AudioPlayMode.WaitToComplete)
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_RANDOM_ATTACK
                 combatForm.ShowDialog()
@@ -240,6 +244,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets the Users Location
     Private Sub MoveToStartPosition(selectedStartPosition As Short)
+        My.Computer.Audio.Play(My.Resources.pegasus, AudioPlayMode.WaitToComplete)
         currentMove.MovePlayer(currentPlayer.CurrentPosition, selectedStartPosition)
         currentPlayer.CurrentPosition = selectedStartPosition
         currentPlayer.CurrentStartPositon = selectedStartPosition

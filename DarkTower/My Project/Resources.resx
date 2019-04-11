@@ -154,11 +154,17 @@
   <data name="battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battle.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="bazaar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bazaar.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="enemy_hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enemy-hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lost" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lost.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pegasus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pegasus.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="plague" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plague.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -166,7 +172,13 @@
   <data name="player_hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player-hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="sanctuary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanctuary.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="starving" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\starving.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tomb_battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomb-battle.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

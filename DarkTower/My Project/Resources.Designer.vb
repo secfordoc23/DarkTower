@@ -70,6 +70,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property bazaar() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("bazaar", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property BlackTile() As System.Drawing.Bitmap
@@ -180,6 +189,15 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property pegasus() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("pegasus", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property plague() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("plague", resourceCulture)
@@ -208,9 +226,27 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property sanctuary() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("sanctuary", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property starving() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("starving", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property tomb_battle() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("tomb_battle", resourceCulture)
             End Get
         End Property
         
