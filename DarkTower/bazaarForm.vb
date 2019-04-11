@@ -10,6 +10,7 @@ Option Explicit On
 Public Class bazaarForm
     Private purchaseInventory As Inventory
     Private purchaseGoldCountShort As Short
+    Private currentGoldCountShort As Short
     Private Const ONE_TIME_BUY_AMOUNT As Short = 20S
     Private Const WARRIOR_AMOUNT_PER As Short = 5S
     Private Const FOOD_AMOUNT_PER As Short = 1S
@@ -28,32 +29,37 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub bazaarForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        My.Computer.Audio.Play(My.Resources.bazaar, AudioPlayMode.WaitToComplete)
-        purchaseInventory = GetCurrentInventory
+        My.Computer.Audio.Play(My.Resources.bazaar, AudioPlayMode.Background)
+        purchaseInventory = New Inventory
+        currentGoldCountShort = currentPlayer.Inventory.GoldCount
         purchaseGoldCountShort = 0
 
-        With purchaseInventory
+        With currentPlayer.Inventory
             If .HaveScout Then
                 scoutCheckBox.Enabled = False
             End If
             scoutCheckBox.Checked = .HaveScout
+            purchaseInventory.HaveScout = .HaveScout
             If .HaveHealer Then
                 healerCheckBox.Enabled = False
             End If
             healerCheckBox.Checked = .HaveHealer
+            purchaseInventory.HaveHealer = .HaveHealer
             If .HaveBeast Then
                 beastCheckBox.Enabled = False
             End If
             beastCheckBox.Checked = .HaveBeast
+            purchaseInventory.HaveBeast = .HaveBeast
             For warriorCountShort As Short = 0 To .HowManyWarriorsToMax
                 warriorComboBox.Items.Add(warriorCountShort)
             Next
+            purchaseInventory.WarriorCount = 0
             For foodCountShort As Short = 0 To .HowMuchFoodToMax
                 foodComboBox.Items.Add(foodCountShort)
             Next
-
+            purchaseInventory.FoodCount = 0
         End With
-        currentGoldLabel.Text = GetCurrentGold.ToString
+        currentGoldLabel.Text = currentPlayer.Inventory.GoldCount.ToString
         foodComboBox.SelectedIndex = 0
         warriorComboBox.SelectedIndex = 0
     End Sub
@@ -63,14 +69,15 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub buyButton_Click(sender As Object, e As EventArgs) Handles buyButton.Click
-        GetCurrentGold -= purchaseGoldCountShort
+        currentPlayer.Inventory.GoldCount -= purchaseGoldCountShort
         With purchaseInventory
-            GetCurrentInventory.WarriorCount += .WarriorCount
-            GetCurrentInventory.FoodCount += .FoodCount
-            GetCurrentInventory.HaveBeast = .HaveBeast
-            GetCurrentInventory.HaveHealer = .HaveHealer
-            GetCurrentInventory.HaveScout = .HaveScout
+            currentPlayer.Inventory.WarriorCount += .WarriorCount
+            currentPlayer.Inventory.FoodCount += .FoodCount
+            currentPlayer.Inventory.HaveBeast = .HaveBeast
+            currentPlayer.Inventory.HaveHealer = .HaveHealer
+            currentPlayer.Inventory.HaveScout = .HaveScout
         End With
+        currentPlayer.UpdateInventoryDisplay()
         Me.Close()
     End Sub
     '==========================================================================================
@@ -79,7 +86,7 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub warriorComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles warriorComboBox.SelectedIndexChanged
-        If (purchaseGoldCountShort + (warriorComboBox.SelectedIndex * WARRIOR_AMOUNT_PER)) > GetCurrentGold Then
+        If (purchaseGoldCountShort + (warriorComboBox.SelectedIndex * WARRIOR_AMOUNT_PER)) > currentGoldCountShort Then
             MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
             warriorComboBox.SelectedIndex = 0
         Else
@@ -93,7 +100,7 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub foodComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles foodComboBox.SelectedIndexChanged
-        If (purchaseGoldCountShort + (foodComboBox.SelectedIndex * FOOD_AMOUNT_PER)) > GetCurrentGold Then
+        If (purchaseGoldCountShort + (foodComboBox.SelectedIndex * FOOD_AMOUNT_PER)) > currentGoldCountShort Then
             MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
             foodComboBox.SelectedIndex = 0
         Else
@@ -107,9 +114,8 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub scoutCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles scoutCheckBox.CheckedChanged
-        purchaseInventory = GetCurrentInventory
         If scoutCheckBox.Checked = True Then
-            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > GetCurrentGold Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > currentGoldCountShort Then
                 MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
                 scoutCheckBox.Checked = False
             Else
@@ -127,7 +133,7 @@ Public Class bazaarForm
     'Purpose:
     Private Sub healerCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles healerCheckBox.CheckedChanged
         If healerCheckBox.Checked = True Then
-            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > GetCurrentGold Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > currentGoldCountShort Then
                 MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
                 healerCheckBox.Checked = False
             Else
@@ -145,7 +151,7 @@ Public Class bazaarForm
     'Purpose:
     Private Sub beastCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles beastCheckBox.CheckedChanged
         If beastCheckBox.Checked = True Then
-            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > GetCurrentGold Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > currentGoldCountShort Then
                 MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
                 beastCheckBox.Checked = False
             Else
