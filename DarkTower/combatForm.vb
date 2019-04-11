@@ -26,9 +26,10 @@ Public Class combatForm
     'Author: Jason Welch
     'Purpose: Starts Comabat and displays Results
     Private Sub combatForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        My.Computer.Audio.Play(My.Resources.battle, AudioPlayMode.Background)
         brigandCountShort = GetBrigandCount(maxBragandCountShort)
         combatLogListBox.Items.Add("You are being attacked by " & brigandCountShort & " Brigands!")
-        Threading.Thread.Sleep(1000)
+        Threading.Thread.Sleep(2000)
         Combat()
         okButton.Enabled = True
     End Sub
@@ -73,11 +74,11 @@ Public Class combatForm
             If WonFight() Then
                 brigandCountShort = CShort(brigandCountShort / 2)
                 battleResultsString = "Won"
-                My.Computer.Audio.Play(My.Resources.enemy_hit, AudioPlayMode.WaitToComplete)
+                My.Computer.Audio.Play(My.Resources.enemy_hit, AudioPlayMode.Background)
             Else
                 warriorCountShort -= 1S
                 battleResultsString = "Lost"
-                My.Computer.Audio.Play(My.Resources.player_hit, AudioPlayMode.WaitToComplete)
+                My.Computer.Audio.Play(My.Resources.player_hit, AudioPlayMode.Background)
             End If
             combatLogListBox.Items.Add(battleResultsString & " - Warriors: " & warriorCountShort & " Brigands: " & brigandCountShort)
             combatLogListBox.Refresh()

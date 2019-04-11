@@ -8,7 +8,7 @@ Option Strict On
 Option Explicit On
 
 Public Class Player
-    Private playersCurrentInventory As Inventory
+    Private Shared playersCurrentInventory As Inventory
     Private hasGameStartedBoolean As Boolean = False
     Private initialStartPositionShort As Short
     Private currentStartPositonShort As Short
@@ -22,7 +22,7 @@ Public Class Player
     'Purpose: Default Constructor 
     Public Sub New()
         defeatedCastlesList = New List(Of Short)
-        playersCurrentInventory = New Inventory
+        Inventory = New Inventory
     End Sub
 
     '==========================================================================================
@@ -86,7 +86,7 @@ Public Class Player
     'Date: 4/6/19
     'Author: Jason Welch
     'Purpose: Get and Set currentPositionShort
-    Public Property Inventory() As Inventory
+    Public Shared Property Inventory() As Inventory
         Get
             Return playersCurrentInventory
         End Get

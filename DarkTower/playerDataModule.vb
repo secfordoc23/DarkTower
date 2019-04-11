@@ -7,34 +7,16 @@ Option Strict On
 Option Explicit On
 
 Module playerDataModule
-    Private currentInventory As Inventory
-    Private currentGoldShort As Short
+    Public currentPlayer As Player
+
     '==========================================================================================
     'Name: GetCurrentInventory
     'Date: 4/10/19
     'Author: Jason Welch
     'Purpose: Get and Set Inventory
-    Public Property GetCurrentInventory() As Inventory
-        Get
-            Return currentInventory
-        End Get
-        Set(ByVal value As Inventory)
-            currentInventory = value
-        End Set
-    End Property
+    Public Sub CreateNewPlayer() 
+        currentPlayer = New Player
+    End Sub
 
-    '==========================================================================================
-    'Name: GetCurrentGold
-    'Date: 4/10/19
-    'Author: Jason Welch
-    'Purpose: Get and Set Current Gold
-    Public Property GetCurrentGold() As Short
-        Get
-            Return currentGoldShort
-        End Get
-        Set(ByVal value As Short)
-            currentGoldShort = value
-        End Set
-    End Property
 End Module
 '================================== No Code Follows ===========================================

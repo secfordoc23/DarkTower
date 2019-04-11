@@ -9,7 +9,7 @@ Option Explicit On
 Imports System.ComponentModel
 
 Public Class mainForm
-    Public currentPlayer As Player
+    'Private currentPlayer As Player
     Private currentMove As PlayerMovement
     Private loot As CombatLoot
 
@@ -24,7 +24,8 @@ Public Class mainForm
     'Purpose: 
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         splashForm.ShowDialog()
-        currentPlayer = New Player
+        CreateNewPlayer
+        currentPlayer.HasGameStarted = false
     End Sub
     '==========================================================================================
     'Name: NewGameToolStripMenuItem_Click
@@ -32,12 +33,11 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: 
     Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
-        currentPlayer = New Player
+        CreateNewPlayer
 
         currentMove = New PlayerMovement
         currentMove.ResetMap()
 
-        currentPlayer.Inventory = New Inventory
         currentPlayer.UpdateInventoryDisplay()
         currentPlayer.HasGameStarted = True
 
@@ -68,14 +68,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Shows the Bazaar Form
     Private Sub BazarrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BazarrToolStripMenuItem.Click
-        GetCurrentInventory = currentPlayer.Inventory
-        GetCurrentGold = currentPlayer.Inventory.GoldCount
-
         bazaarForm.ShowDialog()
-
-        currentPlayer.Inventory = GetCurrentInventory
-        currentPlayer.Inventory.GoldCount = GetCurrentGold
-        currentPlayer.UpdateInventoryDisplay()
     End Sub
     '==========================================================================================
     'Name: SetStartPosition
@@ -89,7 +82,6 @@ Public Class mainForm
             currentPlayer.InitialStartPosition = startPositionShort
             currentMove.SetInitialStartPosition(startPositionShort)
         End If
-
     End Sub
     '==========================================================================================
     'Name: SetPosition
@@ -185,7 +177,6 @@ Public Class mainForm
             Case 40 To 60
                 LostEvent()
             Case 80 To 100
-                My.Computer.Audio.Play(My.Resources.battle, AudioPlayMode.WaitToComplete)
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_RANDOM_ATTACK
                 combatForm.ShowDialog()
