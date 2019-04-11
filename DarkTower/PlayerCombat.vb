@@ -26,6 +26,7 @@ Public Class PlayerCombat
     Public Function Attack(warriorCountShort As Short, maxBrigandCount As Short) As Short
         Dim brigandCountShort As Short = GetBrigandCount(maxBrigandCount)
 
+        My.Computer.Audio.Play(My.Resources.battle, AudioPlayMode.WaitToComplete)
         combatForm.combatLogListBox.Items.Add("You are being attacked by " & brigandCountShort & " Brigands!")
 
         Return Combat(brigandCountShort, warriorCountShort)
@@ -62,12 +63,13 @@ Public Class PlayerCombat
             If WonFight() Then
                 brigandCountShort = CShort(brigandCountShort / 2)
                 battleResultsString = "Won"
+                My.Computer.Audio.Play(My.Resources.enemy_hit, AudioPlayMode.WaitToComplete)
             Else
                 warriorCountShort -= 1S
                 battleResultsString = "Lost"
+                My.Computer.Audio.Play(My.Resources.player_hit, AudioPlayMode.WaitToComplete)
             End If
             combatForm.combatLogListBox.Items.Add(battleResultsString & " - Warriors: " & warriorCountShort & " Brigands: " & brigandCountShort)
-            Threading.Thread.Sleep(1000)
         End While
 
         If warriorCountShort = 0 Then

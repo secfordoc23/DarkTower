@@ -11,6 +11,10 @@ Public Class bazaarForm
     Public currentInventory As Inventory
     Private purchaseInventory As Inventory
     Private purchaseGoldCountShort As Short
+    Private Const ONE_TIME_BUY_AMOUNT As Short = 20S
+    Private Const WARRIOR_AMOUNT_PER As Short = 5S
+    Private Const FOOD_AMOUNT_PER As Short = 1S
+
     '==========================================================================================
     'Name: cancelButton_Click
     'Date: 4/10/19
@@ -76,8 +80,13 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub warriorComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles warriorComboBox.SelectedIndexChanged
-        purchaseInventory.WarriorCount = CShort(warriorComboBox.SelectedIndex)
-        UpdatePurchaseGold
+        If (purchaseGoldCountShort + (warriorComboBox.SelectedIndex * WARRIOR_AMOUNT_PER)) > purchaseInventory.GoldCount Then
+            MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
+            warriorComboBox.SelectedIndex = 0
+        Else
+            purchaseInventory.WarriorCount = CShort(warriorComboBox.SelectedIndex)
+        End If
+        UpdatePurchaseGold()
     End Sub
     '==========================================================================================
     'Name: foodComboBox_SelectedIndexChanged
@@ -85,8 +94,14 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub foodComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles foodComboBox.SelectedIndexChanged
-        purchaseInventory.FoodCount = CShort(foodComboBox.SelectedIndex)
-        UpdatePurchaseGold
+
+        If (purchaseGoldCountShort + (foodComboBox.SelectedIndex * FOOD_AMOUNT_PER)) > purchaseInventory.GoldCount Then
+            MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
+            foodComboBox.SelectedIndex = 0
+        Else
+            purchaseInventory.FoodCount = CShort(foodComboBox.SelectedIndex)
+        End If
+        UpdatePurchaseGold()
     End Sub
     '==========================================================================================
     'Name: scoutCheckBox_CheckedChanged
@@ -94,8 +109,17 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub scoutCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles scoutCheckBox.CheckedChanged
-        purchaseInventory.HaveScout = scoutCheckBox.Checked
-        UpdatePurchaseGold
+        If scoutCheckBox.Checked = True Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > purchaseInventory.GoldCount Then
+                MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
+                scoutCheckBox.Checked = False
+            Else
+                purchaseInventory.HaveScout = True
+            End If
+        Else
+            purchaseInventory.HaveScout = False
+        End If
+        UpdatePurchaseGold()
     End Sub
     '==========================================================================================
     'Name: healerCheckBox_CheckedChanged
@@ -103,8 +127,17 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub healerCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles healerCheckBox.CheckedChanged
-        purchaseInventory.HaveHealer = healerCheckBox.Checked
-        UpdatePurchaseGold
+        If healerCheckBox.Checked = True Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > purchaseInventory.GoldCount Then
+                MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
+                healerCheckBox.Checked = False
+            Else
+                purchaseInventory.HaveHealer = True
+            End If
+        Else
+            purchaseInventory.HaveHealer = False
+        End If
+        UpdatePurchaseGold()
     End Sub
     '==========================================================================================
     'Name: beastCheckBox_CheckedChanged
@@ -112,8 +145,17 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub beastCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles beastCheckBox.CheckedChanged
-        purchaseInventory.HaveBeast = beastCheckBox.Checked
-        UpdatePurchaseGold
+        If beastCheckBox.Checked = True Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > purchaseInventory.GoldCount Then
+                MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
+                beastCheckBox.Checked = False
+            Else
+                purchaseInventory.HaveBeast = True
+            End If
+        Else
+            purchaseInventory.HaveBeast = False
+        End If
+        UpdatePurchaseGold()
     End Sub
 
     '==========================================================================================
@@ -122,9 +164,25 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub UpdatePurchaseGold()
-        Dim purchaseGoldCountShort As Short = 0
+        purchaseGoldCountShort = 0
 
+        If beastCheckBox.Enabled And beastCheckBox.Checked Then
+            purchaseGoldCountShort += ONE_TIME_BUY_AMOUNT
+        End If
 
+        If healerCheckBox.Enabled And healerCheckBox.Checked Then
+            purchaseGoldCountShort += ONE_TIME_BUY_AMOUNT
+        End If
+
+        If scoutCheckBox.Enabled And scoutCheckBox.Checked Then
+            purchaseGoldCountShort += ONE_TIME_BUY_AMOUNT
+        End If
+
+        purchaseGoldCountShort += CShort(warriorComboBox.SelectedIndex * WARRIOR_AMOUNT_PER)
+
+        purchaseGoldCountShort += CShort(foodComboBox.SelectedIndex * FOOD_AMOUNT_PER)
+
+        purchaseTotalLabel.Text = purchaseGoldCountShort.ToString
     End Sub
 End Class
 '================================== No Code Follows ===========================================

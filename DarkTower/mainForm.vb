@@ -23,7 +23,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: 
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'splashForm.ShowDialog()
+        splashForm.ShowDialog()
         currentPlayer = New Player
     End Sub
     '==========================================================================================
@@ -71,7 +71,7 @@ Public Class mainForm
         bazaarForm.currentInventory = currentPlayer.Inventory
         bazaarForm.ShowDialog()
         currentPlayer.Inventory = bazaarForm.currentInventory
-        currentPlayer.UpdateInventoryDisplay
+        currentPlayer.UpdateInventoryDisplay()
     End Sub
     '==========================================================================================
     'Name: SetStartPosition
@@ -112,6 +112,12 @@ Public Class mainForm
                     Else
                         MsgBox("You have already defeated this Castle!", vbOKOnly, "Castle Defeated!")
                     End If
+                ElseIf selectedPositionShort = 0 Then
+                    If currentPlayer.Inventory.HaveBronzeKey And currentPlayer.Inventory.HaveSilverKey And currentPlayer.Inventory.HaveGoldKey Then
+                        TakeATurn(2)
+                    Else
+                        MsgBox("You DO NOT have all of the Keys to unlock the Dark Tower", vbOKOnly, "The Dark Tower")
+                    End If
                 Else
                     TakeATurn(0)
                 End If
@@ -147,6 +153,9 @@ Public Class mainForm
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_DARK_TOWER
                 combatForm.ShowDialog()
                 currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
+                If currentPlayer.Inventory.WarriorCount > 0 Then
+                    MsgBox("Your have defeated the Dark Tower, and recovered the Stolen Scepter.  Thank you for playing.", vbOKOnly, "You Have Defeated the Dark Tower!")
+                End If
             Case Else
                 MsgBox("You have lost the game. Please start a new game or load a previous game.", vbOKOnly, "You Have Lost the Game!")
         End Select
@@ -188,6 +197,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: 
     Private Sub PlagueEvent()
+        My.Computer.Audio.Play(My.Resources.plague, AudioPlayMode.WaitToComplete)
         If currentPlayer.Inventory.HaveHealer Then
             MsgBox("You Healer has stopped the Plague.  You gain 2 Warriors", vbOKOnly, "Plague Strikes!")
             currentPlayer.Inventory.WarriorCount += 2S
@@ -203,6 +213,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: 
     Private Sub LostEvent()
+        My.Computer.Audio.Play(My.Resources.lost, AudioPlayMode.WaitToComplete)
         If currentPlayer.Inventory.HaveScout Then
             MsgBox("Your Scout has found a faster path to your destination.  You gain 2 Food.", vbOKOnly, "Lost in Uncharted Territories!")
             currentPlayer.Inventory.FoodCount += 2S
@@ -218,6 +229,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Substracts 1 warrior from user inventory
     Private Sub StarvationEvent()
+        My.Computer.Audio.Play(My.Resources.starving, AudioPlayMode.WaitToComplete)
         MsgBox("Your Warriors are Starving!", vbOKOnly, "Starvation!")
         currentPlayer.Inventory.WarriorCount -= 1S
     End Sub
@@ -358,16 +370,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Move to tile position
     Private Sub darkTowerTilePictureBox_Click(sender As Object, e As EventArgs) Handles darkTowerTilePictureBox.Click
-
-        'If currentMove.ValidateMove(currentPositionShort, 0) Then
-        '    If currentInventory.HaveBronzeKey And currentInventory.HaveSilverKey And currentInventory.HaveGoldKey Then
-        '        If MsgBox("Do you wish to Attack the Dark Tower?", vbYesNo, "The Dark Tower") = vbYes Then
-        '            currentInventory = currentTurn.TakeATurn(2)
-        '        End If
-        '    Else
-        '        MsgBox("You DO NOT have all of the Keys to unlock the Dark Tower", vbOKOnly, "The Dark Tower")
-        '    End If
-        'End If
+        SetPosition(0)
     End Sub
     '==========================================================================================
     'Name: forestTile1PictureBox_Click

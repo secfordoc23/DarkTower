@@ -36,33 +36,34 @@ Partial Class bazaarForm
         Me.purchaseTotalLabel = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.currentGoldLabel = New System.Windows.Forms.Label()
-        Me.consumableGroupBox.SuspendLayout
-        Me.oneTimeBuyGroupBox.SuspendLayout
-        Me.SuspendLayout
+        Me.goldLabel = New System.Windows.Forms.Label()
+        Me.consumableGroupBox.SuspendLayout()
+        Me.oneTimeBuyGroupBox.SuspendLayout()
+        Me.SuspendLayout()
         '
         'buyButton
         '
         Me.buyButton.BackColor = System.Drawing.SystemColors.Info
-        Me.buyButton.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.buyButton.Location = New System.Drawing.Point(683, 168)
-        Me.buyButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.buyButton.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buyButton.Location = New System.Drawing.Point(350, 168)
+        Me.buyButton.Margin = New System.Windows.Forms.Padding(4)
         Me.buyButton.Name = "buyButton"
         Me.buyButton.Size = New System.Drawing.Size(100, 46)
-        Me.buyButton.TabIndex = 0
+        Me.buyButton.TabIndex = 2
         Me.buyButton.Text = "&Buy"
-        Me.buyButton.UseVisualStyleBackColor = false
+        Me.buyButton.UseVisualStyleBackColor = False
         '
         'cancelButton
         '
         Me.cancelButton.BackColor = System.Drawing.SystemColors.Info
-        Me.cancelButton.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.cancelButton.Location = New System.Drawing.Point(791, 168)
-        Me.cancelButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cancelButton.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cancelButton.Location = New System.Drawing.Point(458, 168)
+        Me.cancelButton.Margin = New System.Windows.Forms.Padding(4)
         Me.cancelButton.Name = "cancelButton"
         Me.cancelButton.Size = New System.Drawing.Size(100, 46)
-        Me.cancelButton.TabIndex = 1
+        Me.cancelButton.TabIndex = 3
         Me.cancelButton.Text = "&Cancel"
-        Me.cancelButton.UseVisualStyleBackColor = false
+        Me.cancelButton.UseVisualStyleBackColor = False
         '
         'consumableGroupBox
         '
@@ -71,61 +72,61 @@ Partial Class bazaarForm
         Me.consumableGroupBox.Controls.Add(Me.foodComboBox)
         Me.consumableGroupBox.Controls.Add(Me.warriorLabel)
         Me.consumableGroupBox.Controls.Add(Me.warriorComboBox)
-        Me.consumableGroupBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.consumableGroupBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.consumableGroupBox.Location = New System.Drawing.Point(17, 16)
-        Me.consumableGroupBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.consumableGroupBox.Margin = New System.Windows.Forms.Padding(4)
         Me.consumableGroupBox.Name = "consumableGroupBox"
-        Me.consumableGroupBox.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.consumableGroupBox.Padding = New System.Windows.Forms.Padding(4)
         Me.consumableGroupBox.Size = New System.Drawing.Size(325, 144)
-        Me.consumableGroupBox.TabIndex = 2
-        Me.consumableGroupBox.TabStop = false
+        Me.consumableGroupBox.TabIndex = 0
+        Me.consumableGroupBox.TabStop = False
         Me.consumableGroupBox.Text = "Consumables"
         '
         'foodLabel
         '
-        Me.foodLabel.AutoSize = true
-        Me.foodLabel.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.foodLabel.AutoSize = True
+        Me.foodLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.foodLabel.Location = New System.Drawing.Point(8, 90)
         Me.foodLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.foodLabel.Name = "foodLabel"
         Me.foodLabel.Size = New System.Drawing.Size(168, 25)
-        Me.foodLabel.TabIndex = 3
+        Me.foodLabel.TabIndex = 2
         Me.foodLabel.Text = "Food (1 Gold each)"
         '
         'foodComboBox
         '
         Me.foodComboBox.BackColor = System.Drawing.SystemColors.Info
         Me.foodComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.foodComboBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.foodComboBox.FormattingEnabled = true
+        Me.foodComboBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.foodComboBox.FormattingEnabled = True
         Me.foodComboBox.Location = New System.Drawing.Point(214, 82)
-        Me.foodComboBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.foodComboBox.Margin = New System.Windows.Forms.Padding(4)
         Me.foodComboBox.Name = "foodComboBox"
         Me.foodComboBox.Size = New System.Drawing.Size(90, 33)
-        Me.foodComboBox.TabIndex = 2
+        Me.foodComboBox.TabIndex = 3
         '
         'warriorLabel
         '
-        Me.warriorLabel.AutoSize = true
-        Me.warriorLabel.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.warriorLabel.AutoSize = True
+        Me.warriorLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.warriorLabel.Location = New System.Drawing.Point(8, 32)
         Me.warriorLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.warriorLabel.Name = "warriorLabel"
         Me.warriorLabel.Size = New System.Drawing.Size(191, 25)
-        Me.warriorLabel.TabIndex = 1
+        Me.warriorLabel.TabIndex = 0
         Me.warriorLabel.Text = "Warriors (5 Gold each)"
         '
         'warriorComboBox
         '
         Me.warriorComboBox.BackColor = System.Drawing.SystemColors.Info
         Me.warriorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.warriorComboBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.warriorComboBox.FormattingEnabled = true
+        Me.warriorComboBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.warriorComboBox.FormattingEnabled = True
         Me.warriorComboBox.Location = New System.Drawing.Point(214, 29)
-        Me.warriorComboBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.warriorComboBox.Margin = New System.Windows.Forms.Padding(4)
         Me.warriorComboBox.Name = "warriorComboBox"
         Me.warriorComboBox.Size = New System.Drawing.Size(90, 33)
-        Me.warriorComboBox.TabIndex = 0
+        Me.warriorComboBox.TabIndex = 1
         '
         'oneTimeBuyGroupBox
         '
@@ -133,51 +134,51 @@ Partial Class bazaarForm
         Me.oneTimeBuyGroupBox.Controls.Add(Me.beastCheckBox)
         Me.oneTimeBuyGroupBox.Controls.Add(Me.healerCheckBox)
         Me.oneTimeBuyGroupBox.Controls.Add(Me.scoutCheckBox)
-        Me.oneTimeBuyGroupBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.oneTimeBuyGroupBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.oneTimeBuyGroupBox.Location = New System.Drawing.Point(350, 16)
-        Me.oneTimeBuyGroupBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.oneTimeBuyGroupBox.Margin = New System.Windows.Forms.Padding(4)
         Me.oneTimeBuyGroupBox.Name = "oneTimeBuyGroupBox"
-        Me.oneTimeBuyGroupBox.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.oneTimeBuyGroupBox.Size = New System.Drawing.Size(541, 144)
-        Me.oneTimeBuyGroupBox.TabIndex = 3
-        Me.oneTimeBuyGroupBox.TabStop = false
+        Me.oneTimeBuyGroupBox.Padding = New System.Windows.Forms.Padding(4)
+        Me.oneTimeBuyGroupBox.Size = New System.Drawing.Size(208, 144)
+        Me.oneTimeBuyGroupBox.TabIndex = 1
+        Me.oneTimeBuyGroupBox.TabStop = False
         Me.oneTimeBuyGroupBox.Text = "One-Time Buy"
         '
         'beastCheckBox
         '
-        Me.beastCheckBox.AutoSize = true
-        Me.beastCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.beastCheckBox.Location = New System.Drawing.Point(362, 31)
-        Me.beastCheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.beastCheckBox.AutoSize = True
+        Me.beastCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.beastCheckBox.Location = New System.Drawing.Point(19, 105)
+        Me.beastCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.beastCheckBox.Name = "beastCheckBox"
-        Me.beastCheckBox.Size = New System.Drawing.Size(161, 29)
+        Me.beastCheckBox.Size = New System.Drawing.Size(163, 29)
         Me.beastCheckBox.TabIndex = 2
-        Me.beastCheckBox.Text = "Beast - 20 Gold"
-        Me.beastCheckBox.UseVisualStyleBackColor = true
+        Me.beastCheckBox.Text = "Beast (20 Gold)"
+        Me.beastCheckBox.UseVisualStyleBackColor = True
         '
         'healerCheckBox
         '
-        Me.healerCheckBox.AutoSize = true
-        Me.healerCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.healerCheckBox.Location = New System.Drawing.Point(189, 31)
-        Me.healerCheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.healerCheckBox.AutoSize = True
+        Me.healerCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.healerCheckBox.Location = New System.Drawing.Point(19, 68)
+        Me.healerCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.healerCheckBox.Name = "healerCheckBox"
-        Me.healerCheckBox.Size = New System.Drawing.Size(165, 29)
+        Me.healerCheckBox.Size = New System.Drawing.Size(167, 29)
         Me.healerCheckBox.TabIndex = 1
-        Me.healerCheckBox.Text = "Healer - 20 Gold"
-        Me.healerCheckBox.UseVisualStyleBackColor = true
+        Me.healerCheckBox.Text = "Healer (20 Gold)"
+        Me.healerCheckBox.UseVisualStyleBackColor = True
         '
         'scoutCheckBox
         '
-        Me.scoutCheckBox.AutoSize = true
-        Me.scoutCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.scoutCheckBox.AutoSize = True
+        Me.scoutCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.scoutCheckBox.Location = New System.Drawing.Point(19, 31)
-        Me.scoutCheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.scoutCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.scoutCheckBox.Name = "scoutCheckBox"
-        Me.scoutCheckBox.Size = New System.Drawing.Size(162, 29)
+        Me.scoutCheckBox.Size = New System.Drawing.Size(164, 29)
         Me.scoutCheckBox.TabIndex = 0
-        Me.scoutCheckBox.Text = "Scout - 20 Gold"
-        Me.scoutCheckBox.UseVisualStyleBackColor = true
+        Me.scoutCheckBox.Text = "Scout (20 Gold)"
+        Me.scoutCheckBox.UseVisualStyleBackColor = True
         '
         'purchaseTotalLabel
         '
@@ -191,7 +192,7 @@ Partial Class bazaarForm
         '
         'Label2
         '
-        Me.Label2.AutoSize = true
+        Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(91, 168)
         Me.Label2.Name = "Label2"
@@ -205,18 +206,30 @@ Partial Class bazaarForm
         Me.currentGoldLabel.BackColor = System.Drawing.Color.Transparent
         Me.currentGoldLabel.Location = New System.Drawing.Point(119, 168)
         Me.currentGoldLabel.Name = "currentGoldLabel"
-        Me.currentGoldLabel.Size = New System.Drawing.Size(74, 25)
+        Me.currentGoldLabel.Size = New System.Drawing.Size(40, 25)
         Me.currentGoldLabel.TabIndex = 6
         Me.currentGoldLabel.Text = "0"
         Me.currentGoldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'goldLabel
+        '
+        Me.goldLabel.AutoSize = True
+        Me.goldLabel.BackColor = System.Drawing.Color.Transparent
+        Me.goldLabel.Location = New System.Drawing.Point(165, 168)
+        Me.goldLabel.Name = "goldLabel"
+        Me.goldLabel.Size = New System.Drawing.Size(54, 25)
+        Me.goldLabel.TabIndex = 7
+        Me.goldLabel.Text = "Gold"
+        Me.goldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'bazaarForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12!, 25!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.Game_Background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(917, 243)
+        Me.ClientSize = New System.Drawing.Size(575, 225)
+        Me.Controls.Add(Me.goldLabel)
         Me.Controls.Add(Me.currentGoldLabel)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.purchaseTotalLabel)
@@ -253,4 +266,5 @@ End Sub
     Friend WithEvents purchaseTotalLabel As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents currentGoldLabel As Label
+    Friend WithEvents goldLabel As Label
 End Class

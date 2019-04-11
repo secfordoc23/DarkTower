@@ -18,6 +18,7 @@ Public Class combatForm
     Private Sub combatForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dim combat As New PlayerCombat
         combatLogListBox.Items.Clear()
+
         warriorCountShort = combat.Attack(warriorCountShort, maxBragandCountShort)
     End Sub
 End Class

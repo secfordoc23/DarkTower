@@ -32,7 +32,7 @@ Partial Class combatForm
         Me.combatLogListBox.FormattingEnabled = True
         Me.combatLogListBox.ItemHeight = 25
         Me.combatLogListBox.Location = New System.Drawing.Point(16, 17)
-        Me.combatLogListBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.combatLogListBox.Margin = New System.Windows.Forms.Padding(4)
         Me.combatLogListBox.Name = "combatLogListBox"
         Me.combatLogListBox.Size = New System.Drawing.Size(438, 354)
         Me.combatLogListBox.TabIndex = 0
@@ -41,11 +41,11 @@ Partial Class combatForm
         '
         Me.okButton.BackColor = System.Drawing.SystemColors.Info
         Me.okButton.Location = New System.Drawing.Point(167, 379)
-        Me.okButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.okButton.Margin = New System.Windows.Forms.Padding(4)
         Me.okButton.Name = "okButton"
         Me.okButton.Size = New System.Drawing.Size(156, 58)
         Me.okButton.TabIndex = 1
-        Me.okButton.Text = "OK"
+        Me.okButton.Text = "&OK"
         Me.okButton.UseVisualStyleBackColor = False
         '
         'combatForm
@@ -58,8 +58,10 @@ Partial Class combatForm
         Me.Controls.Add(Me.okButton)
         Me.Controls.Add(Me.combatLogListBox)
         Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "combatForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Battle with Brigands!"
         Me.ResumeLayout(false)
 

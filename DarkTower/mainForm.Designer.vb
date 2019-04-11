@@ -203,7 +203,7 @@ Partial Class mainForm
         '
         Me.MoveToStartPosition1ToolStripMenuItem.Name = "MoveToStartPosition1ToolStripMenuItem"
         Me.MoveToStartPosition1ToolStripMenuItem.Size = New System.Drawing.Size(373, 30)
-        Me.MoveToStartPosition1ToolStripMenuItem.Text = "Travel To The &Deserts of Zenon"
+        Me.MoveToStartPosition1ToolStripMenuItem.Text = "Travel To The &Desert of Zenon"
         '
         'MoveToStartPosition2ToolStripMenuItem1
         '
@@ -267,14 +267,14 @@ Partial Class mainForm
         Me.mapGroupBox.Controls.Add(Me.desertTile7PictureBox)
         Me.mapGroupBox.Controls.Add(Me.desertTile1PictureBox)
         Me.mapGroupBox.Controls.Add(Me.castleTile1PictureBox)
-        Me.mapGroupBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.mapGroupBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mapGroupBox.Location = New System.Drawing.Point(27, 54)
         Me.mapGroupBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.mapGroupBox.Name = "mapGroupBox"
         Me.mapGroupBox.Padding = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.mapGroupBox.Size = New System.Drawing.Size(696, 669)
         Me.mapGroupBox.TabIndex = 13
-        Me.mapGroupBox.TabStop = false
+        Me.mapGroupBox.TabStop = False
         Me.mapGroupBox.Text = "Map"
         '
         'startTile2PictureBox
@@ -288,7 +288,7 @@ Partial Class mainForm
         Me.startTile2PictureBox.Name = "startTile2PictureBox"
         Me.startTile2PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.startTile2PictureBox.TabIndex = 43
-        Me.startTile2PictureBox.TabStop = false
+        Me.startTile2PictureBox.TabStop = False
         '
         'startTile1PictureBox
         '
@@ -301,7 +301,7 @@ Partial Class mainForm
         Me.startTile1PictureBox.Name = "startTile1PictureBox"
         Me.startTile1PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.startTile1PictureBox.TabIndex = 42
-        Me.startTile1PictureBox.TabStop = false
+        Me.startTile1PictureBox.TabStop = False
         '
         'startTile4PictureBox
         '
@@ -314,7 +314,7 @@ Partial Class mainForm
         Me.startTile4PictureBox.Name = "startTile4PictureBox"
         Me.startTile4PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.startTile4PictureBox.TabIndex = 41
-        Me.startTile4PictureBox.TabStop = false
+        Me.startTile4PictureBox.TabStop = False
         '
         'startTile3PictureBox
         '
@@ -327,98 +327,98 @@ Partial Class mainForm
         Me.startTile3PictureBox.Name = "startTile3PictureBox"
         Me.startTile3PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.startTile3PictureBox.TabIndex = 40
-        Me.startTile3PictureBox.TabStop = false
+        Me.startTile3PictureBox.TabStop = False
         '
         'forestTile4PictureBox
         '
         Me.forestTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
         Me.forestTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forestTile4PictureBox.InitialImage = CType(resources.GetObject("forestTile4PictureBox.InitialImage"),System.Drawing.Image)
+        Me.forestTile4PictureBox.InitialImage = CType(resources.GetObject("forestTile4PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile4PictureBox.Location = New System.Drawing.Point(85, 165)
         Me.forestTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.forestTile4PictureBox.Name = "forestTile4PictureBox"
         Me.forestTile4PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.forestTile4PictureBox.TabIndex = 39
-        Me.forestTile4PictureBox.TabStop = false
+        Me.forestTile4PictureBox.TabStop = False
         '
         'forestTile8PictureBox
         '
         Me.forestTile8PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
         Me.forestTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forestTile8PictureBox.InitialImage = CType(resources.GetObject("forestTile8PictureBox.InitialImage"),System.Drawing.Image)
+        Me.forestTile8PictureBox.InitialImage = CType(resources.GetObject("forestTile8PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile8PictureBox.Location = New System.Drawing.Point(85, 445)
         Me.forestTile8PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.forestTile8PictureBox.Name = "forestTile8PictureBox"
         Me.forestTile8PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.forestTile8PictureBox.TabIndex = 38
-        Me.forestTile8PictureBox.TabStop = false
+        Me.forestTile8PictureBox.TabStop = False
         '
         'forestTile7PictureBox
         '
         Me.forestTile7PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
         Me.forestTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forestTile7PictureBox.InitialImage = CType(resources.GetObject("forestTile7PictureBox.InitialImage"),System.Drawing.Image)
+        Me.forestTile7PictureBox.InitialImage = CType(resources.GetObject("forestTile7PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile7PictureBox.Location = New System.Drawing.Point(85, 375)
         Me.forestTile7PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.forestTile7PictureBox.Name = "forestTile7PictureBox"
         Me.forestTile7PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.forestTile7PictureBox.TabIndex = 37
-        Me.forestTile7PictureBox.TabStop = false
+        Me.forestTile7PictureBox.TabStop = False
         '
         'forestTile5PictureBox
         '
         Me.forestTile5PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
         Me.forestTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forestTile5PictureBox.InitialImage = CType(resources.GetObject("forestTile5PictureBox.InitialImage"),System.Drawing.Image)
+        Me.forestTile5PictureBox.InitialImage = CType(resources.GetObject("forestTile5PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile5PictureBox.Location = New System.Drawing.Point(85, 235)
         Me.forestTile5PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.forestTile5PictureBox.Name = "forestTile5PictureBox"
         Me.forestTile5PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.forestTile5PictureBox.TabIndex = 36
-        Me.forestTile5PictureBox.TabStop = false
+        Me.forestTile5PictureBox.TabStop = False
         '
         'forestTile3PictureBox
         '
         Me.forestTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
         Me.forestTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forestTile3PictureBox.InitialImage = CType(resources.GetObject("forestTile3PictureBox.InitialImage"),System.Drawing.Image)
+        Me.forestTile3PictureBox.InitialImage = CType(resources.GetObject("forestTile3PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile3PictureBox.Location = New System.Drawing.Point(160, 375)
         Me.forestTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.forestTile3PictureBox.Name = "forestTile3PictureBox"
         Me.forestTile3PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.forestTile3PictureBox.TabIndex = 35
-        Me.forestTile3PictureBox.TabStop = false
+        Me.forestTile3PictureBox.TabStop = False
         '
         'forestTile2PictureBox
         '
-        Me.forestTile2PictureBox.BackgroundImage = CType(resources.GetObject("forestTile2PictureBox.BackgroundImage"),System.Drawing.Image)
+        Me.forestTile2PictureBox.BackgroundImage = CType(resources.GetObject("forestTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forestTile2PictureBox.InitialImage = CType(resources.GetObject("forestTile2PictureBox.InitialImage"),System.Drawing.Image)
+        Me.forestTile2PictureBox.InitialImage = CType(resources.GetObject("forestTile2PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile2PictureBox.Location = New System.Drawing.Point(160, 235)
         Me.forestTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.forestTile2PictureBox.Name = "forestTile2PictureBox"
         Me.forestTile2PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.forestTile2PictureBox.TabIndex = 34
-        Me.forestTile2PictureBox.TabStop = false
+        Me.forestTile2PictureBox.TabStop = False
         '
         'forestTile6PictureBox
         '
         Me.forestTile6PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
         Me.forestTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forestTile6PictureBox.InitialImage = CType(resources.GetObject("forestTile6PictureBox.InitialImage"),System.Drawing.Image)
+        Me.forestTile6PictureBox.InitialImage = CType(resources.GetObject("forestTile6PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile6PictureBox.Location = New System.Drawing.Point(85, 305)
         Me.forestTile6PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.forestTile6PictureBox.Name = "forestTile6PictureBox"
         Me.forestTile6PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.forestTile6PictureBox.TabIndex = 33
-        Me.forestTile6PictureBox.TabStop = false
+        Me.forestTile6PictureBox.TabStop = False
         '
         'castleTile2PictureBox
         '
@@ -431,163 +431,163 @@ Partial Class mainForm
         Me.castleTile2PictureBox.Name = "castleTile2PictureBox"
         Me.castleTile2PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.castleTile2PictureBox.TabIndex = 32
-        Me.castleTile2PictureBox.TabStop = false
+        Me.castleTile2PictureBox.TabStop = False
         '
         'icelandTile8PictureBox
         '
         Me.icelandTile8PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
         Me.icelandTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.icelandTile8PictureBox.InitialImage = CType(resources.GetObject("icelandTile8PictureBox.InitialImage"),System.Drawing.Image)
+        Me.icelandTile8PictureBox.InitialImage = CType(resources.GetObject("icelandTile8PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile8PictureBox.Location = New System.Drawing.Point(161, 95)
         Me.icelandTile8PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.icelandTile8PictureBox.Name = "icelandTile8PictureBox"
         Me.icelandTile8PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.icelandTile8PictureBox.TabIndex = 31
-        Me.icelandTile8PictureBox.TabStop = false
+        Me.icelandTile8PictureBox.TabStop = False
         '
         'icelandTile7PictureBox
         '
         Me.icelandTile7PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
         Me.icelandTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.icelandTile7PictureBox.InitialImage = CType(resources.GetObject("icelandTile7PictureBox.InitialImage"),System.Drawing.Image)
+        Me.icelandTile7PictureBox.InitialImage = CType(resources.GetObject("icelandTile7PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile7PictureBox.Location = New System.Drawing.Point(236, 95)
         Me.icelandTile7PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.icelandTile7PictureBox.Name = "icelandTile7PictureBox"
         Me.icelandTile7PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.icelandTile7PictureBox.TabIndex = 30
-        Me.icelandTile7PictureBox.TabStop = false
+        Me.icelandTile7PictureBox.TabStop = False
         '
         'icelandTile4PictureBox
         '
         Me.icelandTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
         Me.icelandTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.icelandTile4PictureBox.InitialImage = CType(resources.GetObject("icelandTile4PictureBox.InitialImage"),System.Drawing.Image)
+        Me.icelandTile4PictureBox.InitialImage = CType(resources.GetObject("icelandTile4PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile4PictureBox.Location = New System.Drawing.Point(461, 95)
         Me.icelandTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.icelandTile4PictureBox.Name = "icelandTile4PictureBox"
         Me.icelandTile4PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.icelandTile4PictureBox.TabIndex = 29
-        Me.icelandTile4PictureBox.TabStop = false
+        Me.icelandTile4PictureBox.TabStop = False
         '
         'icelandTile5PictureBox
         '
         Me.icelandTile5PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
         Me.icelandTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.icelandTile5PictureBox.InitialImage = CType(resources.GetObject("icelandTile5PictureBox.InitialImage"),System.Drawing.Image)
+        Me.icelandTile5PictureBox.InitialImage = CType(resources.GetObject("icelandTile5PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile5PictureBox.Location = New System.Drawing.Point(387, 95)
         Me.icelandTile5PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.icelandTile5PictureBox.Name = "icelandTile5PictureBox"
         Me.icelandTile5PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.icelandTile5PictureBox.TabIndex = 28
-        Me.icelandTile5PictureBox.TabStop = false
+        Me.icelandTile5PictureBox.TabStop = False
         '
         'icelandTile3PictureBox
         '
         Me.icelandTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
         Me.icelandTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.icelandTile3PictureBox.InitialImage = CType(resources.GetObject("icelandTile3PictureBox.InitialImage"),System.Drawing.Image)
+        Me.icelandTile3PictureBox.InitialImage = CType(resources.GetObject("icelandTile3PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile3PictureBox.Location = New System.Drawing.Point(237, 165)
         Me.icelandTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.icelandTile3PictureBox.Name = "icelandTile3PictureBox"
         Me.icelandTile3PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.icelandTile3PictureBox.TabIndex = 27
-        Me.icelandTile3PictureBox.TabStop = false
+        Me.icelandTile3PictureBox.TabStop = False
         '
         'plainTile2PictureBox
         '
         Me.plainTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
         Me.plainTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.plainTile2PictureBox.InitialImage = CType(resources.GetObject("plainTile2PictureBox.InitialImage"),System.Drawing.Image)
+        Me.plainTile2PictureBox.InitialImage = CType(resources.GetObject("plainTile2PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile2PictureBox.Location = New System.Drawing.Point(465, 375)
         Me.plainTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.plainTile2PictureBox.Name = "plainTile2PictureBox"
         Me.plainTile2PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.plainTile2PictureBox.TabIndex = 26
-        Me.plainTile2PictureBox.TabStop = false
+        Me.plainTile2PictureBox.TabStop = False
         '
         'plainTile3PictureBox
         '
         Me.plainTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
         Me.plainTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.plainTile3PictureBox.InitialImage = CType(resources.GetObject("plainTile3PictureBox.InitialImage"),System.Drawing.Image)
+        Me.plainTile3PictureBox.InitialImage = CType(resources.GetObject("plainTile3PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile3PictureBox.Location = New System.Drawing.Point(467, 235)
         Me.plainTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.plainTile3PictureBox.Name = "plainTile3PictureBox"
         Me.plainTile3PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.plainTile3PictureBox.TabIndex = 25
-        Me.plainTile3PictureBox.TabStop = false
+        Me.plainTile3PictureBox.TabStop = False
         '
         'plainTile4PictureBox
         '
         Me.plainTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
         Me.plainTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.plainTile4PictureBox.InitialImage = CType(resources.GetObject("plainTile4PictureBox.InitialImage"),System.Drawing.Image)
+        Me.plainTile4PictureBox.InitialImage = CType(resources.GetObject("plainTile4PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile4PictureBox.Location = New System.Drawing.Point(540, 445)
         Me.plainTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.plainTile4PictureBox.Name = "plainTile4PictureBox"
         Me.plainTile4PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.plainTile4PictureBox.TabIndex = 24
-        Me.plainTile4PictureBox.TabStop = false
+        Me.plainTile4PictureBox.TabStop = False
         '
         'plainTile5PictureBox
         '
         Me.plainTile5PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
         Me.plainTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.plainTile5PictureBox.InitialImage = CType(resources.GetObject("plainTile5PictureBox.InitialImage"),System.Drawing.Image)
+        Me.plainTile5PictureBox.InitialImage = CType(resources.GetObject("plainTile5PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile5PictureBox.Location = New System.Drawing.Point(540, 375)
         Me.plainTile5PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.plainTile5PictureBox.Name = "plainTile5PictureBox"
         Me.plainTile5PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.plainTile5PictureBox.TabIndex = 23
-        Me.plainTile5PictureBox.TabStop = false
+        Me.plainTile5PictureBox.TabStop = False
         '
         'plainTile8PictureBox
         '
         Me.plainTile8PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
         Me.plainTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.plainTile8PictureBox.InitialImage = CType(resources.GetObject("plainTile8PictureBox.InitialImage"),System.Drawing.Image)
+        Me.plainTile8PictureBox.InitialImage = CType(resources.GetObject("plainTile8PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile8PictureBox.Location = New System.Drawing.Point(540, 165)
         Me.plainTile8PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.plainTile8PictureBox.Name = "plainTile8PictureBox"
         Me.plainTile8PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.plainTile8PictureBox.TabIndex = 22
-        Me.plainTile8PictureBox.TabStop = false
+        Me.plainTile8PictureBox.TabStop = False
         '
         'plainTile7PictureBox
         '
         Me.plainTile7PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
         Me.plainTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.plainTile7PictureBox.InitialImage = CType(resources.GetObject("plainTile7PictureBox.InitialImage"),System.Drawing.Image)
+        Me.plainTile7PictureBox.InitialImage = CType(resources.GetObject("plainTile7PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile7PictureBox.Location = New System.Drawing.Point(540, 235)
         Me.plainTile7PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.plainTile7PictureBox.Name = "plainTile7PictureBox"
         Me.plainTile7PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.plainTile7PictureBox.TabIndex = 21
-        Me.plainTile7PictureBox.TabStop = false
+        Me.plainTile7PictureBox.TabStop = False
         '
         'plainTile6PictureBox
         '
         Me.plainTile6PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
         Me.plainTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.plainTile6PictureBox.InitialImage = CType(resources.GetObject("plainTile6PictureBox.InitialImage"),System.Drawing.Image)
+        Me.plainTile6PictureBox.InitialImage = CType(resources.GetObject("plainTile6PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile6PictureBox.Location = New System.Drawing.Point(540, 305)
         Me.plainTile6PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.plainTile6PictureBox.Name = "plainTile6PictureBox"
         Me.plainTile6PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.plainTile6PictureBox.TabIndex = 20
-        Me.plainTile6PictureBox.TabStop = false
+        Me.plainTile6PictureBox.TabStop = False
         '
         'castleTile3PictureBox
         '
@@ -600,33 +600,33 @@ Partial Class mainForm
         Me.castleTile3PictureBox.Name = "castleTile3PictureBox"
         Me.castleTile3PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.castleTile3PictureBox.TabIndex = 19
-        Me.castleTile3PictureBox.TabStop = false
+        Me.castleTile3PictureBox.TabStop = False
         '
         'icelandTile2PictureBox
         '
         Me.icelandTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
         Me.icelandTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.icelandTile2PictureBox.InitialImage = CType(resources.GetObject("icelandTile2PictureBox.InitialImage"),System.Drawing.Image)
+        Me.icelandTile2PictureBox.InitialImage = CType(resources.GetObject("icelandTile2PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile2PictureBox.Location = New System.Drawing.Point(387, 165)
         Me.icelandTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.icelandTile2PictureBox.Name = "icelandTile2PictureBox"
         Me.icelandTile2PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.icelandTile2PictureBox.TabIndex = 18
-        Me.icelandTile2PictureBox.TabStop = false
+        Me.icelandTile2PictureBox.TabStop = False
         '
         'icelandTile6PictureBox
         '
         Me.icelandTile6PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
         Me.icelandTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.icelandTile6PictureBox.InitialImage = CType(resources.GetObject("icelandTile6PictureBox.InitialImage"),System.Drawing.Image)
+        Me.icelandTile6PictureBox.InitialImage = CType(resources.GetObject("icelandTile6PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile6PictureBox.Location = New System.Drawing.Point(312, 95)
         Me.icelandTile6PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.icelandTile6PictureBox.Name = "icelandTile6PictureBox"
         Me.icelandTile6PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.icelandTile6PictureBox.TabIndex = 17
-        Me.icelandTile6PictureBox.TabStop = false
+        Me.icelandTile6PictureBox.TabStop = False
         '
         'castleTile4PictureBox
         '
@@ -639,7 +639,7 @@ Partial Class mainForm
         Me.castleTile4PictureBox.Name = "castleTile4PictureBox"
         Me.castleTile4PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.castleTile4PictureBox.TabIndex = 16
-        Me.castleTile4PictureBox.TabStop = false
+        Me.castleTile4PictureBox.TabStop = False
         '
         'desertTile4PictureBox
         '
@@ -652,7 +652,7 @@ Partial Class mainForm
         Me.desertTile4PictureBox.Name = "desertTile4PictureBox"
         Me.desertTile4PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.desertTile4PictureBox.TabIndex = 15
-        Me.desertTile4PictureBox.TabStop = false
+        Me.desertTile4PictureBox.TabStop = False
         '
         'desertTile5PictureBox
         '
@@ -665,7 +665,7 @@ Partial Class mainForm
         Me.desertTile5PictureBox.Name = "desertTile5PictureBox"
         Me.desertTile5PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.desertTile5PictureBox.TabIndex = 14
-        Me.desertTile5PictureBox.TabStop = false
+        Me.desertTile5PictureBox.TabStop = False
         '
         'desertTile8PictureBox
         '
@@ -678,20 +678,20 @@ Partial Class mainForm
         Me.desertTile8PictureBox.Name = "desertTile8PictureBox"
         Me.desertTile8PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.desertTile8PictureBox.TabIndex = 13
-        Me.desertTile8PictureBox.TabStop = false
+        Me.desertTile8PictureBox.TabStop = False
         '
         'forestTile1PictureBox
         '
         Me.forestTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
         Me.forestTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forestTile1PictureBox.InitialImage = CType(resources.GetObject("forestTile1PictureBox.InitialImage"),System.Drawing.Image)
+        Me.forestTile1PictureBox.InitialImage = CType(resources.GetObject("forestTile1PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile1PictureBox.Location = New System.Drawing.Point(236, 305)
         Me.forestTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.forestTile1PictureBox.Name = "forestTile1PictureBox"
         Me.forestTile1PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.forestTile1PictureBox.TabIndex = 12
-        Me.forestTile1PictureBox.TabStop = false
+        Me.forestTile1PictureBox.TabStop = False
         '
         'desertTile6PictureBox
         '
@@ -704,20 +704,20 @@ Partial Class mainForm
         Me.desertTile6PictureBox.Name = "desertTile6PictureBox"
         Me.desertTile6PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.desertTile6PictureBox.TabIndex = 1
-        Me.desertTile6PictureBox.TabStop = false
+        Me.desertTile6PictureBox.TabStop = False
         '
         'icelandTile1PictureBox
         '
         Me.icelandTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
         Me.icelandTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.icelandTile1PictureBox.InitialImage = CType(resources.GetObject("icelandTile1PictureBox.InitialImage"),System.Drawing.Image)
+        Me.icelandTile1PictureBox.InitialImage = CType(resources.GetObject("icelandTile1PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile1PictureBox.Location = New System.Drawing.Point(312, 235)
         Me.icelandTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.icelandTile1PictureBox.Name = "icelandTile1PictureBox"
         Me.icelandTile1PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.icelandTile1PictureBox.TabIndex = 11
-        Me.icelandTile1PictureBox.TabStop = false
+        Me.icelandTile1PictureBox.TabStop = False
         '
         'desertTile2PictureBox
         '
@@ -730,20 +730,20 @@ Partial Class mainForm
         Me.desertTile2PictureBox.Name = "desertTile2PictureBox"
         Me.desertTile2PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.desertTile2PictureBox.TabIndex = 2
-        Me.desertTile2PictureBox.TabStop = false
+        Me.desertTile2PictureBox.TabStop = False
         '
         'plainTile1PictureBox
         '
         Me.plainTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
         Me.plainTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.plainTile1PictureBox.InitialImage = CType(resources.GetObject("plainTile1PictureBox.InitialImage"),System.Drawing.Image)
+        Me.plainTile1PictureBox.InitialImage = CType(resources.GetObject("plainTile1PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile1PictureBox.Location = New System.Drawing.Point(387, 305)
         Me.plainTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.plainTile1PictureBox.Name = "plainTile1PictureBox"
         Me.plainTile1PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.plainTile1PictureBox.TabIndex = 10
-        Me.plainTile1PictureBox.TabStop = false
+        Me.plainTile1PictureBox.TabStop = False
         '
         'desertTile3PictureBox
         '
@@ -756,7 +756,7 @@ Partial Class mainForm
         Me.desertTile3PictureBox.Name = "desertTile3PictureBox"
         Me.desertTile3PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.desertTile3PictureBox.TabIndex = 3
-        Me.desertTile3PictureBox.TabStop = false
+        Me.desertTile3PictureBox.TabStop = False
         '
         'darkTowerTilePictureBox
         '
@@ -768,7 +768,7 @@ Partial Class mainForm
         Me.darkTowerTilePictureBox.Name = "darkTowerTilePictureBox"
         Me.darkTowerTilePictureBox.Size = New System.Drawing.Size(66, 62)
         Me.darkTowerTilePictureBox.TabIndex = 9
-        Me.darkTowerTilePictureBox.TabStop = false
+        Me.darkTowerTilePictureBox.TabStop = False
         '
         'desertTile7PictureBox
         '
@@ -781,7 +781,7 @@ Partial Class mainForm
         Me.desertTile7PictureBox.Name = "desertTile7PictureBox"
         Me.desertTile7PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.desertTile7PictureBox.TabIndex = 4
-        Me.desertTile7PictureBox.TabStop = false
+        Me.desertTile7PictureBox.TabStop = False
         '
         'desertTile1PictureBox
         '
@@ -794,7 +794,7 @@ Partial Class mainForm
         Me.desertTile1PictureBox.Name = "desertTile1PictureBox"
         Me.desertTile1PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.desertTile1PictureBox.TabIndex = 5
-        Me.desertTile1PictureBox.TabStop = false
+        Me.desertTile1PictureBox.TabStop = False
         '
         'castleTile1PictureBox
         '
@@ -807,7 +807,7 @@ Partial Class mainForm
         Me.castleTile1PictureBox.Name = "castleTile1PictureBox"
         Me.castleTile1PictureBox.Size = New System.Drawing.Size(66, 62)
         Me.castleTile1PictureBox.TabIndex = 6
-        Me.castleTile1PictureBox.TabStop = false
+        Me.castleTile1PictureBox.TabStop = False
         '
         'inventoryGroupBox
         '
@@ -827,19 +827,19 @@ Partial Class mainForm
         Me.inventoryGroupBox.Controls.Add(Me.goldLabel)
         Me.inventoryGroupBox.Controls.Add(Me.foodLabel)
         Me.inventoryGroupBox.Controls.Add(Me.warriorLabel)
-        Me.inventoryGroupBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.inventoryGroupBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.inventoryGroupBox.Location = New System.Drawing.Point(27, 734)
         Me.inventoryGroupBox.Margin = New System.Windows.Forms.Padding(4)
         Me.inventoryGroupBox.Name = "inventoryGroupBox"
         Me.inventoryGroupBox.Padding = New System.Windows.Forms.Padding(4)
         Me.inventoryGroupBox.Size = New System.Drawing.Size(696, 190)
         Me.inventoryGroupBox.TabIndex = 14
-        Me.inventoryGroupBox.TabStop = false
+        Me.inventoryGroupBox.TabStop = False
         Me.inventoryGroupBox.Text = "Inventory"
         '
         'goldMaxLabel
         '
-        Me.goldMaxLabel.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.goldMaxLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.goldMaxLabel.Location = New System.Drawing.Point(188, 132)
         Me.goldMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.goldMaxLabel.Name = "goldMaxLabel"
@@ -849,7 +849,7 @@ Partial Class mainForm
         '
         'foodMaxLabel
         '
-        Me.foodMaxLabel.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.foodMaxLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.foodMaxLabel.Location = New System.Drawing.Point(189, 82)
         Me.foodMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.foodMaxLabel.Name = "foodMaxLabel"
@@ -859,7 +859,7 @@ Partial Class mainForm
         '
         'warriorMaxLabel
         '
-        Me.warriorMaxLabel.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.warriorMaxLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.warriorMaxLabel.Location = New System.Drawing.Point(189, 32)
         Me.warriorMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.warriorMaxLabel.Name = "warriorMaxLabel"
@@ -869,81 +869,81 @@ Partial Class mainForm
         '
         'goldKeyCheckBox
         '
-        Me.goldKeyCheckBox.Enabled = false
-        Me.goldKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.goldKeyCheckBox.Enabled = False
+        Me.goldKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.goldKeyCheckBox.Location = New System.Drawing.Point(543, 131)
         Me.goldKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.goldKeyCheckBox.Name = "goldKeyCheckBox"
         Me.goldKeyCheckBox.Size = New System.Drawing.Size(123, 30)
         Me.goldKeyCheckBox.TabIndex = 11
         Me.goldKeyCheckBox.Text = "Gold Key"
-        Me.goldKeyCheckBox.ThreeState = true
-        Me.goldKeyCheckBox.UseVisualStyleBackColor = true
+        Me.goldKeyCheckBox.ThreeState = True
+        Me.goldKeyCheckBox.UseVisualStyleBackColor = True
         '
         'silverKeyCheckBox
         '
-        Me.silverKeyCheckBox.Enabled = false
-        Me.silverKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.silverKeyCheckBox.Enabled = False
+        Me.silverKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.silverKeyCheckBox.Location = New System.Drawing.Point(543, 81)
         Me.silverKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.silverKeyCheckBox.Name = "silverKeyCheckBox"
         Me.silverKeyCheckBox.Size = New System.Drawing.Size(128, 30)
         Me.silverKeyCheckBox.TabIndex = 10
         Me.silverKeyCheckBox.Text = "Silver Key"
-        Me.silverKeyCheckBox.ThreeState = true
-        Me.silverKeyCheckBox.UseVisualStyleBackColor = true
+        Me.silverKeyCheckBox.ThreeState = True
+        Me.silverKeyCheckBox.UseVisualStyleBackColor = True
         '
         'bronzeKeyCheckBox
         '
-        Me.bronzeKeyCheckBox.Enabled = false
-        Me.bronzeKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.bronzeKeyCheckBox.Enabled = False
+        Me.bronzeKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bronzeKeyCheckBox.Location = New System.Drawing.Point(543, 31)
         Me.bronzeKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.bronzeKeyCheckBox.Name = "bronzeKeyCheckBox"
         Me.bronzeKeyCheckBox.Size = New System.Drawing.Size(145, 30)
         Me.bronzeKeyCheckBox.TabIndex = 9
         Me.bronzeKeyCheckBox.Text = "Bronze Key"
-        Me.bronzeKeyCheckBox.ThreeState = true
-        Me.bronzeKeyCheckBox.UseVisualStyleBackColor = true
+        Me.bronzeKeyCheckBox.ThreeState = True
+        Me.bronzeKeyCheckBox.UseVisualStyleBackColor = True
         '
         'beastCheckBox
         '
-        Me.beastCheckBox.Enabled = false
-        Me.beastCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.beastCheckBox.Enabled = False
+        Me.beastCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.beastCheckBox.Location = New System.Drawing.Point(371, 131)
         Me.beastCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.beastCheckBox.Name = "beastCheckBox"
         Me.beastCheckBox.Size = New System.Drawing.Size(93, 30)
         Me.beastCheckBox.TabIndex = 8
         Me.beastCheckBox.Text = "Beast"
-        Me.beastCheckBox.ThreeState = true
-        Me.beastCheckBox.UseVisualStyleBackColor = true
+        Me.beastCheckBox.ThreeState = True
+        Me.beastCheckBox.UseVisualStyleBackColor = True
         '
         'healerCheckBox
         '
-        Me.healerCheckBox.Enabled = false
-        Me.healerCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.healerCheckBox.Enabled = False
+        Me.healerCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.healerCheckBox.Location = New System.Drawing.Point(371, 81)
         Me.healerCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.healerCheckBox.Name = "healerCheckBox"
         Me.healerCheckBox.Size = New System.Drawing.Size(100, 30)
         Me.healerCheckBox.TabIndex = 7
         Me.healerCheckBox.Text = "Healer"
-        Me.healerCheckBox.ThreeState = true
-        Me.healerCheckBox.UseVisualStyleBackColor = true
+        Me.healerCheckBox.ThreeState = True
+        Me.healerCheckBox.UseVisualStyleBackColor = True
         '
         'scoutCheckBox
         '
-        Me.scoutCheckBox.Enabled = false
-        Me.scoutCheckBox.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.scoutCheckBox.Enabled = False
+        Me.scoutCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.scoutCheckBox.Location = New System.Drawing.Point(371, 31)
         Me.scoutCheckBox.Margin = New System.Windows.Forms.Padding(4)
         Me.scoutCheckBox.Name = "scoutCheckBox"
         Me.scoutCheckBox.Size = New System.Drawing.Size(93, 30)
         Me.scoutCheckBox.TabIndex = 6
         Me.scoutCheckBox.Text = "Scout"
-        Me.scoutCheckBox.ThreeState = true
-        Me.scoutCheckBox.UseVisualStyleBackColor = true
+        Me.scoutCheckBox.ThreeState = True
+        Me.scoutCheckBox.UseVisualStyleBackColor = True
         '
         'goldCountLabel
         '
@@ -977,7 +977,7 @@ Partial Class mainForm
         '
         'goldLabel
         '
-        Me.goldLabel.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.goldLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.goldLabel.Location = New System.Drawing.Point(11, 132)
         Me.goldLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.goldLabel.Name = "goldLabel"
@@ -987,7 +987,7 @@ Partial Class mainForm
         '
         'foodLabel
         '
-        Me.foodLabel.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.foodLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.foodLabel.Location = New System.Drawing.Point(11, 82)
         Me.foodLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.foodLabel.Name = "foodLabel"
@@ -997,7 +997,7 @@ Partial Class mainForm
         '
         'warriorLabel
         '
-        Me.warriorLabel.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.warriorLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.warriorLabel.Location = New System.Drawing.Point(11, 32)
         Me.warriorLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.warriorLabel.Name = "warriorLabel"
@@ -1007,7 +1007,7 @@ Partial Class mainForm
         '
         'mainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12!, 25!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.Game_Background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -1015,10 +1015,12 @@ Partial Class mainForm
         Me.Controls.Add(Me.inventoryGroupBox)
         Me.Controls.Add(Me.mapGroupBox)
         Me.Controls.Add(Me.gamePlayMenuStrip)
-        Me.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.gamePlayMenuStrip
         Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "mainForm"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dark Tower"
         Me.gamePlayMenuStrip.ResumeLayout(false)

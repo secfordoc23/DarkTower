@@ -111,6 +111,12 @@
     <Compile Include="Player.vb" />
     <Compile Include="PlayerCombat.vb" />
     <Compile Include="PlayerMovement.vb" />
+    <Compile Include="splashForm.designer.vb">
+      <DependentUpon>splashForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splashForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="startPositionForm.Designer.vb">
       <DependentUpon>startPositionForm.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashForm.resx">
+      <DependentUpon>splashForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="startPositionForm.resx">
       <DependentUpon>startPositionForm.vb</DependentUpon>
@@ -174,8 +183,15 @@
     <None Include="Resources\YellowTile.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\starving.wav" />
     <None Include="Resources\Game Background1.jpg" />
     <None Include="Resources\New Game Background.jpg" />
+    <None Include="Resources\DarkTowerIcon.jpg" />
+    <Content Include="Resources\battle.wav" />
+    <Content Include="Resources\enemy-hit.wav" />
+    <Content Include="Resources\lost.wav" />
+    <Content Include="Resources\plague.wav" />
+    <Content Include="Resources\player-hit.wav" />
     <Content Include="Resources\PlayerTile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
