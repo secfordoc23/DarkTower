@@ -24,7 +24,8 @@ Partial Class combatForm
     Private Sub InitializeComponent()
         Me.combatLogListBox = New System.Windows.Forms.ListBox()
         Me.okButton = New System.Windows.Forms.Button()
-        Me.SuspendLayout
+        Me.startCombatButton = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
         '
         'combatLogListBox
         '
@@ -40,7 +41,7 @@ Partial Class combatForm
         'okButton
         '
         Me.okButton.BackColor = System.Drawing.SystemColors.Info
-        Me.okButton.Location = New System.Drawing.Point(167, 379)
+        Me.okButton.Location = New System.Drawing.Point(298, 379)
         Me.okButton.Margin = New System.Windows.Forms.Padding(4)
         Me.okButton.Name = "okButton"
         Me.okButton.Size = New System.Drawing.Size(156, 58)
@@ -48,13 +49,25 @@ Partial Class combatForm
         Me.okButton.Text = "&OK"
         Me.okButton.UseVisualStyleBackColor = False
         '
+        'startCombatButton
+        '
+        Me.startCombatButton.BackColor = System.Drawing.SystemColors.Info
+        Me.startCombatButton.Location = New System.Drawing.Point(16, 379)
+        Me.startCombatButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.startCombatButton.Name = "startCombatButton"
+        Me.startCombatButton.Size = New System.Drawing.Size(156, 58)
+        Me.startCombatButton.TabIndex = 2
+        Me.startCombatButton.Text = "&Start Combat"
+        Me.startCombatButton.UseVisualStyleBackColor = False
+        '
         'combatForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.Game_Background
+        Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.GameBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(474, 450)
+        Me.Controls.Add(Me.startCombatButton)
         Me.Controls.Add(Me.okButton)
         Me.Controls.Add(Me.combatLogListBox)
         Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -69,4 +82,5 @@ End Sub
 
     Friend WithEvents combatLogListBox As ListBox
     Friend WithEvents okButton As Button
+    Friend WithEvents startCombatButton As Button
 End Class

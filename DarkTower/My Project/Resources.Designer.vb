@@ -120,9 +120,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Game_Background() As System.Drawing.Bitmap
+        Friend ReadOnly Property GameBackground() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Game Background", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("GameBackground", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -179,9 +179,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property New_Game_Background() As System.Drawing.Bitmap
+        Friend ReadOnly Property NewGameBackground() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("New Game Background", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("NewGameBackground", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

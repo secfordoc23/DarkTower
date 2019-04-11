@@ -58,7 +58,6 @@ Public Class bazaarForm
         foodComboBox.SelectedIndex = 0
         warriorComboBox.SelectedIndex = 0
 
-
     End Sub
     '==========================================================================================
     'Name: buyButton_Click
@@ -72,8 +71,9 @@ Public Class bazaarForm
             currentInventory.FoodCount += .FoodCount
             currentInventory.HaveBeast = .HaveBeast
             currentInventory.HaveHealer = .HaveHealer
-            currentInventory.HaveScout = .HaveScout 
+            currentInventory.HaveScout = .HaveScout
         End With
+        Me.Close()
     End Sub
     '==========================================================================================
     'Name: warriorComboBox_SelectedIndexChanged

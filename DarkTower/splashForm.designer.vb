@@ -59,7 +59,7 @@ Partial Class splashForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
-        Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.New_Game_Background
+        Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.NewGameBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(417, 430)
         Me.ControlBox = False

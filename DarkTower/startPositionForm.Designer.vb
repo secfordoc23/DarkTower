@@ -109,7 +109,7 @@ Partial Class startPositionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12!, 25!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.New_Game_Background
+        Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.NewGameBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(918, 757)
         Me.Controls.Add(Me.startLocationGroupBox)
