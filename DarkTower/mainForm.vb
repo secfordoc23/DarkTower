@@ -68,9 +68,13 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Shows the Bazaar Form
     Private Sub BazarrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BazarrToolStripMenuItem.Click
-        bazaarForm.currentInventory = currentPlayer.Inventory
+        GetCurrentInventory = currentPlayer.Inventory
+        GetCurrentGold = currentPlayer.Inventory.GoldCount
+
         bazaarForm.ShowDialog()
-        currentPlayer.Inventory = bazaarForm.currentInventory
+
+        currentPlayer.Inventory = GetCurrentInventory
+        currentPlayer.Inventory.GoldCount = GetCurrentGold
         currentPlayer.UpdateInventoryDisplay()
     End Sub
     '==========================================================================================

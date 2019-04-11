@@ -22,6 +22,7 @@ Partial Class bazaarForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bazaarForm))
         Me.buyButton = New System.Windows.Forms.Button()
         Me.cancelButton = New System.Windows.Forms.Button()
         Me.consumableGroupBox = New System.Windows.Forms.GroupBox()
@@ -237,8 +238,9 @@ Partial Class bazaarForm
         Me.Controls.Add(Me.consumableGroupBox)
         Me.Controls.Add(Me.cancelButton)
         Me.Controls.Add(Me.buyButton)
-        Me.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "bazaarForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

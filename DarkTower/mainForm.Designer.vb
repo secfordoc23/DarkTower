@@ -1017,10 +1017,10 @@ Partial Class mainForm
         Me.Controls.Add(Me.gamePlayMenuStrip)
         Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.gamePlayMenuStrip
         Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "mainForm"
-        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dark Tower"
         Me.gamePlayMenuStrip.ResumeLayout(false)

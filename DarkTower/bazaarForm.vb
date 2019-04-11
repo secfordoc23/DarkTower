@@ -2,13 +2,12 @@
 'Me: bazaarForm.vb
 'Date: 4/10/2019
 'Author: Jason Welch
-'Purpose: 
+'Purpose: Allow Player to buy Items
 
 Option Strict On
 Option Explicit On
 
 Public Class bazaarForm
-    Public currentInventory As Inventory
     Private purchaseInventory As Inventory
     Private purchaseGoldCountShort As Short
     Private Const ONE_TIME_BUY_AMOUNT As Short = 20S
@@ -30,11 +29,10 @@ Public Class bazaarForm
     'Purpose:
     Private Sub bazaarForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         My.Computer.Audio.Play(My.Resources.bazaar, AudioPlayMode.WaitToComplete)
-        purchaseInventory = currentInventory
+        purchaseInventory = GetCurrentInventory
         purchaseGoldCountShort = 0
 
         With purchaseInventory
-            currentGoldLabel.Text = .GoldCount.ToString
             If .HaveScout Then
                 scoutCheckBox.Enabled = False
             End If
@@ -55,9 +53,9 @@ Public Class bazaarForm
             Next
 
         End With
+        currentGoldLabel.Text = GetCurrentGold.ToString
         foodComboBox.SelectedIndex = 0
         warriorComboBox.SelectedIndex = 0
-
     End Sub
     '==========================================================================================
     'Name: buyButton_Click
@@ -65,13 +63,13 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub buyButton_Click(sender As Object, e As EventArgs) Handles buyButton.Click
+        GetCurrentGold -= purchaseGoldCountShort
         With purchaseInventory
-            currentInventory.GoldCount -= purchaseGoldCountShort
-            currentInventory.WarriorCount += .WarriorCount
-            currentInventory.FoodCount += .FoodCount
-            currentInventory.HaveBeast = .HaveBeast
-            currentInventory.HaveHealer = .HaveHealer
-            currentInventory.HaveScout = .HaveScout
+            GetCurrentInventory.WarriorCount += .WarriorCount
+            GetCurrentInventory.FoodCount += .FoodCount
+            GetCurrentInventory.HaveBeast = .HaveBeast
+            GetCurrentInventory.HaveHealer = .HaveHealer
+            GetCurrentInventory.HaveScout = .HaveScout
         End With
         Me.Close()
     End Sub
@@ -81,7 +79,7 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub warriorComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles warriorComboBox.SelectedIndexChanged
-        If (purchaseGoldCountShort + (warriorComboBox.SelectedIndex * WARRIOR_AMOUNT_PER)) > purchaseInventory.GoldCount Then
+        If (purchaseGoldCountShort + (warriorComboBox.SelectedIndex * WARRIOR_AMOUNT_PER)) > GetCurrentGold Then
             MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
             warriorComboBox.SelectedIndex = 0
         Else
@@ -95,8 +93,7 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub foodComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles foodComboBox.SelectedIndexChanged
-
-        If (purchaseGoldCountShort + (foodComboBox.SelectedIndex * FOOD_AMOUNT_PER)) > purchaseInventory.GoldCount Then
+        If (purchaseGoldCountShort + (foodComboBox.SelectedIndex * FOOD_AMOUNT_PER)) > GetCurrentGold Then
             MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
             foodComboBox.SelectedIndex = 0
         Else
@@ -110,8 +107,9 @@ Public Class bazaarForm
     'Author: Jason Welch
     'Purpose:
     Private Sub scoutCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles scoutCheckBox.CheckedChanged
+        purchaseInventory = GetCurrentInventory
         If scoutCheckBox.Checked = True Then
-            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > purchaseInventory.GoldCount Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > GetCurrentGold Then
                 MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
                 scoutCheckBox.Checked = False
             Else
@@ -129,7 +127,7 @@ Public Class bazaarForm
     'Purpose:
     Private Sub healerCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles healerCheckBox.CheckedChanged
         If healerCheckBox.Checked = True Then
-            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > purchaseInventory.GoldCount Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > GetCurrentGold Then
                 MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
                 healerCheckBox.Checked = False
             Else
@@ -147,7 +145,7 @@ Public Class bazaarForm
     'Purpose:
     Private Sub beastCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles beastCheckBox.CheckedChanged
         If beastCheckBox.Checked = True Then
-            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > purchaseInventory.GoldCount Then
+            If purchaseGoldCountShort + ONE_TIME_BUY_AMOUNT > GetCurrentGold Then
                 MsgBox("Your purchase has exceeded your available gold!", vbOKOnly, "Unable to Purchase!")
                 beastCheckBox.Checked = False
             Else
@@ -158,7 +156,6 @@ Public Class bazaarForm
         End If
         UpdatePurchaseGold()
     End Sub
-
     '==========================================================================================
     'Name: UpdatePurchaseGold
     'Date: 4/10/19

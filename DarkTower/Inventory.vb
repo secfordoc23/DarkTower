@@ -199,28 +199,6 @@ Public Class Inventory
         Return MAX_VALUE_SHORT - currentCount
     End Function
     '==========================================================================================
-    'Name: UpdateInventory()
-    'Date: 2/18/19
-    'Author: Jason Welch
-    'Purpose: Update Inventory on Main Form from Inventory Object
-    'Public Sub UpdateInventory()
-    '    mainForm.warriorCountLabel.Text = warriorCountShort.ToString()
-    '    mainForm.warriorCountLabel.Text = warriorCountShort.ToString()
-    '    mainForm.foodCountLabel.Text = foodCountShort.ToString()
-    '    If goldCountShort > GoldMax() Then
-    '        goldCountShort = GoldMax()
-    '    End If
-    '    mainForm.goldMaxLabel.Text = "/ " & GoldMax().ToString()
-    '    mainForm.goldCountLabel.Text = goldCountShort.ToString()
-    '    mainForm.scoutCheckBox.Checked = haveScoutBoolean
-    '    mainForm.healerCheckBox.Checked = haveHealerBoolean
-    '    mainForm.beastCheckBox.Checked = haveBeastBoolean
-    '    mainForm.bronzeKeyCheckBox.Checked = haveBronzeKeyBoolean
-    '    mainForm.silverKeyCheckBox.Checked = haveSilverKeyBoolean
-    '    mainForm.goldKeyCheckBox.Checked = haveGoldKeyBoolean
-    'End Sub
-
-    '==========================================================================================
     'Name: GoldMax
     'Date: 2/18/19
     'Author: Jason Welch

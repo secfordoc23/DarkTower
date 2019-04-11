@@ -12,17 +12,31 @@ Public Class combatForm
     Public warriorCountShort As Short = 0
     Private rand As Random
     Private brigandCountShort As Short = 0
-
+    '==========================================================================================
+    'Name: okButton_Click
+    'Date: 4/6/19
+    'Author: Jason Welch
+    'Purpose: Closes the Form
     Private Sub okButton_Click(sender As Object, e As EventArgs) Handles okButton.Click
         Close()
     End Sub
-
+    '==========================================================================================
+    'Name: combatForm_Shown
+    'Date: 4/6/19
+    'Author: Jason Welch
+    'Purpose: Starts Comabat and displays Results
     Private Sub combatForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         brigandCountShort = GetBrigandCount(maxBragandCountShort)
         combatLogListBox.Items.Add("You are being attacked by " & brigandCountShort & " Brigands!")
-
+        Threading.Thread.Sleep(1000)
+        Combat()
+        okButton.Enabled = True
     End Sub
-
+    '==========================================================================================
+    'Name: combatForm_Load
+    'Date: 4/6/19
+    'Author: Jason Welch
+    'Purpose: Starts the Comabat Log
     Private Sub combatForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         combatLogListBox.Items.Clear()
         rand = New Random()
@@ -32,7 +46,7 @@ Public Class combatForm
     'Name: WonFight
     'Date: 4/6/19
     'Author: Jason Welch
-    'Purpose:
+    'Purpose: Randomly Returns True or false 
     Private Function WonFight() As Boolean
         If rand.Next(0, 2) > 0 Then
             Return True
@@ -43,7 +57,7 @@ Public Class combatForm
     'Name: GetBrigandCount
     'Date: 4/6/19
     'Author: Jason Welch
-    'Purpose:
+    'Purpose: Gets a random number of brigands
     Private Function GetBrigandCount(maxBrigandsShort As Short) As Short
         Return CShort(rand.Next(1, maxBrigandsShort))
     End Function
@@ -51,7 +65,7 @@ Public Class combatForm
     'Name: Combat
     'Date: 4/6/19
     'Author: Jason Welch
-    'Purpose:
+    'Purpose: Loops through until all Brigands or Warriors are gone
     Private Sub Combat()
         Dim battleResultsString As String
         While brigandCountShort > 0 And warriorCountShort > 0S
@@ -66,7 +80,8 @@ Public Class combatForm
                 My.Computer.Audio.Play(My.Resources.player_hit, AudioPlayMode.WaitToComplete)
             End If
             combatLogListBox.Items.Add(battleResultsString & " - Warriors: " & warriorCountShort & " Brigands: " & brigandCountShort)
-            Threading.Thread.Sleep(2000)
+            combatLogListBox.Refresh()
+            Threading.Thread.Sleep(1000)
         End While
 
         If warriorCountShort = 0 Then
@@ -74,11 +89,6 @@ Public Class combatForm
         Else
             combatLogListBox.Items.Add("Battle Won!")
         End If
-    End Sub
-
-    Private Sub startCombatButton_Click(sender As Object, e As EventArgs) Handles startCombatButton.Click
-        Combat()
-        okButton.Enabled = True
     End Sub
 End Class
 '================================== No Code Follows ===========================================

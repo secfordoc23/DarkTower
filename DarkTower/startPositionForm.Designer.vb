@@ -102,20 +102,21 @@ Partial Class startPositionForm
         Me.startLocationGroupBox.Name = "startLocationGroupBox"
         Me.startLocationGroupBox.Size = New System.Drawing.Size(796, 204)
         Me.startLocationGroupBox.TabIndex = 1
-        Me.startLocationGroupBox.TabStop = false
+        Me.startLocationGroupBox.TabStop = False
         Me.startLocationGroupBox.Text = "Select Starting Citadel"
         '
         'startPositionForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12!, 25!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.NewGameBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(918, 757)
         Me.Controls.Add(Me.startLocationGroupBox)
         Me.Controls.Add(Me.introRichTextBox)
-        Me.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "startPositionForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

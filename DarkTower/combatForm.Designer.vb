@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class combatForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,11 @@ Partial Class combatForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(combatForm))
         Me.combatLogListBox = New System.Windows.Forms.ListBox()
         Me.okButton = New System.Windows.Forms.Button()
-        Me.startCombatButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'combatLogListBox
@@ -41,24 +41,13 @@ Partial Class combatForm
         'okButton
         '
         Me.okButton.BackColor = System.Drawing.SystemColors.Info
-        Me.okButton.Location = New System.Drawing.Point(298, 379)
+        Me.okButton.Location = New System.Drawing.Point(153, 379)
         Me.okButton.Margin = New System.Windows.Forms.Padding(4)
         Me.okButton.Name = "okButton"
         Me.okButton.Size = New System.Drawing.Size(156, 58)
         Me.okButton.TabIndex = 1
         Me.okButton.Text = "&OK"
         Me.okButton.UseVisualStyleBackColor = False
-        '
-        'startCombatButton
-        '
-        Me.startCombatButton.BackColor = System.Drawing.SystemColors.Info
-        Me.startCombatButton.Location = New System.Drawing.Point(16, 379)
-        Me.startCombatButton.Margin = New System.Windows.Forms.Padding(4)
-        Me.startCombatButton.Name = "startCombatButton"
-        Me.startCombatButton.Size = New System.Drawing.Size(156, 58)
-        Me.startCombatButton.TabIndex = 2
-        Me.startCombatButton.Text = "&Start Combat"
-        Me.startCombatButton.UseVisualStyleBackColor = False
         '
         'combatForm
         '
@@ -67,20 +56,19 @@ Partial Class combatForm
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.GameBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(474, 450)
-        Me.Controls.Add(Me.startCombatButton)
         Me.Controls.Add(Me.okButton)
         Me.Controls.Add(Me.combatLogListBox)
         Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "combatForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Battle with Brigands!"
-        Me.ResumeLayout(false)
+        Me.ResumeLayout(False)
 
-End Sub
+    End Sub
 
     Friend WithEvents combatLogListBox As ListBox
     Friend WithEvents okButton As Button
-    Friend WithEvents startCombatButton As Button
 End Class
