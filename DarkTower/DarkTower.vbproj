@@ -190,11 +190,15 @@
     <None Include="Resources\YellowTile.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Textures.png" />
     <None Include="Resources\tomb-battle.wav" />
     <None Include="Resources\pegasus.wav" />
     <None Include="Resources\bazaar.wav" />
     <None Include="Resources\sanctuary.wav" />
     <Content Include="darktowericon.ico" />
+    <None Include="Resources\Desert1Texture.png" />
+    <None Include="Resources\Desert2Texture.png" />
+    <None Include="Resources\Forest1Texture.png" />
     <Content Include="Resources\starving.wav" />
     <None Include="Resources\Game Background1.jpg" />
     <None Include="Resources\New Game Background.jpg" />
