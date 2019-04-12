@@ -8,7 +8,7 @@ Option Strict On
 Option Explicit On
 
 Public Class Player
-    Private Shared playersCurrentInventory As Inventory
+    Private playersCurrentInventory As Inventory
     Private hasGameStartedBoolean As Boolean = False
     Private initialStartPositionShort As Short
     Private currentStartPositonShort As Short
@@ -86,7 +86,7 @@ Public Class Player
     'Date: 4/6/19
     'Author: Jason Welch
     'Purpose: Get and Set currentPositionShort
-    Public Shared Property Inventory() As Inventory
+    Public Property Inventory() As Inventory
         Get
             Return playersCurrentInventory
         End Get

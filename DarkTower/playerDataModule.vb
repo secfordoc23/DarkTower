@@ -14,7 +14,7 @@ Module playerDataModule
     'Date: 4/10/19
     'Author: Jason Welch
     'Purpose: Instantiate a New Player
-    Public Sub CreateNewPlayer() 
+    Public Sub CreateNewPlayer()
         currentPlayer = New Player
     End Sub
 End Module

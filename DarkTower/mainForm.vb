@@ -23,8 +23,8 @@ Public Class mainForm
     'Purpose: 
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         splashForm.ShowDialog()
-        CreateNewPlayer
-        currentPlayer.HasGameStarted = false
+        CreateNewPlayer()
+        currentPlayer.HasGameStarted = False
     End Sub
     '==========================================================================================
     'Name: NewGameToolStripMenuItem_Click
@@ -32,7 +32,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: 
     Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
-        CreateNewPlayer
+        CreateNewPlayer()
 
         currentMove = New PlayerMovement
         currentMove.ResetMap()
