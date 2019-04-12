@@ -33,7 +33,7 @@ Public Class PlayerMovement
                 validMovesList.Add(startPositionShort + 5S)
                 validMovesList.Add(startPositionShort + 7S)
                 validMovesList.Add(startPositionShort + 9S)
-            Case 15, 25, 35, 46
+            Case 15, 25, 35, 45
                 validMovesList.Add(startPositionShort + 6S)
                 validMovesList.Add(startPositionShort + 4S)
                 validMovesList.Add(startPositionShort + 2S)

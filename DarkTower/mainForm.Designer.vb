@@ -1009,21 +1009,23 @@ Partial Class mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.GameBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(759, 944)
+        Me.ControlBox = False
         Me.Controls.Add(Me.inventoryGroupBox)
         Me.Controls.Add(Me.mapGroupBox)
         Me.Controls.Add(Me.gamePlayMenuStrip)
         Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.gamePlayMenuStrip
         Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "mainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Dark Tower"
-        Me.gamePlayMenuStrip.ResumeLayout(false)
+        Me.gamePlayMenuStrip.ResumeLayout(False)
         Me.gamePlayMenuStrip.PerformLayout
         Me.mapGroupBox.ResumeLayout(false)
         CType(Me.startTile2PictureBox,System.ComponentModel.ISupportInitialize).EndInit
