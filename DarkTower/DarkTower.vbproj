@@ -199,6 +199,17 @@
     <None Include="Resources\Desert1Texture.png" />
     <None Include="Resources\Desert2Texture.png" />
     <None Include="Resources\Forest1Texture.png" />
+    <None Include="Resources\key_A_bronze.png" />
+    <None Include="Resources\key_A_gold.png" />
+    <None Include="Resources\key_A_silver.png" />
+    <None Include="Resources\key_A_bronze_Rotated.png" />
+    <None Include="Resources\key_A_gold_Rotated.png" />
+    <None Include="Resources\key_A_silver_Rotated.png" />
+    <None Include="Resources\grass_corner_inner_southwest_f2.png" />
+    <None Include="Resources\castle.png" />
+    <None Include="Resources\StartLocation.png" />
+    <None Include="Resources\snow1.png" />
+    <None Include="Resources\DarkTowerCastle.png" />
     <Content Include="Resources\starving.wav" />
     <None Include="Resources\Game Background1.jpg" />
     <None Include="Resources\New Game Background.jpg" />

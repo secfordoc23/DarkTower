@@ -78,6 +78,9 @@ Partial Class mainForm
         Me.desertTile1PictureBox = New System.Windows.Forms.PictureBox()
         Me.castleTile1PictureBox = New System.Windows.Forms.PictureBox()
         Me.inventoryGroupBox = New System.Windows.Forms.GroupBox()
+        Me.goldKeyPictureBox = New System.Windows.Forms.PictureBox()
+        Me.silverKeyPictureBox = New System.Windows.Forms.PictureBox()
+        Me.bronzeKeyPictureBox = New System.Windows.Forms.PictureBox()
         Me.goldMaxLabel = New System.Windows.Forms.Label()
         Me.foodMaxLabel = New System.Windows.Forms.Label()
         Me.warriorMaxLabel = New System.Windows.Forms.Label()
@@ -93,56 +96,59 @@ Partial Class mainForm
         Me.goldLabel = New System.Windows.Forms.Label()
         Me.foodLabel = New System.Windows.Forms.Label()
         Me.warriorLabel = New System.Windows.Forms.Label()
-        Me.gamePlayMenuStrip.SuspendLayout
-        Me.mapGroupBox.SuspendLayout
-        CType(Me.startTile2PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.startTile1PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.startTile4PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.startTile3PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.forestTile4PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.forestTile8PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.forestTile7PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.forestTile5PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.forestTile3PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.forestTile2PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.forestTile6PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.castleTile2PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.icelandTile8PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.icelandTile7PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.icelandTile4PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.icelandTile5PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.icelandTile3PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.plainTile2PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.plainTile3PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.plainTile4PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.plainTile5PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.plainTile8PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.plainTile7PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.plainTile6PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.castleTile3PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.icelandTile2PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.icelandTile6PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.castleTile4PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.desertTile4PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.desertTile5PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.desertTile8PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.forestTile1PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.desertTile6PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.icelandTile1PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.desertTile2PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.plainTile1PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.desertTile3PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.darkTowerTilePictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.desertTile7PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.desertTile1PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.castleTile1PictureBox,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.inventoryGroupBox.SuspendLayout
-        Me.SuspendLayout
+        Me.gamePlayMenuStrip.SuspendLayout()
+        Me.mapGroupBox.SuspendLayout()
+        CType(Me.startTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.startTile1PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.startTile4PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.startTile3PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.forestTile4PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.forestTile8PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.forestTile7PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.forestTile5PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.forestTile3PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.forestTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.forestTile6PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.castleTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.icelandTile8PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.icelandTile7PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.icelandTile4PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.icelandTile5PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.icelandTile3PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.plainTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.plainTile3PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.plainTile4PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.plainTile5PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.plainTile8PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.plainTile7PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.plainTile6PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.castleTile3PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.icelandTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.icelandTile6PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.castleTile4PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desertTile4PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desertTile5PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desertTile8PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.forestTile1PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desertTile6PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.icelandTile1PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desertTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.plainTile1PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desertTile3PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.darkTowerTilePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desertTile7PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desertTile1PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.castleTile1PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.inventoryGroupBox.SuspendLayout()
+        CType(Me.goldKeyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.silverKeyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bronzeKeyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'gamePlayMenuStrip
         '
         Me.gamePlayMenuStrip.BackColor = System.Drawing.Color.Transparent
-        Me.gamePlayMenuStrip.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.gamePlayMenuStrip.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gamePlayMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.OptionsToolStripMenuItem})
         Me.gamePlayMenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.gamePlayMenuStrip.Name = "gamePlayMenuStrip"
@@ -153,9 +159,9 @@ Partial Class mainForm
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.AutoSize = false
+        Me.FileToolStripMenuItem.AutoSize = False
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewGameToolStripMenuItem, Me.SaveGameToolStripMenuItem, Me.LoadGameToolStripMenuItem, Me.ExitToolStripMenuItem})
-        Me.FileToolStripMenuItem.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.FileToolStripMenuItem.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 25)
         Me.FileToolStripMenuItem.Text = "&File"
@@ -186,9 +192,9 @@ Partial Class mainForm
         '
         'OptionsToolStripMenuItem
         '
-        Me.OptionsToolStripMenuItem.AutoSize = false
+        Me.OptionsToolStripMenuItem.AutoSize = False
         Me.OptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BazarrToolStripMenuItem, Me.MoveToStartPosition1ToolStripMenuItem, Me.MoveToStartPosition2ToolStripMenuItem1, Me.MoveToStartPosition3ToolStripMenuItem2, Me.MoveToStartPosition4ToolStripMenuItem3})
-        Me.OptionsToolStripMenuItem.Font = New System.Drawing.Font("Papyrus", 12!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.OptionsToolStripMenuItem.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
         Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(77, 25)
         Me.OptionsToolStripMenuItem.Text = "&Options"
@@ -279,7 +285,7 @@ Partial Class mainForm
         '
         'startTile2PictureBox
         '
-        Me.startTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.YellowTile
+        Me.startTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.startTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startTile2PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -292,7 +298,7 @@ Partial Class mainForm
         '
         'startTile1PictureBox
         '
-        Me.startTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.YellowTile
+        Me.startTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.startTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startTile1PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -305,7 +311,7 @@ Partial Class mainForm
         '
         'startTile4PictureBox
         '
-        Me.startTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.YellowTile
+        Me.startTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.startTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startTile4PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -318,7 +324,7 @@ Partial Class mainForm
         '
         'startTile3PictureBox
         '
-        Me.startTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.YellowTile
+        Me.startTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.startTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startTile3PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -331,7 +337,7 @@ Partial Class mainForm
         '
         'forestTile4PictureBox
         '
-        Me.forestTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
+        Me.forestTile4PictureBox.BackgroundImage = CType(resources.GetObject("forestTile4PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile4PictureBox.InitialImage = CType(resources.GetObject("forestTile4PictureBox.InitialImage"), System.Drawing.Image)
@@ -344,7 +350,7 @@ Partial Class mainForm
         '
         'forestTile8PictureBox
         '
-        Me.forestTile8PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
+        Me.forestTile8PictureBox.BackgroundImage = CType(resources.GetObject("forestTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile8PictureBox.InitialImage = CType(resources.GetObject("forestTile8PictureBox.InitialImage"), System.Drawing.Image)
@@ -357,7 +363,7 @@ Partial Class mainForm
         '
         'forestTile7PictureBox
         '
-        Me.forestTile7PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
+        Me.forestTile7PictureBox.BackgroundImage = CType(resources.GetObject("forestTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile7PictureBox.InitialImage = CType(resources.GetObject("forestTile7PictureBox.InitialImage"), System.Drawing.Image)
@@ -370,7 +376,7 @@ Partial Class mainForm
         '
         'forestTile5PictureBox
         '
-        Me.forestTile5PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
+        Me.forestTile5PictureBox.BackgroundImage = CType(resources.GetObject("forestTile5PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile5PictureBox.InitialImage = CType(resources.GetObject("forestTile5PictureBox.InitialImage"), System.Drawing.Image)
@@ -383,7 +389,7 @@ Partial Class mainForm
         '
         'forestTile3PictureBox
         '
-        Me.forestTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
+        Me.forestTile3PictureBox.BackgroundImage = CType(resources.GetObject("forestTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile3PictureBox.InitialImage = CType(resources.GetObject("forestTile3PictureBox.InitialImage"), System.Drawing.Image)
@@ -409,7 +415,7 @@ Partial Class mainForm
         '
         'forestTile6PictureBox
         '
-        Me.forestTile6PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
+        Me.forestTile6PictureBox.BackgroundImage = CType(resources.GetObject("forestTile6PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile6PictureBox.InitialImage = CType(resources.GetObject("forestTile6PictureBox.InitialImage"), System.Drawing.Image)
@@ -422,7 +428,8 @@ Partial Class mainForm
         '
         'castleTile2PictureBox
         '
-        Me.castleTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GrayTile
+        Me.castleTile2PictureBox.BackColor = System.Drawing.Color.Gray
+        Me.castleTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.castleTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.castleTile2PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -435,7 +442,7 @@ Partial Class mainForm
         '
         'icelandTile8PictureBox
         '
-        Me.icelandTile8PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
+        Me.icelandTile8PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile8PictureBox.InitialImage = CType(resources.GetObject("icelandTile8PictureBox.InitialImage"), System.Drawing.Image)
@@ -448,7 +455,7 @@ Partial Class mainForm
         '
         'icelandTile7PictureBox
         '
-        Me.icelandTile7PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
+        Me.icelandTile7PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile7PictureBox.InitialImage = CType(resources.GetObject("icelandTile7PictureBox.InitialImage"), System.Drawing.Image)
@@ -461,7 +468,7 @@ Partial Class mainForm
         '
         'icelandTile4PictureBox
         '
-        Me.icelandTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
+        Me.icelandTile4PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile4PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile4PictureBox.InitialImage = CType(resources.GetObject("icelandTile4PictureBox.InitialImage"), System.Drawing.Image)
@@ -474,7 +481,7 @@ Partial Class mainForm
         '
         'icelandTile5PictureBox
         '
-        Me.icelandTile5PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
+        Me.icelandTile5PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile5PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile5PictureBox.InitialImage = CType(resources.GetObject("icelandTile5PictureBox.InitialImage"), System.Drawing.Image)
@@ -487,7 +494,7 @@ Partial Class mainForm
         '
         'icelandTile3PictureBox
         '
-        Me.icelandTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
+        Me.icelandTile3PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile3PictureBox.InitialImage = CType(resources.GetObject("icelandTile3PictureBox.InitialImage"), System.Drawing.Image)
@@ -500,7 +507,7 @@ Partial Class mainForm
         '
         'plainTile2PictureBox
         '
-        Me.plainTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
+        Me.plainTile2PictureBox.BackgroundImage = CType(resources.GetObject("plainTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile2PictureBox.InitialImage = CType(resources.GetObject("plainTile2PictureBox.InitialImage"), System.Drawing.Image)
@@ -513,7 +520,7 @@ Partial Class mainForm
         '
         'plainTile3PictureBox
         '
-        Me.plainTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
+        Me.plainTile3PictureBox.BackgroundImage = CType(resources.GetObject("plainTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile3PictureBox.InitialImage = CType(resources.GetObject("plainTile3PictureBox.InitialImage"), System.Drawing.Image)
@@ -526,7 +533,7 @@ Partial Class mainForm
         '
         'plainTile4PictureBox
         '
-        Me.plainTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
+        Me.plainTile4PictureBox.BackgroundImage = CType(resources.GetObject("plainTile4PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile4PictureBox.InitialImage = CType(resources.GetObject("plainTile4PictureBox.InitialImage"), System.Drawing.Image)
@@ -539,7 +546,7 @@ Partial Class mainForm
         '
         'plainTile5PictureBox
         '
-        Me.plainTile5PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
+        Me.plainTile5PictureBox.BackgroundImage = CType(resources.GetObject("plainTile5PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile5PictureBox.InitialImage = CType(resources.GetObject("plainTile5PictureBox.InitialImage"), System.Drawing.Image)
@@ -552,7 +559,7 @@ Partial Class mainForm
         '
         'plainTile8PictureBox
         '
-        Me.plainTile8PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
+        Me.plainTile8PictureBox.BackgroundImage = CType(resources.GetObject("plainTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile8PictureBox.InitialImage = CType(resources.GetObject("plainTile8PictureBox.InitialImage"), System.Drawing.Image)
@@ -565,7 +572,7 @@ Partial Class mainForm
         '
         'plainTile7PictureBox
         '
-        Me.plainTile7PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
+        Me.plainTile7PictureBox.BackgroundImage = CType(resources.GetObject("plainTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile7PictureBox.InitialImage = CType(resources.GetObject("plainTile7PictureBox.InitialImage"), System.Drawing.Image)
@@ -578,7 +585,7 @@ Partial Class mainForm
         '
         'plainTile6PictureBox
         '
-        Me.plainTile6PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
+        Me.plainTile6PictureBox.BackgroundImage = CType(resources.GetObject("plainTile6PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile6PictureBox.InitialImage = CType(resources.GetObject("plainTile6PictureBox.InitialImage"), System.Drawing.Image)
@@ -591,7 +598,8 @@ Partial Class mainForm
         '
         'castleTile3PictureBox
         '
-        Me.castleTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GrayTile
+        Me.castleTile3PictureBox.BackColor = System.Drawing.Color.Gray
+        Me.castleTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.castleTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.castleTile3PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -604,7 +612,7 @@ Partial Class mainForm
         '
         'icelandTile2PictureBox
         '
-        Me.icelandTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
+        Me.icelandTile2PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile2PictureBox.InitialImage = CType(resources.GetObject("icelandTile2PictureBox.InitialImage"), System.Drawing.Image)
@@ -617,7 +625,7 @@ Partial Class mainForm
         '
         'icelandTile6PictureBox
         '
-        Me.icelandTile6PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
+        Me.icelandTile6PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile6PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile6PictureBox.InitialImage = CType(resources.GetObject("icelandTile6PictureBox.InitialImage"), System.Drawing.Image)
@@ -630,7 +638,8 @@ Partial Class mainForm
         '
         'castleTile4PictureBox
         '
-        Me.castleTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GrayTile
+        Me.castleTile4PictureBox.BackColor = System.Drawing.Color.Gray
+        Me.castleTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.castleTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.castleTile4PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -643,7 +652,7 @@ Partial Class mainForm
         '
         'desertTile4PictureBox
         '
-        Me.desertTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BrownTile
+        Me.desertTile4PictureBox.BackgroundImage = CType(resources.GetObject("desertTile4PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile4PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -656,7 +665,7 @@ Partial Class mainForm
         '
         'desertTile5PictureBox
         '
-        Me.desertTile5PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BrownTile
+        Me.desertTile5PictureBox.BackgroundImage = CType(resources.GetObject("desertTile5PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile5PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -669,7 +678,7 @@ Partial Class mainForm
         '
         'desertTile8PictureBox
         '
-        Me.desertTile8PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BrownTile
+        Me.desertTile8PictureBox.BackgroundImage = CType(resources.GetObject("desertTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile8PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -682,7 +691,7 @@ Partial Class mainForm
         '
         'forestTile1PictureBox
         '
-        Me.forestTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GreenTile
+        Me.forestTile1PictureBox.BackgroundImage = CType(resources.GetObject("forestTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.forestTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile1PictureBox.InitialImage = CType(resources.GetObject("forestTile1PictureBox.InitialImage"), System.Drawing.Image)
@@ -695,7 +704,7 @@ Partial Class mainForm
         '
         'desertTile6PictureBox
         '
-        Me.desertTile6PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BrownTile
+        Me.desertTile6PictureBox.BackgroundImage = CType(resources.GetObject("desertTile6PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile6PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -708,7 +717,7 @@ Partial Class mainForm
         '
         'icelandTile1PictureBox
         '
-        Me.icelandTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightBlueTile
+        Me.icelandTile1PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.icelandTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile1PictureBox.InitialImage = CType(resources.GetObject("icelandTile1PictureBox.InitialImage"), System.Drawing.Image)
@@ -721,7 +730,7 @@ Partial Class mainForm
         '
         'desertTile2PictureBox
         '
-        Me.desertTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BrownTile
+        Me.desertTile2PictureBox.BackgroundImage = CType(resources.GetObject("desertTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile2PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -734,7 +743,7 @@ Partial Class mainForm
         '
         'plainTile1PictureBox
         '
-        Me.plainTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.LightGreenTile
+        Me.plainTile1PictureBox.BackgroundImage = CType(resources.GetObject("plainTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.plainTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile1PictureBox.InitialImage = CType(resources.GetObject("plainTile1PictureBox.InitialImage"), System.Drawing.Image)
@@ -747,7 +756,7 @@ Partial Class mainForm
         '
         'desertTile3PictureBox
         '
-        Me.desertTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BrownTile
+        Me.desertTile3PictureBox.BackgroundImage = CType(resources.GetObject("desertTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile3PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -760,7 +769,7 @@ Partial Class mainForm
         '
         'darkTowerTilePictureBox
         '
-        Me.darkTowerTilePictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BlackTile
+        Me.darkTowerTilePictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.DarkTowerCastle
         Me.darkTowerTilePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.darkTowerTilePictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.darkTowerTilePictureBox.Location = New System.Drawing.Point(312, 305)
@@ -772,7 +781,7 @@ Partial Class mainForm
         '
         'desertTile7PictureBox
         '
-        Me.desertTile7PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BrownTile
+        Me.desertTile7PictureBox.BackgroundImage = CType(resources.GetObject("desertTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile7PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -785,7 +794,7 @@ Partial Class mainForm
         '
         'desertTile1PictureBox
         '
-        Me.desertTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.BrownTile
+        Me.desertTile1PictureBox.BackgroundImage = CType(resources.GetObject("desertTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile1PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -798,7 +807,8 @@ Partial Class mainForm
         '
         'castleTile1PictureBox
         '
-        Me.castleTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.GrayTile
+        Me.castleTile1PictureBox.BackColor = System.Drawing.Color.Gray
+        Me.castleTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.castleTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.castleTile1PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
@@ -812,6 +822,9 @@ Partial Class mainForm
         'inventoryGroupBox
         '
         Me.inventoryGroupBox.BackColor = System.Drawing.Color.Transparent
+        Me.inventoryGroupBox.Controls.Add(Me.goldKeyPictureBox)
+        Me.inventoryGroupBox.Controls.Add(Me.silverKeyPictureBox)
+        Me.inventoryGroupBox.Controls.Add(Me.bronzeKeyPictureBox)
         Me.inventoryGroupBox.Controls.Add(Me.goldMaxLabel)
         Me.inventoryGroupBox.Controls.Add(Me.foodMaxLabel)
         Me.inventoryGroupBox.Controls.Add(Me.warriorMaxLabel)
@@ -836,6 +849,36 @@ Partial Class mainForm
         Me.inventoryGroupBox.TabIndex = 14
         Me.inventoryGroupBox.TabStop = False
         Me.inventoryGroupBox.Text = "Inventory"
+        '
+        'goldKeyPictureBox
+        '
+        Me.goldKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.key_A_gold_Rotated
+        Me.goldKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.goldKeyPictureBox.Location = New System.Drawing.Point(571, 132)
+        Me.goldKeyPictureBox.Name = "goldKeyPictureBox"
+        Me.goldKeyPictureBox.Size = New System.Drawing.Size(50, 37)
+        Me.goldKeyPictureBox.TabIndex = 17
+        Me.goldKeyPictureBox.TabStop = False
+        '
+        'silverKeyPictureBox
+        '
+        Me.silverKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.key_A_silver_Rotated
+        Me.silverKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.silverKeyPictureBox.Location = New System.Drawing.Point(571, 81)
+        Me.silverKeyPictureBox.Name = "silverKeyPictureBox"
+        Me.silverKeyPictureBox.Size = New System.Drawing.Size(50, 37)
+        Me.silverKeyPictureBox.TabIndex = 16
+        Me.silverKeyPictureBox.TabStop = False
+        '
+        'bronzeKeyPictureBox
+        '
+        Me.bronzeKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.key_A_bronze_Rotated
+        Me.bronzeKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.bronzeKeyPictureBox.Location = New System.Drawing.Point(571, 24)
+        Me.bronzeKeyPictureBox.Name = "bronzeKeyPictureBox"
+        Me.bronzeKeyPictureBox.Size = New System.Drawing.Size(50, 37)
+        Me.bronzeKeyPictureBox.TabIndex = 15
+        Me.bronzeKeyPictureBox.TabStop = False
         '
         'goldMaxLabel
         '
@@ -876,7 +919,6 @@ Partial Class mainForm
         Me.goldKeyCheckBox.Name = "goldKeyCheckBox"
         Me.goldKeyCheckBox.Size = New System.Drawing.Size(123, 30)
         Me.goldKeyCheckBox.TabIndex = 11
-        Me.goldKeyCheckBox.Text = "Gold Key"
         Me.goldKeyCheckBox.ThreeState = True
         Me.goldKeyCheckBox.UseVisualStyleBackColor = True
         '
@@ -889,7 +931,6 @@ Partial Class mainForm
         Me.silverKeyCheckBox.Name = "silverKeyCheckBox"
         Me.silverKeyCheckBox.Size = New System.Drawing.Size(128, 30)
         Me.silverKeyCheckBox.TabIndex = 10
-        Me.silverKeyCheckBox.Text = "Silver Key"
         Me.silverKeyCheckBox.ThreeState = True
         Me.silverKeyCheckBox.UseVisualStyleBackColor = True
         '
@@ -902,7 +943,6 @@ Partial Class mainForm
         Me.bronzeKeyCheckBox.Name = "bronzeKeyCheckBox"
         Me.bronzeKeyCheckBox.Size = New System.Drawing.Size(145, 30)
         Me.bronzeKeyCheckBox.TabIndex = 9
-        Me.bronzeKeyCheckBox.Text = "Bronze Key"
         Me.bronzeKeyCheckBox.ThreeState = True
         Me.bronzeKeyCheckBox.UseVisualStyleBackColor = True
         '
@@ -1026,51 +1066,54 @@ Partial Class mainForm
         Me.Name = "mainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.gamePlayMenuStrip.ResumeLayout(False)
-        Me.gamePlayMenuStrip.PerformLayout
-        Me.mapGroupBox.ResumeLayout(false)
-        CType(Me.startTile2PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.startTile1PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.startTile4PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.startTile3PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.forestTile4PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.forestTile8PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.forestTile7PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.forestTile5PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.forestTile3PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.forestTile2PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.forestTile6PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.castleTile2PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.icelandTile8PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.icelandTile7PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.icelandTile4PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.icelandTile5PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.icelandTile3PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.plainTile2PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.plainTile3PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.plainTile4PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.plainTile5PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.plainTile8PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.plainTile7PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.plainTile6PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.castleTile3PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.icelandTile2PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.icelandTile6PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.castleTile4PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.desertTile4PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.desertTile5PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.desertTile8PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.forestTile1PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.desertTile6PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.icelandTile1PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.desertTile2PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.plainTile1PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.desertTile3PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.darkTowerTilePictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.desertTile7PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.desertTile1PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.castleTile1PictureBox,System.ComponentModel.ISupportInitialize).EndInit
-        Me.inventoryGroupBox.ResumeLayout(false)
-        Me.ResumeLayout(false)
+        Me.gamePlayMenuStrip.PerformLayout()
+        Me.mapGroupBox.ResumeLayout(False)
+        CType(Me.startTile2PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.startTile1PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.startTile4PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.startTile3PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.forestTile4PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.forestTile8PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.forestTile7PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.forestTile5PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.forestTile3PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.forestTile2PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.forestTile6PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.castleTile2PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.icelandTile8PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.icelandTile7PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.icelandTile4PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.icelandTile5PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.icelandTile3PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.plainTile2PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.plainTile3PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.plainTile4PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.plainTile5PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.plainTile8PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.plainTile7PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.plainTile6PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.castleTile3PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.icelandTile2PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.icelandTile6PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.castleTile4PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desertTile4PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desertTile5PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desertTile8PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.forestTile1PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desertTile6PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.icelandTile1PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desertTile2PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.plainTile1PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desertTile3PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.darkTowerTilePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desertTile7PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desertTile1PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.castleTile1PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.inventoryGroupBox.ResumeLayout(False)
+        CType(Me.goldKeyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.silverKeyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bronzeKeyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
         Me.PerformLayout
 
 End Sub
@@ -1145,4 +1188,7 @@ End Sub
     Friend WithEvents goldMaxLabel As Label
     Friend WithEvents foodMaxLabel As Label
     Friend WithEvents warriorMaxLabel As Label
+    Friend WithEvents goldKeyPictureBox As PictureBox
+    Friend WithEvents silverKeyPictureBox As PictureBox
+    Friend WithEvents bronzeKeyPictureBox As PictureBox
 End Class
