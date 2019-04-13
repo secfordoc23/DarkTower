@@ -45,6 +45,8 @@ Public Class CombatLoot
             ' User has all of the keys so do nothing
         End If
 
+        ' Dragon Sword??
+
         Return combatInventory
     End Function
     '==========================================================================================

@@ -190,6 +190,8 @@
     <None Include="Resources\YellowTile.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\warriors.png" />
+    <None Include="Resources\warrior.png" />
     <None Include="Resources\Textures.png" />
     <None Include="Resources\tomb-battle.wav" />
     <None Include="Resources\pegasus.wav" />
@@ -210,6 +212,16 @@
     <None Include="Resources\StartLocation.png" />
     <None Include="Resources\snow1.png" />
     <None Include="Resources\DarkTowerCastle.png" />
+    <None Include="Resources\beast.png" />
+    <None Include="Resources\brigands.png" />
+    <None Include="Resources\dragon.png" />
+    <None Include="Resources\dragonsword.png" />
+    <None Include="Resources\gold.png" />
+    <None Include="Resources\healer.png" />
+    <None Include="Resources\Lost.png" />
+    <None Include="Resources\Plague.png" />
+    <None Include="Resources\scout.png" />
+    <None Include="Resources\food.png" />
     <Content Include="Resources\starving.wav" />
     <None Include="Resources\Game Background1.jpg" />
     <None Include="Resources\New Game Background.jpg" />

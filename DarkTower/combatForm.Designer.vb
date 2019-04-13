@@ -25,6 +25,10 @@ Partial Class combatForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(combatForm))
         Me.combatLogListBox = New System.Windows.Forms.ListBox()
         Me.okButton = New System.Windows.Forms.Button()
+        Me.brigandsPictureBox = New System.Windows.Forms.PictureBox()
+        Me.warriorsPictureBox = New System.Windows.Forms.PictureBox()
+        CType(Me.brigandsPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.warriorsPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'combatLogListBox
@@ -32,7 +36,7 @@ Partial Class combatForm
         Me.combatLogListBox.BackColor = System.Drawing.SystemColors.Info
         Me.combatLogListBox.FormattingEnabled = True
         Me.combatLogListBox.ItemHeight = 25
-        Me.combatLogListBox.Location = New System.Drawing.Point(16, 17)
+        Me.combatLogListBox.Location = New System.Drawing.Point(179, 13)
         Me.combatLogListBox.Margin = New System.Windows.Forms.Padding(4)
         Me.combatLogListBox.Name = "combatLogListBox"
         Me.combatLogListBox.Size = New System.Drawing.Size(438, 354)
@@ -41,7 +45,7 @@ Partial Class combatForm
         'okButton
         '
         Me.okButton.BackColor = System.Drawing.SystemColors.Info
-        Me.okButton.Location = New System.Drawing.Point(153, 379)
+        Me.okButton.Location = New System.Drawing.Point(320, 375)
         Me.okButton.Margin = New System.Windows.Forms.Padding(4)
         Me.okButton.Name = "okButton"
         Me.okButton.Size = New System.Drawing.Size(156, 58)
@@ -49,13 +53,33 @@ Partial Class combatForm
         Me.okButton.Text = "&OK"
         Me.okButton.UseVisualStyleBackColor = False
         '
+        'brigandsPictureBox
+        '
+        Me.brigandsPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.brigands
+        Me.brigandsPictureBox.Location = New System.Drawing.Point(624, 75)
+        Me.brigandsPictureBox.Name = "brigandsPictureBox"
+        Me.brigandsPictureBox.Size = New System.Drawing.Size(160, 125)
+        Me.brigandsPictureBox.TabIndex = 2
+        Me.brigandsPictureBox.TabStop = False
+        '
+        'warriorsPictureBox
+        '
+        Me.warriorsPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.warriors
+        Me.warriorsPictureBox.Location = New System.Drawing.Point(12, 75)
+        Me.warriorsPictureBox.Name = "warriorsPictureBox"
+        Me.warriorsPictureBox.Size = New System.Drawing.Size(160, 125)
+        Me.warriorsPictureBox.TabIndex = 3
+        Me.warriorsPictureBox.TabStop = False
+        '
         'combatForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.GameBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(474, 450)
+        Me.ClientSize = New System.Drawing.Size(796, 444)
+        Me.Controls.Add(Me.warriorsPictureBox)
+        Me.Controls.Add(Me.brigandsPictureBox)
         Me.Controls.Add(Me.okButton)
         Me.Controls.Add(Me.combatLogListBox)
         Me.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -65,10 +89,14 @@ Partial Class combatForm
         Me.Name = "combatForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Battle with Brigands!"
+        CType(Me.brigandsPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.warriorsPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents combatLogListBox As ListBox
     Friend WithEvents okButton As Button
+    Friend WithEvents brigandsPictureBox As PictureBox
+    Friend WithEvents warriorsPictureBox As PictureBox
 End Class
