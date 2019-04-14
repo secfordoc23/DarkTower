@@ -26,10 +26,12 @@ Public Class combatForm
     'Author: Jason Welch
     'Purpose: Starts Comabat and displays Results
     Private Sub combatForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Refresh()
         My.Computer.Audio.Play(My.Resources.battle, AudioPlayMode.WaitToComplete)
+
         brigandCountShort = GetBrigandCount(maxBragandCountShort)
         combatLogListBox.Items.Add("You are being attacked by " & brigandCountShort & " Brigands!")
-        okButton.Refresh()
+
         Threading.Thread.Sleep(1000)
         Combat()
         okButton.Enabled = True     
@@ -82,7 +84,8 @@ Public Class combatForm
                 My.Computer.Audio.Play(My.Resources.player_hit, AudioPlayMode.WaitToComplete)
             End If
             combatLogListBox.Items.Add(battleResultsString & " - Warriors: " & warriorCountShort & " Brigands: " & brigandCountShort)
-            combatLogListBox.Refresh()
+
+            Refresh()
             Threading.Thread.Sleep(1000)
         End While
 
