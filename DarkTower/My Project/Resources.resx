@@ -118,125 +118,98 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PlayerTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GrayTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GrayTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tomb_battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tomb-battle.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="player_hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\player-hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battle.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Desert1Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Desert1Texture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="enemy_hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enemy-hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="NewGameBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\New Game Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bazaar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bazaar.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BrownTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BrownTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lost" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lost.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="starving" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\starving.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DarkTowerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DarkTowerIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="YellowTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\YellowTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Textures" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Textures.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pegasus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pegasus.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LightGreenTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LightGreenTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sanctuary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sanctuary.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="plague" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plague.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BlackTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlackTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GreenTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GreenTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GameBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Game Background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LightBlueTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LightBlueTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Desert2Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Desert2Texture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Forest1Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Forest1Texture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="castle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\castle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DarkTowerCastle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DarkTowerCastle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DarkTowerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkTowerIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grass_corner_inner_southwest_f2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grass_corner_inner_southwest_f2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NewGameBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Game Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="key_A_bronze_Rotated" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key_A_bronze_Rotated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tomb_battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomb-battle.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="key_A_gold_Rotated" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key_A_gold_Rotated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pegasus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pegasus.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="key_A_silver_Rotated" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key_A_silver_Rotated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Forest1Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest1Texture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sanctuary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanctuary.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="StartLocation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StartLocation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="warrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="beast" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plague" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plague.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="brigands" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brigands.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DarkTowerCastle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkTowerCastle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StartLocation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartLocation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dragonsword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dragonsword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warriors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warriors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game Background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="starving" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\starving.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="beast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Desert1Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Desert1Texture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="food" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lost.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grass_corner_inner_southwest_f2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grass_corner_inner_southwest_f2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player-hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="enemy_hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemy-hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bazaar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bazaar.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Desert2Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Desert2Texture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="healer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\healer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlayerTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerTile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lost1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,13 +217,16 @@
   <data name="Plague1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plague.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bronzeKey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bronzeKey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warriors" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warriors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="goldKey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goldKey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silverKey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silverKey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

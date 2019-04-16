@@ -26,8 +26,6 @@ Partial Class mainForm
         Me.gamePlayMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoadGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BazarrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -78,10 +76,17 @@ Partial Class mainForm
         Me.desertTile1PictureBox = New System.Windows.Forms.PictureBox()
         Me.castleTile1PictureBox = New System.Windows.Forms.PictureBox()
         Me.inventoryGroupBox = New System.Windows.Forms.GroupBox()
-        Me.healerPictureBox = New System.Windows.Forms.PictureBox()
         Me.goldKeyPictureBox = New System.Windows.Forms.PictureBox()
         Me.silverKeyPictureBox = New System.Windows.Forms.PictureBox()
-        Me.bronzeKeyPictureBox = New System.Windows.Forms.PictureBox()
+        Me.brassKeyPictureBox = New System.Windows.Forms.PictureBox()
+        Me.swordCheckBox = New System.Windows.Forms.CheckBox()
+        Me.swordPictureBox = New System.Windows.Forms.PictureBox()
+        Me.goldPictureBox = New System.Windows.Forms.PictureBox()
+        Me.foodPictureBox = New System.Windows.Forms.PictureBox()
+        Me.warriorPictureBox = New System.Windows.Forms.PictureBox()
+        Me.scoutPictureBox = New System.Windows.Forms.PictureBox()
+        Me.beastPictureBox = New System.Windows.Forms.PictureBox()
+        Me.healerPictureBox = New System.Windows.Forms.PictureBox()
         Me.goldMaxLabel = New System.Windows.Forms.Label()
         Me.foodMaxLabel = New System.Windows.Forms.Label()
         Me.warriorMaxLabel = New System.Windows.Forms.Label()
@@ -94,13 +99,6 @@ Partial Class mainForm
         Me.goldCountLabel = New System.Windows.Forms.Label()
         Me.foodCountLabel = New System.Windows.Forms.Label()
         Me.warriorCountLabel = New System.Windows.Forms.Label()
-        Me.beastPictureBox = New System.Windows.Forms.PictureBox()
-        Me.scoutPictureBox = New System.Windows.Forms.PictureBox()
-        Me.warriorPictureBox = New System.Windows.Forms.PictureBox()
-        Me.foodPictureBox = New System.Windows.Forms.PictureBox()
-        Me.goldPictureBox = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.gamePlayMenuStrip.SuspendLayout()
         Me.mapGroupBox.SuspendLayout()
         CType(Me.startTile2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,16 +143,16 @@ Partial Class mainForm
         CType(Me.desertTile1PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.castleTile1PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.inventoryGroupBox.SuspendLayout()
-        CType(Me.healerPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.goldKeyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.silverKeyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bronzeKeyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.beastPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.scoutPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.warriorPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.foodPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.brassKeyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.swordPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.goldPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.foodPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.warriorPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.scoutPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.beastPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.healerPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gamePlayMenuStrip
@@ -172,7 +170,7 @@ Partial Class mainForm
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.AutoSize = False
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewGameToolStripMenuItem, Me.SaveGameToolStripMenuItem, Me.LoadGameToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewGameToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 25)
@@ -181,25 +179,13 @@ Partial Class mainForm
         'NewGameToolStripMenuItem
         '
         Me.NewGameToolStripMenuItem.Name = "NewGameToolStripMenuItem"
-        Me.NewGameToolStripMenuItem.Size = New System.Drawing.Size(177, 30)
+        Me.NewGameToolStripMenuItem.Size = New System.Drawing.Size(170, 30)
         Me.NewGameToolStripMenuItem.Text = "&New Game"
-        '
-        'SaveGameToolStripMenuItem
-        '
-        Me.SaveGameToolStripMenuItem.Name = "SaveGameToolStripMenuItem"
-        Me.SaveGameToolStripMenuItem.Size = New System.Drawing.Size(177, 30)
-        Me.SaveGameToolStripMenuItem.Text = "&Save Game"
-        '
-        'LoadGameToolStripMenuItem
-        '
-        Me.LoadGameToolStripMenuItem.Name = "LoadGameToolStripMenuItem"
-        Me.LoadGameToolStripMenuItem.Size = New System.Drawing.Size(177, 30)
-        Me.LoadGameToolStripMenuItem.Text = "&Load Game"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(177, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(170, 30)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'OptionsToolStripMenuItem
@@ -300,7 +286,6 @@ Partial Class mainForm
         Me.startTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.startTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.startTile2PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.startTile2PictureBox.Location = New System.Drawing.Point(11, 305)
         Me.startTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.startTile2PictureBox.Name = "startTile2PictureBox"
@@ -313,7 +298,6 @@ Partial Class mainForm
         Me.startTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.startTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.startTile1PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.startTile1PictureBox.Location = New System.Drawing.Point(312, 592)
         Me.startTile1PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.startTile1PictureBox.Name = "startTile1PictureBox"
@@ -326,7 +310,6 @@ Partial Class mainForm
         Me.startTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.startTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.startTile4PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.startTile4PictureBox.Location = New System.Drawing.Point(312, 25)
         Me.startTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.startTile4PictureBox.Name = "startTile4PictureBox"
@@ -339,7 +322,6 @@ Partial Class mainForm
         Me.startTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.startTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.startTile3PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.startTile3PictureBox.Location = New System.Drawing.Point(615, 305)
         Me.startTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.startTile3PictureBox.Name = "startTile3PictureBox"
@@ -444,7 +426,6 @@ Partial Class mainForm
         Me.castleTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.castleTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.castleTile2PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.castleTile2PictureBox.Location = New System.Drawing.Point(160, 305)
         Me.castleTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.castleTile2PictureBox.Name = "castleTile2PictureBox"
@@ -614,7 +595,6 @@ Partial Class mainForm
         Me.castleTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.castleTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.castleTile3PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.castleTile3PictureBox.Location = New System.Drawing.Point(465, 305)
         Me.castleTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.castleTile3PictureBox.Name = "castleTile3PictureBox"
@@ -654,7 +634,6 @@ Partial Class mainForm
         Me.castleTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.castleTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.castleTile4PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.castleTile4PictureBox.Location = New System.Drawing.Point(312, 165)
         Me.castleTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.castleTile4PictureBox.Name = "castleTile4PictureBox"
@@ -667,7 +646,6 @@ Partial Class mainForm
         Me.desertTile4PictureBox.BackgroundImage = CType(resources.GetObject("desertTile4PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.desertTile4PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.desertTile4PictureBox.Location = New System.Drawing.Point(163, 520)
         Me.desertTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.desertTile4PictureBox.Name = "desertTile4PictureBox"
@@ -680,7 +658,6 @@ Partial Class mainForm
         Me.desertTile5PictureBox.BackgroundImage = CType(resources.GetObject("desertTile5PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.desertTile5PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.desertTile5PictureBox.Location = New System.Drawing.Point(237, 520)
         Me.desertTile5PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.desertTile5PictureBox.Name = "desertTile5PictureBox"
@@ -693,7 +670,6 @@ Partial Class mainForm
         Me.desertTile8PictureBox.BackgroundImage = CType(resources.GetObject("desertTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.desertTile8PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.desertTile8PictureBox.Location = New System.Drawing.Point(461, 520)
         Me.desertTile8PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.desertTile8PictureBox.Name = "desertTile8PictureBox"
@@ -719,7 +695,6 @@ Partial Class mainForm
         Me.desertTile6PictureBox.BackgroundImage = CType(resources.GetObject("desertTile6PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.desertTile6PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.desertTile6PictureBox.Location = New System.Drawing.Point(312, 520)
         Me.desertTile6PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile6PictureBox.Name = "desertTile6PictureBox"
@@ -745,7 +720,6 @@ Partial Class mainForm
         Me.desertTile2PictureBox.BackgroundImage = CType(resources.GetObject("desertTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.desertTile2PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.desertTile2PictureBox.Location = New System.Drawing.Point(237, 445)
         Me.desertTile2PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile2PictureBox.Name = "desertTile2PictureBox"
@@ -771,7 +745,6 @@ Partial Class mainForm
         Me.desertTile3PictureBox.BackgroundImage = CType(resources.GetObject("desertTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.desertTile3PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.desertTile3PictureBox.Location = New System.Drawing.Point(387, 445)
         Me.desertTile3PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile3PictureBox.Name = "desertTile3PictureBox"
@@ -783,7 +756,6 @@ Partial Class mainForm
         '
         Me.darkTowerTilePictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.DarkTowerCastle
         Me.darkTowerTilePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.darkTowerTilePictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.darkTowerTilePictureBox.Location = New System.Drawing.Point(312, 305)
         Me.darkTowerTilePictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.darkTowerTilePictureBox.Name = "darkTowerTilePictureBox"
@@ -796,7 +768,6 @@ Partial Class mainForm
         Me.desertTile7PictureBox.BackgroundImage = CType(resources.GetObject("desertTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.desertTile7PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.desertTile7PictureBox.Location = New System.Drawing.Point(387, 520)
         Me.desertTile7PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile7PictureBox.Name = "desertTile7PictureBox"
@@ -809,7 +780,6 @@ Partial Class mainForm
         Me.desertTile1PictureBox.BackgroundImage = CType(resources.GetObject("desertTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.desertTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.desertTile1PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.desertTile1PictureBox.Location = New System.Drawing.Point(312, 375)
         Me.desertTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile1PictureBox.Name = "desertTile1PictureBox"
@@ -823,7 +793,6 @@ Partial Class mainForm
         Me.castleTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.castleTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.castleTile1PictureBox.InitialImage = Global.DarkTower.My.Resources.Resources.BrownTile
         Me.castleTile1PictureBox.Location = New System.Drawing.Point(312, 445)
         Me.castleTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.castleTile1PictureBox.Name = "castleTile1PictureBox"
@@ -834,17 +803,17 @@ Partial Class mainForm
         'inventoryGroupBox
         '
         Me.inventoryGroupBox.BackColor = System.Drawing.Color.Transparent
-        Me.inventoryGroupBox.Controls.Add(Me.CheckBox1)
-        Me.inventoryGroupBox.Controls.Add(Me.PictureBox1)
+        Me.inventoryGroupBox.Controls.Add(Me.goldKeyPictureBox)
+        Me.inventoryGroupBox.Controls.Add(Me.silverKeyPictureBox)
+        Me.inventoryGroupBox.Controls.Add(Me.brassKeyPictureBox)
+        Me.inventoryGroupBox.Controls.Add(Me.swordCheckBox)
+        Me.inventoryGroupBox.Controls.Add(Me.swordPictureBox)
         Me.inventoryGroupBox.Controls.Add(Me.goldPictureBox)
         Me.inventoryGroupBox.Controls.Add(Me.foodPictureBox)
         Me.inventoryGroupBox.Controls.Add(Me.warriorPictureBox)
         Me.inventoryGroupBox.Controls.Add(Me.scoutPictureBox)
         Me.inventoryGroupBox.Controls.Add(Me.beastPictureBox)
         Me.inventoryGroupBox.Controls.Add(Me.healerPictureBox)
-        Me.inventoryGroupBox.Controls.Add(Me.goldKeyPictureBox)
-        Me.inventoryGroupBox.Controls.Add(Me.silverKeyPictureBox)
-        Me.inventoryGroupBox.Controls.Add(Me.bronzeKeyPictureBox)
         Me.inventoryGroupBox.Controls.Add(Me.goldMaxLabel)
         Me.inventoryGroupBox.Controls.Add(Me.foodMaxLabel)
         Me.inventoryGroupBox.Controls.Add(Me.warriorMaxLabel)
@@ -862,222 +831,62 @@ Partial Class mainForm
         Me.inventoryGroupBox.Margin = New System.Windows.Forms.Padding(4)
         Me.inventoryGroupBox.Name = "inventoryGroupBox"
         Me.inventoryGroupBox.Padding = New System.Windows.Forms.Padding(4)
-        Me.inventoryGroupBox.Size = New System.Drawing.Size(292, 669)
+        Me.inventoryGroupBox.Size = New System.Drawing.Size(306, 669)
         Me.inventoryGroupBox.TabIndex = 14
         Me.inventoryGroupBox.TabStop = False
         Me.inventoryGroupBox.Text = "Inventory"
         '
-        'healerPictureBox
-        '
-        Me.healerPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.healer
-        Me.healerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.healerPictureBox.Location = New System.Drawing.Point(7, 464)
-        Me.healerPictureBox.Name = "healerPictureBox"
-        Me.healerPictureBox.Size = New System.Drawing.Size(110, 81)
-        Me.healerPictureBox.TabIndex = 18
-        Me.healerPictureBox.TabStop = False
-        '
         'goldKeyPictureBox
         '
-        Me.goldKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.key_A_gold_Rotated
-        Me.goldKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.goldKeyPictureBox.Location = New System.Drawing.Point(194, 464)
+        Me.goldKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.goldKey
+        Me.goldKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.goldKeyPictureBox.Location = New System.Drawing.Point(159, 483)
         Me.goldKeyPictureBox.Name = "goldKeyPictureBox"
-        Me.goldKeyPictureBox.Size = New System.Drawing.Size(50, 37)
-        Me.goldKeyPictureBox.TabIndex = 17
+        Me.goldKeyPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.goldKeyPictureBox.TabIndex = 28
         Me.goldKeyPictureBox.TabStop = False
         '
         'silverKeyPictureBox
         '
-        Me.silverKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.key_A_silver_Rotated
-        Me.silverKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.silverKeyPictureBox.Location = New System.Drawing.Point(194, 375)
+        Me.silverKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.silverKey
+        Me.silverKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.silverKeyPictureBox.Location = New System.Drawing.Point(159, 392)
         Me.silverKeyPictureBox.Name = "silverKeyPictureBox"
-        Me.silverKeyPictureBox.Size = New System.Drawing.Size(50, 37)
-        Me.silverKeyPictureBox.TabIndex = 16
+        Me.silverKeyPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.silverKeyPictureBox.TabIndex = 27
         Me.silverKeyPictureBox.TabStop = False
         '
-        'bronzeKeyPictureBox
+        'brassKeyPictureBox
         '
-        Me.bronzeKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.key_A_bronze_Rotated
-        Me.bronzeKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.bronzeKeyPictureBox.Location = New System.Drawing.Point(193, 286)
-        Me.bronzeKeyPictureBox.Name = "bronzeKeyPictureBox"
-        Me.bronzeKeyPictureBox.Size = New System.Drawing.Size(50, 37)
-        Me.bronzeKeyPictureBox.TabIndex = 15
-        Me.bronzeKeyPictureBox.TabStop = False
+        Me.brassKeyPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.bronzeKey
+        Me.brassKeyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.brassKeyPictureBox.Location = New System.Drawing.Point(159, 305)
+        Me.brassKeyPictureBox.Name = "brassKeyPictureBox"
+        Me.brassKeyPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.brassKeyPictureBox.TabIndex = 26
+        Me.brassKeyPictureBox.TabStop = False
         '
-        'goldMaxLabel
+        'swordCheckBox
         '
-        Me.goldMaxLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.goldMaxLabel.Location = New System.Drawing.Point(188, 199)
-        Me.goldMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.goldMaxLabel.Name = "goldMaxLabel"
-        Me.goldMaxLabel.Size = New System.Drawing.Size(48, 25)
-        Me.goldMaxLabel.TabIndex = 14
-        Me.goldMaxLabel.Text = "/ 0"
+        Me.swordCheckBox.Enabled = False
+        Me.swordCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.swordCheckBox.Location = New System.Drawing.Point(126, 570)
+        Me.swordCheckBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.swordCheckBox.Name = "swordCheckBox"
+        Me.swordCheckBox.Size = New System.Drawing.Size(22, 30)
+        Me.swordCheckBox.TabIndex = 25
+        Me.swordCheckBox.ThreeState = True
+        Me.swordCheckBox.UseVisualStyleBackColor = True
         '
-        'foodMaxLabel
+        'swordPictureBox
         '
-        Me.foodMaxLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.foodMaxLabel.Location = New System.Drawing.Point(189, 112)
-        Me.foodMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.foodMaxLabel.Name = "foodMaxLabel"
-        Me.foodMaxLabel.Size = New System.Drawing.Size(47, 25)
-        Me.foodMaxLabel.TabIndex = 13
-        Me.foodMaxLabel.Text = "/ 99"
-        '
-        'warriorMaxLabel
-        '
-        Me.warriorMaxLabel.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.warriorMaxLabel.Location = New System.Drawing.Point(185, 25)
-        Me.warriorMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.warriorMaxLabel.Name = "warriorMaxLabel"
-        Me.warriorMaxLabel.Size = New System.Drawing.Size(47, 25)
-        Me.warriorMaxLabel.TabIndex = 12
-        Me.warriorMaxLabel.Text = "/ 99"
-        '
-        'goldKeyCheckBox
-        '
-        Me.goldKeyCheckBox.Enabled = False
-        Me.goldKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.goldKeyCheckBox.Location = New System.Drawing.Point(251, 464)
-        Me.goldKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.goldKeyCheckBox.Name = "goldKeyCheckBox"
-        Me.goldKeyCheckBox.Size = New System.Drawing.Size(22, 30)
-        Me.goldKeyCheckBox.TabIndex = 11
-        Me.goldKeyCheckBox.ThreeState = True
-        Me.goldKeyCheckBox.UseVisualStyleBackColor = True
-        '
-        'silverKeyCheckBox
-        '
-        Me.silverKeyCheckBox.Enabled = False
-        Me.silverKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.silverKeyCheckBox.Location = New System.Drawing.Point(251, 373)
-        Me.silverKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.silverKeyCheckBox.Name = "silverKeyCheckBox"
-        Me.silverKeyCheckBox.Size = New System.Drawing.Size(22, 30)
-        Me.silverKeyCheckBox.TabIndex = 10
-        Me.silverKeyCheckBox.ThreeState = True
-        Me.silverKeyCheckBox.UseVisualStyleBackColor = True
-        '
-        'bronzeKeyCheckBox
-        '
-        Me.bronzeKeyCheckBox.Enabled = False
-        Me.bronzeKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bronzeKeyCheckBox.Location = New System.Drawing.Point(251, 286)
-        Me.bronzeKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.bronzeKeyCheckBox.Name = "bronzeKeyCheckBox"
-        Me.bronzeKeyCheckBox.Size = New System.Drawing.Size(22, 30)
-        Me.bronzeKeyCheckBox.TabIndex = 9
-        Me.bronzeKeyCheckBox.ThreeState = True
-        Me.bronzeKeyCheckBox.UseVisualStyleBackColor = True
-        '
-        'beastCheckBox
-        '
-        Me.beastCheckBox.Enabled = False
-        Me.beastCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.beastCheckBox.Location = New System.Drawing.Point(124, 373)
-        Me.beastCheckBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.beastCheckBox.Name = "beastCheckBox"
-        Me.beastCheckBox.Size = New System.Drawing.Size(23, 30)
-        Me.beastCheckBox.TabIndex = 8
-        Me.beastCheckBox.ThreeState = True
-        Me.beastCheckBox.UseVisualStyleBackColor = True
-        '
-        'healerCheckBox
-        '
-        Me.healerCheckBox.Enabled = False
-        Me.healerCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.healerCheckBox.Location = New System.Drawing.Point(126, 464)
-        Me.healerCheckBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.healerCheckBox.Name = "healerCheckBox"
-        Me.healerCheckBox.Size = New System.Drawing.Size(22, 30)
-        Me.healerCheckBox.TabIndex = 7
-        Me.healerCheckBox.ThreeState = True
-        Me.healerCheckBox.UseVisualStyleBackColor = True
-        '
-        'scoutCheckBox
-        '
-        Me.scoutCheckBox.Enabled = False
-        Me.scoutCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.scoutCheckBox.Location = New System.Drawing.Point(124, 286)
-        Me.scoutCheckBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.scoutCheckBox.Name = "scoutCheckBox"
-        Me.scoutCheckBox.Size = New System.Drawing.Size(19, 30)
-        Me.scoutCheckBox.TabIndex = 6
-        Me.scoutCheckBox.ThreeState = True
-        Me.scoutCheckBox.UseVisualStyleBackColor = True
-        '
-        'goldCountLabel
-        '
-        Me.goldCountLabel.BackColor = System.Drawing.Color.Transparent
-        Me.goldCountLabel.Location = New System.Drawing.Point(121, 199)
-        Me.goldCountLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.goldCountLabel.Name = "goldCountLabel"
-        Me.goldCountLabel.Size = New System.Drawing.Size(60, 24)
-        Me.goldCountLabel.TabIndex = 5
-        Me.goldCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'foodCountLabel
-        '
-        Me.foodCountLabel.BackColor = System.Drawing.Color.Transparent
-        Me.foodCountLabel.Location = New System.Drawing.Point(120, 112)
-        Me.foodCountLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.foodCountLabel.Name = "foodCountLabel"
-        Me.foodCountLabel.Size = New System.Drawing.Size(61, 24)
-        Me.foodCountLabel.TabIndex = 4
-        Me.foodCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'warriorCountLabel
-        '
-        Me.warriorCountLabel.BackColor = System.Drawing.Color.Transparent
-        Me.warriorCountLabel.Location = New System.Drawing.Point(116, 25)
-        Me.warriorCountLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.warriorCountLabel.Name = "warriorCountLabel"
-        Me.warriorCountLabel.Size = New System.Drawing.Size(61, 24)
-        Me.warriorCountLabel.TabIndex = 3
-        Me.warriorCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'beastPictureBox
-        '
-        Me.beastPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.beast
-        Me.beastPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.beastPictureBox.Location = New System.Drawing.Point(7, 373)
-        Me.beastPictureBox.Name = "beastPictureBox"
-        Me.beastPictureBox.Size = New System.Drawing.Size(110, 81)
-        Me.beastPictureBox.TabIndex = 19
-        Me.beastPictureBox.TabStop = False
-        '
-        'scoutPictureBox
-        '
-        Me.scoutPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.scout
-        Me.scoutPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.scoutPictureBox.Location = New System.Drawing.Point(7, 286)
-        Me.scoutPictureBox.Name = "scoutPictureBox"
-        Me.scoutPictureBox.Size = New System.Drawing.Size(110, 81)
-        Me.scoutPictureBox.TabIndex = 20
-        Me.scoutPictureBox.TabStop = False
-        '
-        'warriorPictureBox
-        '
-        Me.warriorPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.warrior
-        Me.warriorPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.warriorPictureBox.Location = New System.Drawing.Point(7, 25)
-        Me.warriorPictureBox.Name = "warriorPictureBox"
-        Me.warriorPictureBox.Size = New System.Drawing.Size(110, 81)
-        Me.warriorPictureBox.TabIndex = 21
-        Me.warriorPictureBox.TabStop = False
-        '
-        'foodPictureBox
-        '
-        Me.foodPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.food
-        Me.foodPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.foodPictureBox.Location = New System.Drawing.Point(7, 112)
-        Me.foodPictureBox.Name = "foodPictureBox"
-        Me.foodPictureBox.Size = New System.Drawing.Size(110, 81)
-        Me.foodPictureBox.TabIndex = 22
-        Me.foodPictureBox.TabStop = False
+        Me.swordPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.dragonsword
+        Me.swordPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.swordPictureBox.Location = New System.Drawing.Point(7, 570)
+        Me.swordPictureBox.Name = "swordPictureBox"
+        Me.swordPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.swordPictureBox.TabIndex = 24
+        Me.swordPictureBox.TabStop = False
         '
         'goldPictureBox
         '
@@ -1089,27 +898,190 @@ Partial Class mainForm
         Me.goldPictureBox.TabIndex = 23
         Me.goldPictureBox.TabStop = False
         '
-        'PictureBox1
+        'foodPictureBox
         '
-        Me.PictureBox1.BackgroundImage = Global.DarkTower.My.Resources.Resources.dragonsword
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(7, 551)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(110, 81)
-        Me.PictureBox1.TabIndex = 24
-        Me.PictureBox1.TabStop = False
+        Me.foodPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.food
+        Me.foodPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.foodPictureBox.Location = New System.Drawing.Point(7, 112)
+        Me.foodPictureBox.Name = "foodPictureBox"
+        Me.foodPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.foodPictureBox.TabIndex = 22
+        Me.foodPictureBox.TabStop = False
         '
-        'CheckBox1
+        'warriorPictureBox
         '
-        Me.CheckBox1.Enabled = False
-        Me.CheckBox1.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(126, 551)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(22, 30)
-        Me.CheckBox1.TabIndex = 25
-        Me.CheckBox1.ThreeState = True
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.warriorPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.warrior
+        Me.warriorPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.warriorPictureBox.Location = New System.Drawing.Point(7, 25)
+        Me.warriorPictureBox.Name = "warriorPictureBox"
+        Me.warriorPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.warriorPictureBox.TabIndex = 21
+        Me.warriorPictureBox.TabStop = False
+        '
+        'scoutPictureBox
+        '
+        Me.scoutPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.scout
+        Me.scoutPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.scoutPictureBox.Location = New System.Drawing.Point(7, 305)
+        Me.scoutPictureBox.Name = "scoutPictureBox"
+        Me.scoutPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.scoutPictureBox.TabIndex = 20
+        Me.scoutPictureBox.TabStop = False
+        '
+        'beastPictureBox
+        '
+        Me.beastPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.beast
+        Me.beastPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.beastPictureBox.Location = New System.Drawing.Point(7, 392)
+        Me.beastPictureBox.Name = "beastPictureBox"
+        Me.beastPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.beastPictureBox.TabIndex = 19
+        Me.beastPictureBox.TabStop = False
+        '
+        'healerPictureBox
+        '
+        Me.healerPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.healer
+        Me.healerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.healerPictureBox.Location = New System.Drawing.Point(7, 483)
+        Me.healerPictureBox.Name = "healerPictureBox"
+        Me.healerPictureBox.Size = New System.Drawing.Size(110, 81)
+        Me.healerPictureBox.TabIndex = 18
+        Me.healerPictureBox.TabStop = False
+        '
+        'goldMaxLabel
+        '
+        Me.goldMaxLabel.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.goldMaxLabel.Location = New System.Drawing.Point(188, 199)
+        Me.goldMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.goldMaxLabel.Name = "goldMaxLabel"
+        Me.goldMaxLabel.Size = New System.Drawing.Size(62, 34)
+        Me.goldMaxLabel.TabIndex = 14
+        Me.goldMaxLabel.Text = "/ 0"
+        '
+        'foodMaxLabel
+        '
+        Me.foodMaxLabel.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.foodMaxLabel.Location = New System.Drawing.Point(189, 112)
+        Me.foodMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.foodMaxLabel.Name = "foodMaxLabel"
+        Me.foodMaxLabel.Size = New System.Drawing.Size(62, 34)
+        Me.foodMaxLabel.TabIndex = 13
+        Me.foodMaxLabel.Text = "/ 99"
+        '
+        'warriorMaxLabel
+        '
+        Me.warriorMaxLabel.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.warriorMaxLabel.Location = New System.Drawing.Point(185, 25)
+        Me.warriorMaxLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.warriorMaxLabel.Name = "warriorMaxLabel"
+        Me.warriorMaxLabel.Size = New System.Drawing.Size(62, 34)
+        Me.warriorMaxLabel.TabIndex = 12
+        Me.warriorMaxLabel.Text = "/ 99"
+        '
+        'goldKeyCheckBox
+        '
+        Me.goldKeyCheckBox.Enabled = False
+        Me.goldKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.goldKeyCheckBox.Location = New System.Drawing.Point(276, 483)
+        Me.goldKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.goldKeyCheckBox.Name = "goldKeyCheckBox"
+        Me.goldKeyCheckBox.Size = New System.Drawing.Size(22, 30)
+        Me.goldKeyCheckBox.TabIndex = 11
+        Me.goldKeyCheckBox.ThreeState = True
+        Me.goldKeyCheckBox.UseVisualStyleBackColor = True
+        '
+        'silverKeyCheckBox
+        '
+        Me.silverKeyCheckBox.Enabled = False
+        Me.silverKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.silverKeyCheckBox.Location = New System.Drawing.Point(276, 392)
+        Me.silverKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.silverKeyCheckBox.Name = "silverKeyCheckBox"
+        Me.silverKeyCheckBox.Size = New System.Drawing.Size(22, 30)
+        Me.silverKeyCheckBox.TabIndex = 10
+        Me.silverKeyCheckBox.ThreeState = True
+        Me.silverKeyCheckBox.UseVisualStyleBackColor = True
+        '
+        'bronzeKeyCheckBox
+        '
+        Me.bronzeKeyCheckBox.Enabled = False
+        Me.bronzeKeyCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bronzeKeyCheckBox.Location = New System.Drawing.Point(276, 305)
+        Me.bronzeKeyCheckBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.bronzeKeyCheckBox.Name = "bronzeKeyCheckBox"
+        Me.bronzeKeyCheckBox.Size = New System.Drawing.Size(22, 30)
+        Me.bronzeKeyCheckBox.TabIndex = 9
+        Me.bronzeKeyCheckBox.ThreeState = True
+        Me.bronzeKeyCheckBox.UseVisualStyleBackColor = True
+        '
+        'beastCheckBox
+        '
+        Me.beastCheckBox.Enabled = False
+        Me.beastCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.beastCheckBox.Location = New System.Drawing.Point(124, 392)
+        Me.beastCheckBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.beastCheckBox.Name = "beastCheckBox"
+        Me.beastCheckBox.Size = New System.Drawing.Size(23, 30)
+        Me.beastCheckBox.TabIndex = 8
+        Me.beastCheckBox.ThreeState = True
+        Me.beastCheckBox.UseVisualStyleBackColor = True
+        '
+        'healerCheckBox
+        '
+        Me.healerCheckBox.Enabled = False
+        Me.healerCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.healerCheckBox.Location = New System.Drawing.Point(126, 483)
+        Me.healerCheckBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.healerCheckBox.Name = "healerCheckBox"
+        Me.healerCheckBox.Size = New System.Drawing.Size(22, 30)
+        Me.healerCheckBox.TabIndex = 7
+        Me.healerCheckBox.ThreeState = True
+        Me.healerCheckBox.UseVisualStyleBackColor = True
+        '
+        'scoutCheckBox
+        '
+        Me.scoutCheckBox.Enabled = False
+        Me.scoutCheckBox.Font = New System.Drawing.Font("Papyrus", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.scoutCheckBox.Location = New System.Drawing.Point(124, 305)
+        Me.scoutCheckBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.scoutCheckBox.Name = "scoutCheckBox"
+        Me.scoutCheckBox.Size = New System.Drawing.Size(19, 30)
+        Me.scoutCheckBox.TabIndex = 6
+        Me.scoutCheckBox.ThreeState = True
+        Me.scoutCheckBox.UseVisualStyleBackColor = True
+        '
+        'goldCountLabel
+        '
+        Me.goldCountLabel.BackColor = System.Drawing.Color.Transparent
+        Me.goldCountLabel.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.goldCountLabel.Location = New System.Drawing.Point(131, 199)
+        Me.goldCountLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.goldCountLabel.Name = "goldCountLabel"
+        Me.goldCountLabel.Size = New System.Drawing.Size(62, 34)
+        Me.goldCountLabel.TabIndex = 5
+        Me.goldCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'foodCountLabel
+        '
+        Me.foodCountLabel.BackColor = System.Drawing.Color.Transparent
+        Me.foodCountLabel.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.foodCountLabel.Location = New System.Drawing.Point(126, 112)
+        Me.foodCountLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.foodCountLabel.Name = "foodCountLabel"
+        Me.foodCountLabel.Size = New System.Drawing.Size(62, 34)
+        Me.foodCountLabel.TabIndex = 4
+        Me.foodCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'warriorCountLabel
+        '
+        Me.warriorCountLabel.BackColor = System.Drawing.Color.Transparent
+        Me.warriorCountLabel.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.warriorCountLabel.Location = New System.Drawing.Point(124, 25)
+        Me.warriorCountLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.warriorCountLabel.Name = "warriorCountLabel"
+        Me.warriorCountLabel.Size = New System.Drawing.Size(62, 34)
+        Me.warriorCountLabel.TabIndex = 3
+        Me.warriorCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'mainForm
         '
@@ -1117,7 +1089,6 @@ Partial Class mainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.GameBackground
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1051, 734)
         Me.ControlBox = False
         Me.Controls.Add(Me.inventoryGroupBox)
@@ -1176,16 +1147,16 @@ Partial Class mainForm
         CType(Me.desertTile1PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.castleTile1PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.inventoryGroupBox.ResumeLayout(False)
-        CType(Me.healerPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.goldKeyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.silverKeyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bronzeKeyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.beastPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.scoutPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.warriorPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.foodPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.brassKeyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.swordPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.goldPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.foodPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.warriorPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.scoutPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.beastPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.healerPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout
 
@@ -1253,20 +1224,18 @@ End Sub
     Friend WithEvents MoveToStartPosition2ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents MoveToStartPosition3ToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents MoveToStartPosition4ToolStripMenuItem3 As ToolStripMenuItem
-    Friend WithEvents SaveGameToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LoadGameToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents goldMaxLabel As Label
     Friend WithEvents foodMaxLabel As Label
     Friend WithEvents warriorMaxLabel As Label
-    Friend WithEvents goldKeyPictureBox As PictureBox
-    Friend WithEvents silverKeyPictureBox As PictureBox
-    Friend WithEvents bronzeKeyPictureBox As PictureBox
     Friend WithEvents healerPictureBox As PictureBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents swordCheckBox As CheckBox
+    Friend WithEvents swordPictureBox As PictureBox
     Friend WithEvents goldPictureBox As PictureBox
     Friend WithEvents foodPictureBox As PictureBox
     Friend WithEvents warriorPictureBox As PictureBox
     Friend WithEvents scoutPictureBox As PictureBox
     Friend WithEvents beastPictureBox As PictureBox
+    Friend WithEvents goldKeyPictureBox As PictureBox
+    Friend WithEvents silverKeyPictureBox As PictureBox
+    Friend WithEvents brassKeyPictureBox As PictureBox
 End Class
