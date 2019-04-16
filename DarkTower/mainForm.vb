@@ -197,13 +197,16 @@ Public Class mainForm
     'Purpose: 
     Private Sub PlagueEvent()
         My.Computer.Audio.Play(My.Resources.plague, AudioPlayMode.Background)
+        Dim gameEvent = New eventForm
+        gameEvent.eventPictureBox.BackgroundImage = My.Resources.Plague1
         If currentPlayer.Inventory.HaveHealer Then
-            MsgBox("You Healer has stopped the Plague.  You gain 2 Warriors", vbOKOnly, "Plague Strikes!")
+            gameEvent.eventRichTextBox.Text = "Plague Strikes!"  & vbCrLf & vbCrLf & "You Healer has stopped the Plague." & vbCrLf & "You gain 2 Warriors"
             currentPlayer.Inventory.WarriorCount += 2S
         Else
-            MsgBox("You have been hit by the Plague! You lose 2 Warriors", vbOKOnly, "Plague Strikes!")
+            gameEvent.eventRichTextBox.Text = "Plague Strikes!"  & vbCrLf & vbCrLf & "You have been hit by the Plague!" & vbCrLf & "You lose 2 Warriors"
             currentPlayer.Inventory.WarriorCount -= 2S
         End If
+        gameEvent.ShowDialog()
     End Sub
 
     '==========================================================================================
@@ -213,13 +216,16 @@ Public Class mainForm
     'Purpose: 
     Private Sub LostEvent()
         My.Computer.Audio.Play(My.Resources.lost, AudioPlayMode.Background)
+        Dim gameEvent = New eventForm
+        gameEvent.eventPictureBox.BackgroundImage = My.Resources.LostImage
         If currentPlayer.Inventory.HaveScout Then
-            MsgBox("Your Scout has found a faster path to your destination.  You gain 2 Food.", vbOKOnly, "Lost in Uncharted Territories!")
+            gameEvent.eventRichTextBox.Text = "Lost in Uncharted Territories!" & vbCrLf & vbCrLf & " Your Scout has found a faster path to your destination." & vbCrLf & "You gain 2 Food."
             currentPlayer.Inventory.FoodCount += 2S
         Else
-            MsgBox("You got lost along your journey! You lose 2 Food.", vbOKOnly, "Lost in Uncharted Territories!")
+            gameEvent.eventRichTextBox.Text = "Lost in Uncharted Territories!" & vbCrLf & vbCrLf & "You got lost along your journey!" & vbCrLf & "You lose 2 Food."
             currentPlayer.Inventory.FoodCount -= 2S
         End If
+        gameEvent.ShowDialog()
     End Sub
 
     '==========================================================================================
