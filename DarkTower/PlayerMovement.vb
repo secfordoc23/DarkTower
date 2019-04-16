@@ -178,85 +178,85 @@ Public Class PlayerMovement
     Private Sub ResetTile(currentStartPositionShort As Short)
         Select Case currentStartPositionShort
             Case 10 ' Start Postion 1
-                mainForm.startTile1PictureBox.BackgroundImage = My.Resources.YellowTile
+                mainForm.startTile1PictureBox.BackgroundImage = My.Resources.StartLocation
             Case 11
-                mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.Desert2Texture
             Case 12
-                mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.Desert2Texture
             Case 13
-                mainForm.desertTile3PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile3PictureBox.BackgroundImage = My.Resources.Desert2Texture
             Case 14
-                mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.Desert2Texture
             Case 15
-                mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.Desert2Texture
             Case 16
-                mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.Desert2Texture
             Case 17
-                mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.Desert2Texture
             Case 18
-                mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.BrownTile
+                mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.Desert2Texture
             Case 19 ' Castle 1
-                mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.GrayTile
+                mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.castle
             Case 20 ' Start Position 2
-                mainForm.startTile2PictureBox.BackgroundImage = My.Resources.YellowTile
+                mainForm.startTile2PictureBox.BackgroundImage = My.Resources.StartLocation
             Case 21
-                mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.Forest1Texture
             Case 22
-                mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.Forest1Texture
             Case 23
-                mainForm.forestTile3PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile3PictureBox.BackgroundImage = My.Resources.Forest1Texture
             Case 24
-                mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.Forest1Texture
             Case 25
-                mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.Forest1Texture
             Case 26
-                mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.Forest1Texture
             Case 27
-                mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.Forest1Texture
             Case 28
-                mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.GreenTile
+                mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.Forest1Texture
             Case 29 ' Castle 2
-                mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.GrayTile
+                mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.castle
             Case 30 ' Start Position 3
-                mainForm.startTile3PictureBox.BackgroundImage = My.Resources.YellowTile
+                mainForm.startTile3PictureBox.BackgroundImage = My.Resources.StartLocation
             Case 31
-                mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.LightGreenTile
+                mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
             Case 32
-                mainForm.plainTile2PictureBox.BackgroundImage = My.Resources.LightGreenTile
+                mainForm.plainTile2PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
             Case 33
-                mainForm.plainTile3PictureBox.BackgroundImage = My.Resources.LightGreenTile
+                mainForm.plainTile3PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
             Case 34
-                mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.LightGreenTile
+                mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
             Case 35
-                mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.LightGreenTile
+                mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
             Case 36
-                mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.LightGreenTile
+                mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
             Case 37
-                mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.LightGreenTile
+                mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
             Case 38
-                mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.LightGreenTile
+                mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
             Case 39 ' Castle 3
-                mainForm.castleTile3PictureBox.BackgroundImage = My.Resources.GrayTile
+                mainForm.castleTile3PictureBox.BackgroundImage = My.Resources.castle
             Case 40 ' Start Position 4
-                mainForm.startTile4PictureBox.BackgroundImage = My.Resources.YellowTile
+                mainForm.startTile4PictureBox.BackgroundImage = My.Resources.StartLocation
             Case 41
-                mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.LightBlueTile
+                mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.snow1
             Case 42
-                mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.LightBlueTile
+                mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.snow1
             Case 43
-                mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.LightBlueTile
+                mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.snow1
             Case 44
-                mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.LightBlueTile
+                mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.snow1
             Case 45
-                mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.LightBlueTile
+                mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.snow1
             Case 46
-                mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.LightBlueTile
+                mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.snow1
             Case 47
-                mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.LightBlueTile
+                mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.snow1
             Case 48
-                mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.LightBlueTile
+                mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.snow1
             Case 49 ' Castle 4
-                mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.GrayTile
+                mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.castle
         End Select
     End Sub
     '==========================================================================================
@@ -266,49 +266,49 @@ Public Class PlayerMovement
     'Purpose: Reset the all the tiles on the Map
     Public Sub ResetMap()
         ' Location 1
-        mainForm.startTile1PictureBox.BackgroundImage = My.Resources.YellowTile
-        mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.BrownTile
-        mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.BrownTile
-        mainForm.desertTile3PictureBox.BackgroundImage = My.Resources.BrownTile
-        mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.BrownTile
-        mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.BrownTile
-        mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.BrownTile
-        mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.BrownTile
-        mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.BrownTile
-        mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.GrayTile
+        mainForm.startTile1PictureBox.BackgroundImage = My.Resources.StartLocation
+        mainForm.desertTile1PictureBox.BackgroundImage = My.Resources.Desert2Texture
+        mainForm.desertTile2PictureBox.BackgroundImage = My.Resources.Desert2Texture
+        mainForm.desertTile3PictureBox.BackgroundImage = My.Resources.Desert2Texture
+        mainForm.desertTile4PictureBox.BackgroundImage = My.Resources.Desert2Texture
+        mainForm.desertTile5PictureBox.BackgroundImage = My.Resources.Desert2Texture
+        mainForm.desertTile6PictureBox.BackgroundImage = My.Resources.Desert2Texture
+        mainForm.desertTile7PictureBox.BackgroundImage = My.Resources.Desert2Texture
+        mainForm.desertTile8PictureBox.BackgroundImage = My.Resources.Desert2Texture
+        mainForm.castleTile1PictureBox.BackgroundImage = My.Resources.castle
         ' Location 2
-        mainForm.startTile2PictureBox.BackgroundImage = My.Resources.YellowTile
-        mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.GreenTile
-        mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.GreenTile
-        mainForm.forestTile3PictureBox.BackgroundImage = My.Resources.GreenTile
-        mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.GreenTile
-        mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.GreenTile
-        mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.GreenTile
-        mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.GreenTile
-        mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.GreenTile
-        mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.GrayTile
+        mainForm.startTile2PictureBox.BackgroundImage = My.Resources.StartLocation
+        mainForm.forestTile1PictureBox.BackgroundImage = My.Resources.Forest1Texture
+        mainForm.forestTile2PictureBox.BackgroundImage = My.Resources.Forest1Texture
+        mainForm.forestTile3PictureBox.BackgroundImage = My.Resources.Forest1Texture
+        mainForm.forestTile4PictureBox.BackgroundImage = My.Resources.Forest1Texture
+        mainForm.forestTile5PictureBox.BackgroundImage = My.Resources.Forest1Texture
+        mainForm.forestTile6PictureBox.BackgroundImage = My.Resources.Forest1Texture
+        mainForm.forestTile7PictureBox.BackgroundImage = My.Resources.Forest1Texture
+        mainForm.forestTile8PictureBox.BackgroundImage = My.Resources.Forest1Texture
+        mainForm.castleTile2PictureBox.BackgroundImage = My.Resources.castle
         ' Location 3
-        mainForm.startTile3PictureBox.BackgroundImage = My.Resources.YellowTile
-        mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.LightGreenTile
-        mainForm.plainTile2PictureBox.BackgroundImage = My.Resources.LightGreenTile
-        mainForm.plainTile3PictureBox.BackgroundImage = My.Resources.LightGreenTile
-        mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.LightGreenTile
-        mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.LightGreenTile
-        mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.LightGreenTile
-        mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.LightGreenTile
-        mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.LightGreenTile
-        mainForm.castleTile3PictureBox.BackgroundImage = My.Resources.GrayTile
+        mainForm.startTile3PictureBox.BackgroundImage = My.Resources.StartLocation
+        mainForm.plainTile1PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
+        mainForm.plainTile2PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
+        mainForm.plainTile3PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
+        mainForm.plainTile4PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
+        mainForm.plainTile5PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
+        mainForm.plainTile6PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
+        mainForm.plainTile7PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
+        mainForm.plainTile8PictureBox.BackgroundImage = My.Resources.grass_corner_inner_southwest_f2
+        mainForm.castleTile3PictureBox.BackgroundImage = My.Resources.castle
         ' Location 4
-        mainForm.startTile4PictureBox.BackgroundImage = My.Resources.YellowTile
-        mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.LightBlueTile
-        mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.LightBlueTile
-        mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.LightBlueTile
-        mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.LightBlueTile
-        mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.LightBlueTile
-        mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.LightBlueTile
-        mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.LightBlueTile
-        mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.LightBlueTile
-        mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.GrayTile
+        mainForm.startTile4PictureBox.BackgroundImage = My.Resources.StartLocation
+        mainForm.icelandTile1PictureBox.BackgroundImage = My.Resources.snow1
+        mainForm.icelandTile2PictureBox.BackgroundImage = My.Resources.snow1
+        mainForm.icelandTile3PictureBox.BackgroundImage = My.Resources.snow1
+        mainForm.icelandTile4PictureBox.BackgroundImage = My.Resources.snow1
+        mainForm.icelandTile5PictureBox.BackgroundImage = My.Resources.snow1
+        mainForm.icelandTile6PictureBox.BackgroundImage = My.Resources.snow1
+        mainForm.icelandTile7PictureBox.BackgroundImage = My.Resources.snow1
+        mainForm.icelandTile8PictureBox.BackgroundImage = My.Resources.snow1
+        mainForm.castleTile4PictureBox.BackgroundImage = My.Resources.castle
     End Sub
     '==========================================================================================
     'Name: SetInitialStartPosition

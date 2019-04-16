@@ -37,9 +37,10 @@ Partial Class bazaarForm
         Me.purchaseTotalLabel = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.currentGoldLabel = New System.Windows.Forms.Label()
-        Me.goldLabel = New System.Windows.Forms.Label()
+        Me.goldPictureBox = New System.Windows.Forms.PictureBox()
         Me.consumableGroupBox.SuspendLayout()
         Me.oneTimeBuyGroupBox.SuspendLayout()
+        CType(Me.goldPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'buyButton
@@ -184,9 +185,10 @@ Partial Class bazaarForm
         'purchaseTotalLabel
         '
         Me.purchaseTotalLabel.BackColor = System.Drawing.Color.Transparent
-        Me.purchaseTotalLabel.Location = New System.Drawing.Point(17, 168)
+        Me.purchaseTotalLabel.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.purchaseTotalLabel.Location = New System.Drawing.Point(206, 174)
         Me.purchaseTotalLabel.Name = "purchaseTotalLabel"
-        Me.purchaseTotalLabel.Size = New System.Drawing.Size(68, 25)
+        Me.purchaseTotalLabel.Size = New System.Drawing.Size(38, 25)
         Me.purchaseTotalLabel.TabIndex = 4
         Me.purchaseTotalLabel.Text = "0"
         Me.purchaseTotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -195,9 +197,10 @@ Partial Class bazaarForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(91, 168)
+        Me.Label2.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(250, 174)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(22, 25)
+        Me.Label2.Size = New System.Drawing.Size(28, 33)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "/"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -205,23 +208,23 @@ Partial Class bazaarForm
         'currentGoldLabel
         '
         Me.currentGoldLabel.BackColor = System.Drawing.Color.Transparent
-        Me.currentGoldLabel.Location = New System.Drawing.Point(119, 168)
+        Me.currentGoldLabel.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.currentGoldLabel.Location = New System.Drawing.Point(284, 174)
         Me.currentGoldLabel.Name = "currentGoldLabel"
-        Me.currentGoldLabel.Size = New System.Drawing.Size(40, 25)
+        Me.currentGoldLabel.Size = New System.Drawing.Size(34, 25)
         Me.currentGoldLabel.TabIndex = 6
         Me.currentGoldLabel.Text = "0"
         Me.currentGoldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'goldLabel
+        'goldPictureBox
         '
-        Me.goldLabel.AutoSize = True
-        Me.goldLabel.BackColor = System.Drawing.Color.Transparent
-        Me.goldLabel.Location = New System.Drawing.Point(165, 168)
-        Me.goldLabel.Name = "goldLabel"
-        Me.goldLabel.Size = New System.Drawing.Size(54, 25)
-        Me.goldLabel.TabIndex = 7
-        Me.goldLabel.Text = "Gold"
-        Me.goldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.goldPictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.gold
+        Me.goldPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.goldPictureBox.Location = New System.Drawing.Point(104, 167)
+        Me.goldPictureBox.Name = "goldPictureBox"
+        Me.goldPictureBox.Size = New System.Drawing.Size(89, 60)
+        Me.goldPictureBox.TabIndex = 27
+        Me.goldPictureBox.TabStop = False
         '
         'bazaarForm
         '
@@ -229,8 +232,8 @@ Partial Class bazaarForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.GameBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(575, 225)
-        Me.Controls.Add(Me.goldLabel)
+        Me.ClientSize = New System.Drawing.Size(575, 245)
+        Me.Controls.Add(Me.goldPictureBox)
         Me.Controls.Add(Me.currentGoldLabel)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.purchaseTotalLabel)
@@ -245,11 +248,12 @@ Partial Class bazaarForm
         Me.Name = "bazaarForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bazaar"
-        Me.consumableGroupBox.ResumeLayout(false)
-        Me.consumableGroupBox.PerformLayout
-        Me.oneTimeBuyGroupBox.ResumeLayout(false)
-        Me.oneTimeBuyGroupBox.PerformLayout
-        Me.ResumeLayout(false)
+        Me.consumableGroupBox.ResumeLayout(False)
+        Me.consumableGroupBox.PerformLayout()
+        Me.oneTimeBuyGroupBox.ResumeLayout(False)
+        Me.oneTimeBuyGroupBox.PerformLayout()
+        CType(Me.goldPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
         Me.PerformLayout
 
 End Sub
@@ -268,5 +272,5 @@ End Sub
     Friend WithEvents purchaseTotalLabel As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents currentGoldLabel As Label
-    Friend WithEvents goldLabel As Label
+    Friend WithEvents goldPictureBox As PictureBox
 End Class
