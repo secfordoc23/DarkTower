@@ -15,12 +15,7 @@ Public Class Player
     Private currentPositionShort As Short
     Private defeatedCastlesList As List(Of Short)
 
-    '==========================================================================================
-    'Name: Contructor
-    'Date: 4/6/19
-    'Author: Jason Welch
-    'Purpose: Default Constructor 
-    Public Sub New()
+
         defeatedCastlesList = New List(Of Short)
         Inventory = New Inventory
     End Sub
