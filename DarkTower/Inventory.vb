@@ -17,6 +17,7 @@ Public Class Inventory
     Private haveBronzeKeyBoolean As Boolean
     Private haveSilverKeyBoolean As Boolean
     Private haveGoldKeyBoolean As Boolean
+    Private haveDragonSwordBoolean As Boolean
 
     Private Const MAX_VALUE_SHORT As Short = 99S
 
@@ -25,13 +26,20 @@ Public Class Inventory
     'Date: 2/18/19
     'Author: Jason Welch
     'Purpose: Default Constructor
-    Public Sub New()
-        warriorCountShort = 10S
-        foodCountShort = 25S
-        goldCountShort = 30S
+    Public Sub New(startNewGame As Boolean)
+        If startNewGame Then
+            warriorCountShort = 10S
+            foodCountShort = 25S
+            goldCountShort = 30S
+        Else
+            warriorCountShort = 0S
+            foodCountShort = 0S
+            goldCountShort = 0S
+        End If
         haveScoutBoolean = False
         haveHealerBoolean = False
         haveBeastBoolean = False
+        haveDragonSwordBoolean = False
         haveBronzeKeyBoolean = False
         haveSilverKeyBoolean = False
         haveGoldKeyBoolean = False
@@ -125,6 +133,19 @@ Public Class Inventory
         End Get
         Set(ByVal value As Boolean)
             haveBeastBoolean = value
+        End Set
+    End Property
+    '==========================================================================================
+    'Name: HaveDragonSword()
+    'Date: 4/28/19
+    'Author: Jason Welch
+    'Purpose: Get and Set haveDragonSwordBoolean
+    Public Property HaveDragonSword() As Boolean
+        Get
+            Return haveDragonSwordBoolean
+        End Get
+        Set(ByVal value As Boolean)
+            haveDragonSwordBoolean = value
         End Set
     End Property
     '==========================================================================================

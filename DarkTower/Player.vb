@@ -22,7 +22,7 @@ Public Class Player
     'Purpose: Default Constructor 
     Public Sub New()
         defeatedCastlesList = New List(Of Short)
-        Inventory = New Inventory
+        Inventory = New Inventory(True)
     End Sub
 
     '==========================================================================================

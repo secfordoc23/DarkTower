@@ -31,19 +31,20 @@ Partial Class eventForm
         'eventPictureBox
         '
         Me.eventPictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.eventPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.eventPictureBox.Location = New System.Drawing.Point(12, 12)
         Me.eventPictureBox.Name = "eventPictureBox"
         Me.eventPictureBox.Size = New System.Drawing.Size(170, 162)
         Me.eventPictureBox.TabIndex = 0
-        Me.eventPictureBox.TabStop = false
+        Me.eventPictureBox.TabStop = False
         '
         'eventRichTextBox
         '
         Me.eventRichTextBox.BackColor = System.Drawing.SystemColors.Info
-        Me.eventRichTextBox.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.eventRichTextBox.Font = New System.Drawing.Font("Papyrus", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.eventRichTextBox.Location = New System.Drawing.Point(188, 12)
         Me.eventRichTextBox.Name = "eventRichTextBox"
-        Me.eventRichTextBox.ReadOnly = true
+        Me.eventRichTextBox.ReadOnly = True
         Me.eventRichTextBox.Size = New System.Drawing.Size(448, 162)
         Me.eventRichTextBox.TabIndex = 1
         Me.eventRichTextBox.Text = ""
@@ -51,20 +52,20 @@ Partial Class eventForm
         'okButton
         '
         Me.okButton.BackColor = System.Drawing.SystemColors.Info
-        Me.okButton.Font = New System.Drawing.Font("Papyrus", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.okButton.Font = New System.Drawing.Font("Papyrus", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.okButton.Location = New System.Drawing.Point(527, 180)
         Me.okButton.Name = "okButton"
         Me.okButton.Size = New System.Drawing.Size(109, 40)
         Me.okButton.TabIndex = 2
         Me.okButton.Text = "&Close"
-        Me.okButton.UseVisualStyleBackColor = false
+        Me.okButton.UseVisualStyleBackColor = False
         '
         'eventForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.DarkTower.My.Resources.Resources.GameBackground
-        Me.ClientSize = New System.Drawing.Size(644, 232)
+        Me.ClientSize = New System.Drawing.Size(640, 228)
         Me.ControlBox = false
         Me.Controls.Add(Me.okButton)
         Me.Controls.Add(Me.eventRichTextBox)

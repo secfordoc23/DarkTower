@@ -25,7 +25,7 @@ Public Class CombatLoot
     'Author: Jason Welch
     'Purpose: 
     Public Function CastleLoot(defeatedCastleList As List(Of Short)) As Inventory
-        Dim combatInventory As New Inventory
+        Dim combatInventory As New Inventory(False)
 
         combatInventory.GoldCount = GenerateGold(MAX_CASTLE_GOLD)
 

@@ -67,7 +67,8 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Shows the Bazaar Form
     Private Sub BazarrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BazarrToolStripMenuItem.Click
-        bazaarForm.ShowDialog()
+        Dim bazaarEvent = New bazaarForm
+        bazaarEvent.ShowDialog()
     End Sub
     '==========================================================================================
     'Name: SetStartPosition
@@ -174,7 +175,9 @@ Public Class mainForm
         Select Case randomShort
             Case 1 To 20
                 PlagueEvent()
-            Case 40 To 60
+            Case 40 To 49
+                DragonAttackEvent()
+            Case 50 To 60
                 LostEvent()
             Case 80 To 100
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
@@ -224,6 +227,26 @@ Public Class mainForm
         Else
             gameEvent.eventRichTextBox.Text = "Lost in Uncharted Territories!" & vbCrLf & vbCrLf & "You got lost along your journey!" & vbCrLf & "You lose 2 Food."
             currentPlayer.Inventory.FoodCount -= 2S
+        End If
+        gameEvent.ShowDialog()
+    End Sub
+
+    '==========================================================================================
+    'Name: DragonAttackEvent
+    'Date: 4/28/19
+    'Author: Jason Welch
+    'Purpose: 
+    Private Sub DragonAttackEvent()
+        Dim gameEvent = New eventForm
+        gameEvent.eventPictureBox.BackgroundImage = My.Resources.dragon
+        If currentPlayer.Inventory.HaveDragonSword Then
+            gameEvent.eventRichTextBox.Text = ""
+            currentPlayer.Inventory.WarriorCount += CShort(currentPlayer.Inventory.WarriorCount / 4)
+            currentPlayer.Inventory.GoldCount += CShort(currentPlayer.Inventory.GoldCount / 4)
+        Else
+            gameEvent.eventRichTextBox.Text = ""
+            currentPlayer.Inventory.WarriorCount -= CShort(currentPlayer.Inventory.WarriorCount / 4)
+            currentPlayer.Inventory.GoldCount -= CShort(currentPlayer.Inventory.GoldCount / 4)
         End If
         gameEvent.ShowDialog()
     End Sub
