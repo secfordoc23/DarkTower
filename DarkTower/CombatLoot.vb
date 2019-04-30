@@ -26,6 +26,8 @@ Public Class CombatLoot
     'Purpose: 
     Public Function CastleLoot(defeatedCastleList As List(Of Short)) As Inventory
         Dim combatInventory As New Inventory(False)
+        Dim randomNumber As Short
+        combatInventory.WarriorCount = currentPlayer.Inventory.WarriorCount
 
         combatInventory.GoldCount = GenerateGold(MAX_CASTLE_GOLD)
 
@@ -45,7 +47,12 @@ Public Class CombatLoot
             ' User has all of the keys so do nothing
         End If
 
-        ' Dragon Sword??
+        If Not currentPlayer.Inventory.HaveDragonSword Then
+            randomNumber = CShort(rand.Next(1, 10))
+            If randomNumber Mod 2 = 0 Then
+                combatInventory.HaveDragonSword = True
+            End If
+        End If
 
         Return combatInventory
     End Function
@@ -63,7 +70,7 @@ Public Class CombatLoot
     'Author: Jason Welch
     'Purpose: 
     Private Function GenerateGold(maxGold As Short) As Short
-        Return CShort(rand.Next(1, maxGold))
+        Return CShort(rand.Next(10, maxGold))
     End Function
 End Class
 '================================== No Code Follows ===========================================

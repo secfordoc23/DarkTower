@@ -234,6 +234,11 @@
     <None Include="Resources\bronzeKey.png" />
     <None Include="Resources\goldKey.png" />
     <None Include="Resources\silverKey.png" />
+    <None Include="Resources\darktower.wav" />
+    <None Include="Resources\dragon.wav" />
+    <None Include="Resources\dragon-kill.wav" />
+    <None Include="Resources\intro.wav" />
+    <None Include="Resources\frontier.wav" />
     <Content Include="Resources\starving.wav" />
     <None Include="Resources\Game Background1.jpg" />
     <None Include="Resources\New Game Background.jpg" />

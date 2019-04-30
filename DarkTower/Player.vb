@@ -130,6 +130,7 @@ Public Class Player
         mainForm.scoutCheckBox.Checked = playersCurrentInventory.HaveScout
         mainForm.healerCheckBox.Checked = playersCurrentInventory.HaveHealer
         mainForm.beastCheckBox.Checked = playersCurrentInventory.HaveBeast
+        mainForm.swordCheckBox.Checked = playersCurrentInventory.HaveDragonSword
         mainForm.bronzeKeyCheckBox.Checked = playersCurrentInventory.HaveBronzeKey
         mainForm.silverKeyCheckBox.Checked = playersCurrentInventory.HaveSilverKey
         mainForm.goldKeyCheckBox.Checked = playersCurrentInventory.HaveGoldKey

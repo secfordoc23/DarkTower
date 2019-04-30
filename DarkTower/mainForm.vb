@@ -96,24 +96,32 @@ Public Class mainForm
                 If selectedPositionShort = 19 Or selectedPositionShort = 29 Or selectedPositionShort = 39 Or selectedPositionShort = 49 Then
                     If Not currentPlayer.HasCastleBeenDefeated(selectedPositionShort) Then
                         TakeATurn(1)
-                        If currentPlayer.Inventory.WarriorCount <> 0 Then
+                        If Not currentPlayer.Inventory.WarriorCount = 0 Then
                             loot = New CombatLoot
                             With loot.CastleLoot(currentPlayer.GetDefeatedCastleList())
                                 currentPlayer.Inventory.GoldCount += .GoldCount
                                 currentPlayer.Inventory.HaveBronzeKey = .HaveBronzeKey
                                 currentPlayer.Inventory.HaveSilverKey = .HaveSilverKey
                                 currentPlayer.Inventory.HaveGoldKey = .HaveGoldKey
+                                currentPlayer.Inventory.HaveDragonSword = .HaveDragonSword
                             End With
                             currentPlayer.AddDefeatedCastle(selectedPositionShort)
                         End If
                     Else
-                        MsgBox("You have already defeated this Castle!", vbOKOnly, "Castle Defeated!")
+                        My.Computer.Audio.Play(My.Resources.sanctuary, AudioPlayMode.Background)
+                        Dim gameEvent = New eventForm
+                        gameEvent.eventPictureBox.BackgroundImage = My.Resources.DarkTowerCastle
+                        gameEvent.eventRichTextBox.Text = "Castle Defeated!" & vbCrLf & vbCrLf & "You have already defeated this Castle!"
+                        gameEvent.ShowDialog()
                     End If
                 ElseIf selectedPositionShort = 0 Then
                     If currentPlayer.Inventory.HaveBronzeKey And currentPlayer.Inventory.HaveSilverKey And currentPlayer.Inventory.HaveGoldKey Then
                         TakeATurn(2)
                     Else
-                        MsgBox("You DO NOT have all of the Keys to unlock the Dark Tower", vbOKOnly, "The Dark Tower")
+                        Dim gameEvent = New eventForm
+                        gameEvent.eventPictureBox.BackgroundImage = My.Resources.DarkTowerCastle
+                        gameEvent.eventRichTextBox.Text = "The Dark Tower" & vbCrLf & vbCrLf & "You DO NOT have all of the Keys to unlock the Dark Tower."
+                        gameEvent.ShowDialog()
                     End If
                 Else
                     TakeATurn(0)
@@ -142,22 +150,33 @@ Public Class mainForm
                 GenerateRandomEvent()
             Case 1 ' Castle
                 My.Computer.Audio.Play(My.Resources.tomb_battle, AudioPlayMode.WaitToComplete)
-                combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
-                combatForm.maxBragandCountShort = MAX_BRIGANDS_CASTLE
-                combatForm.ShowDialog()
-                currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
+                Dim castleEvent = New combatForm
+                castleEvent.warriorCountShort = currentPlayer.Inventory.WarriorCount
+                castleEvent.maxBragandCountShort = MAX_BRIGANDS_CASTLE
+                castleEvent.ShowDialog()
             Case 2 ' Dark Tower
-                My.Computer.Audio.Play(My.Resources.sanctuary, AudioPlayMode.WaitToComplete)
+                My.Computer.Audio.Play(My.Resources.darktower, AudioPlayMode.WaitToComplete)
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_DARK_TOWER
                 combatForm.ShowDialog()
-                currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
                 If currentPlayer.Inventory.WarriorCount > 0 Then
-                    MsgBox("Your have defeated the Dark Tower, and recovered the Stolen Scepter.  Thank you for playing.", vbOKOnly, "You Have Defeated the Dark Tower!")
+                    My.Computer.Audio.Play(My.Resources.intro, AudioPlayMode.Background)
+                    Dim gameEvent = New eventForm
+                    gameEvent.eventPictureBox.BackgroundImage = My.Resources.DarkTowerCastle
+                    gameEvent.eventRichTextBox.Text = "You Have Defeated the Dark Tower!" & vbCrLf & vbCrLf & "You have defeated the Dark Tower, and recovered the Stolen Scepter." & vbCrLf & "Thank you for playing."
+                    gameEvent.ShowDialog()
                     currentPlayer.HasGameStarted = False
+                Else
+                    Dim gameEvent = New eventForm
+                    gameEvent.eventPictureBox.BackgroundImage = My.Resources.DarkTowerIcon
+                    gameEvent.eventRichTextBox.Text = "You Failed to Defeat the Dark Tower!" & vbCrLf & vbCrLf & "You have lost the game." & vbCrLf & "Please start a new game or load a previous game."
+                    gameEvent.ShowDialog()
                 End If
             Case Else
-                MsgBox("You have lost the game. Please start a new game or load a previous game.", vbOKOnly, "You Have Lost the Game!")
+                Dim gameEvent = New eventForm
+                gameEvent.eventPictureBox.BackgroundImage = My.Resources.DarkTowerIcon
+                gameEvent.eventRichTextBox.Text = "You Have Lost the Game!" & vbCrLf & vbCrLf & "You have lost the game.  Please start a new game or load a previous game."
+                gameEvent.ShowDialog()
         End Select
 
     End Sub
@@ -183,8 +202,7 @@ Public Class mainForm
                 combatForm.warriorCountShort = currentPlayer.Inventory.WarriorCount
                 combatForm.maxBragandCountShort = MAX_BRIGANDS_RANDOM_ATTACK
                 combatForm.ShowDialog()
-                currentPlayer.Inventory.WarriorCount = combatForm.warriorCountShort
-                If currentPlayer.Inventory.WarriorCount <> 0 Then
+                If Not currentPlayer.Inventory.WarriorCount = 0 Then
                     loot = New CombatLoot
                     currentPlayer.Inventory.GoldCount += loot.RandomAttackLoot()
                 End If
@@ -240,11 +258,13 @@ Public Class mainForm
         Dim gameEvent = New eventForm
         gameEvent.eventPictureBox.BackgroundImage = My.Resources.dragon
         If currentPlayer.Inventory.HaveDragonSword Then
-            gameEvent.eventRichTextBox.Text = ""
+            My.Computer.Audio.Play(My.Resources.dragon_kill, AudioPlayMode.Background)
+            gameEvent.eventRichTextBox.Text = "Dragon Attack!" & vbCrLf & vbCrLf & "You have slain the Dragon! " & vbCrLf & "You take all of the Dragon's Treasure, and gain additional Warriors and Gold."
             currentPlayer.Inventory.WarriorCount += CShort(currentPlayer.Inventory.WarriorCount / 4)
             currentPlayer.Inventory.GoldCount += CShort(currentPlayer.Inventory.GoldCount / 4)
         Else
-            gameEvent.eventRichTextBox.Text = ""
+            My.Computer.Audio.Play(My.Resources.dragon1, AudioPlayMode.Background)
+            gameEvent.eventRichTextBox.Text = "Dragon Attack!" & vbCrLf & vbCrLf & "You lose a quarter of your Warriors and Gold."
             currentPlayer.Inventory.WarriorCount -= CShort(currentPlayer.Inventory.WarriorCount / 4)
             currentPlayer.Inventory.GoldCount -= CShort(currentPlayer.Inventory.GoldCount / 4)
         End If
@@ -268,7 +288,7 @@ Public Class mainForm
     'Author: Jason Welch
     'Purpose: Sets the Users Location
     Private Sub MoveToStartPosition(selectedStartPosition As Short)
-        My.Computer.Audio.Play(My.Resources.pegasus, AudioPlayMode.Background)
+        My.Computer.Audio.Play(My.Resources.frontier, AudioPlayMode.Background)
         currentMove.MovePlayer(currentPlayer.CurrentPosition, selectedStartPosition)
         currentPlayer.CurrentPosition = selectedStartPosition
         currentPlayer.CurrentStartPositon = selectedStartPosition

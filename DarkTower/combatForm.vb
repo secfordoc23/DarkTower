@@ -18,6 +18,7 @@ Public Class combatForm
     'Author: Jason Welch
     'Purpose: Closes the Form
     Private Sub okButton_Click(sender As Object, e As EventArgs) Handles okButton.Click
+        currentPlayer.Inventory.WarriorCount = warriorCountShort
         Close()
     End Sub
     '==========================================================================================
@@ -31,6 +32,7 @@ Public Class combatForm
 
         brigandCountShort = GetBrigandCount(maxBragandCountShort)
         combatLogListBox.Items.Add("You are being attacked by " & brigandCountShort & " Brigands!")
+        Refresh()
 
         Threading.Thread.Sleep(1000)
         Combat()
