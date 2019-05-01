@@ -285,7 +285,7 @@ Partial Class mainForm
         '
         Me.startTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.startTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.startTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startTile2PictureBox.Location = New System.Drawing.Point(11, 305)
         Me.startTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.startTile2PictureBox.Name = "startTile2PictureBox"
@@ -297,7 +297,7 @@ Partial Class mainForm
         '
         Me.startTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.startTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.startTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startTile1PictureBox.Location = New System.Drawing.Point(312, 592)
         Me.startTile1PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.startTile1PictureBox.Name = "startTile1PictureBox"
@@ -309,7 +309,7 @@ Partial Class mainForm
         '
         Me.startTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.startTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.startTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startTile4PictureBox.Location = New System.Drawing.Point(312, 25)
         Me.startTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.startTile4PictureBox.Name = "startTile4PictureBox"
@@ -321,7 +321,7 @@ Partial Class mainForm
         '
         Me.startTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.StartLocation
         Me.startTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.startTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.startTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startTile3PictureBox.Location = New System.Drawing.Point(615, 305)
         Me.startTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.startTile3PictureBox.Name = "startTile3PictureBox"
@@ -333,7 +333,7 @@ Partial Class mainForm
         '
         Me.forestTile4PictureBox.BackgroundImage = CType(resources.GetObject("forestTile4PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.forestTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.forestTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile4PictureBox.InitialImage = CType(resources.GetObject("forestTile4PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile4PictureBox.Location = New System.Drawing.Point(85, 165)
         Me.forestTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -346,7 +346,7 @@ Partial Class mainForm
         '
         Me.forestTile8PictureBox.BackgroundImage = CType(resources.GetObject("forestTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.forestTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.forestTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile8PictureBox.InitialImage = CType(resources.GetObject("forestTile8PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile8PictureBox.Location = New System.Drawing.Point(85, 445)
         Me.forestTile8PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -359,7 +359,7 @@ Partial Class mainForm
         '
         Me.forestTile7PictureBox.BackgroundImage = CType(resources.GetObject("forestTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.forestTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.forestTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile7PictureBox.InitialImage = CType(resources.GetObject("forestTile7PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile7PictureBox.Location = New System.Drawing.Point(85, 375)
         Me.forestTile7PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -372,7 +372,7 @@ Partial Class mainForm
         '
         Me.forestTile5PictureBox.BackgroundImage = CType(resources.GetObject("forestTile5PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.forestTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.forestTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile5PictureBox.InitialImage = CType(resources.GetObject("forestTile5PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile5PictureBox.Location = New System.Drawing.Point(85, 235)
         Me.forestTile5PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -385,7 +385,7 @@ Partial Class mainForm
         '
         Me.forestTile3PictureBox.BackgroundImage = CType(resources.GetObject("forestTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.forestTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.forestTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile3PictureBox.InitialImage = CType(resources.GetObject("forestTile3PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile3PictureBox.Location = New System.Drawing.Point(160, 375)
         Me.forestTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -398,7 +398,7 @@ Partial Class mainForm
         '
         Me.forestTile2PictureBox.BackgroundImage = CType(resources.GetObject("forestTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.forestTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.forestTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile2PictureBox.InitialImage = CType(resources.GetObject("forestTile2PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile2PictureBox.Location = New System.Drawing.Point(160, 235)
         Me.forestTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -425,7 +425,7 @@ Partial Class mainForm
         Me.castleTile2PictureBox.BackColor = System.Drawing.Color.Gray
         Me.castleTile2PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.castleTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.castleTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.castleTile2PictureBox.Location = New System.Drawing.Point(160, 305)
         Me.castleTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.castleTile2PictureBox.Name = "castleTile2PictureBox"
@@ -437,7 +437,7 @@ Partial Class mainForm
         '
         Me.icelandTile8PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.icelandTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.icelandTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile8PictureBox.InitialImage = CType(resources.GetObject("icelandTile8PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile8PictureBox.Location = New System.Drawing.Point(161, 95)
         Me.icelandTile8PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -450,7 +450,7 @@ Partial Class mainForm
         '
         Me.icelandTile7PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.icelandTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.icelandTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile7PictureBox.InitialImage = CType(resources.GetObject("icelandTile7PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile7PictureBox.Location = New System.Drawing.Point(236, 95)
         Me.icelandTile7PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -489,7 +489,7 @@ Partial Class mainForm
         '
         Me.icelandTile3PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.icelandTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.icelandTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile3PictureBox.InitialImage = CType(resources.GetObject("icelandTile3PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile3PictureBox.Location = New System.Drawing.Point(237, 165)
         Me.icelandTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -502,7 +502,7 @@ Partial Class mainForm
         '
         Me.plainTile2PictureBox.BackgroundImage = CType(resources.GetObject("plainTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.plainTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.plainTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile2PictureBox.InitialImage = CType(resources.GetObject("plainTile2PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile2PictureBox.Location = New System.Drawing.Point(465, 375)
         Me.plainTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -515,7 +515,7 @@ Partial Class mainForm
         '
         Me.plainTile3PictureBox.BackgroundImage = CType(resources.GetObject("plainTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.plainTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.plainTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile3PictureBox.InitialImage = CType(resources.GetObject("plainTile3PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile3PictureBox.Location = New System.Drawing.Point(467, 235)
         Me.plainTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -528,7 +528,7 @@ Partial Class mainForm
         '
         Me.plainTile4PictureBox.BackgroundImage = CType(resources.GetObject("plainTile4PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.plainTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.plainTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile4PictureBox.InitialImage = CType(resources.GetObject("plainTile4PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile4PictureBox.Location = New System.Drawing.Point(540, 445)
         Me.plainTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -541,7 +541,7 @@ Partial Class mainForm
         '
         Me.plainTile5PictureBox.BackgroundImage = CType(resources.GetObject("plainTile5PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.plainTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.plainTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile5PictureBox.InitialImage = CType(resources.GetObject("plainTile5PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile5PictureBox.Location = New System.Drawing.Point(540, 375)
         Me.plainTile5PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -554,7 +554,7 @@ Partial Class mainForm
         '
         Me.plainTile8PictureBox.BackgroundImage = CType(resources.GetObject("plainTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.plainTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.plainTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile8PictureBox.InitialImage = CType(resources.GetObject("plainTile8PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile8PictureBox.Location = New System.Drawing.Point(540, 165)
         Me.plainTile8PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -567,7 +567,7 @@ Partial Class mainForm
         '
         Me.plainTile7PictureBox.BackgroundImage = CType(resources.GetObject("plainTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.plainTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.plainTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile7PictureBox.InitialImage = CType(resources.GetObject("plainTile7PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile7PictureBox.Location = New System.Drawing.Point(540, 235)
         Me.plainTile7PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -580,7 +580,7 @@ Partial Class mainForm
         '
         Me.plainTile6PictureBox.BackgroundImage = CType(resources.GetObject("plainTile6PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.plainTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.plainTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile6PictureBox.InitialImage = CType(resources.GetObject("plainTile6PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile6PictureBox.Location = New System.Drawing.Point(540, 305)
         Me.plainTile6PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -594,7 +594,7 @@ Partial Class mainForm
         Me.castleTile3PictureBox.BackColor = System.Drawing.Color.Gray
         Me.castleTile3PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.castleTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.castleTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.castleTile3PictureBox.Location = New System.Drawing.Point(465, 305)
         Me.castleTile3PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.castleTile3PictureBox.Name = "castleTile3PictureBox"
@@ -606,7 +606,7 @@ Partial Class mainForm
         '
         Me.icelandTile2PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.icelandTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.icelandTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile2PictureBox.InitialImage = CType(resources.GetObject("icelandTile2PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile2PictureBox.Location = New System.Drawing.Point(387, 165)
         Me.icelandTile2PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -619,7 +619,7 @@ Partial Class mainForm
         '
         Me.icelandTile6PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile6PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.icelandTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.icelandTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile6PictureBox.InitialImage = CType(resources.GetObject("icelandTile6PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile6PictureBox.Location = New System.Drawing.Point(312, 95)
         Me.icelandTile6PictureBox.Margin = New System.Windows.Forms.Padding(4)
@@ -633,7 +633,7 @@ Partial Class mainForm
         Me.castleTile4PictureBox.BackColor = System.Drawing.Color.Gray
         Me.castleTile4PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.castleTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.castleTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.castleTile4PictureBox.Location = New System.Drawing.Point(312, 165)
         Me.castleTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.castleTile4PictureBox.Name = "castleTile4PictureBox"
@@ -645,7 +645,7 @@ Partial Class mainForm
         '
         Me.desertTile4PictureBox.BackgroundImage = CType(resources.GetObject("desertTile4PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile4PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.desertTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.desertTile4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile4PictureBox.Location = New System.Drawing.Point(163, 520)
         Me.desertTile4PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.desertTile4PictureBox.Name = "desertTile4PictureBox"
@@ -657,7 +657,7 @@ Partial Class mainForm
         '
         Me.desertTile5PictureBox.BackgroundImage = CType(resources.GetObject("desertTile5PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.desertTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.desertTile5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile5PictureBox.Location = New System.Drawing.Point(237, 520)
         Me.desertTile5PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.desertTile5PictureBox.Name = "desertTile5PictureBox"
@@ -669,7 +669,7 @@ Partial Class mainForm
         '
         Me.desertTile8PictureBox.BackgroundImage = CType(resources.GetObject("desertTile8PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile8PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.desertTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.desertTile8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile8PictureBox.Location = New System.Drawing.Point(461, 520)
         Me.desertTile8PictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.desertTile8PictureBox.Name = "desertTile8PictureBox"
@@ -681,7 +681,7 @@ Partial Class mainForm
         '
         Me.forestTile1PictureBox.BackgroundImage = CType(resources.GetObject("forestTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.forestTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.forestTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.forestTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forestTile1PictureBox.InitialImage = CType(resources.GetObject("forestTile1PictureBox.InitialImage"), System.Drawing.Image)
         Me.forestTile1PictureBox.Location = New System.Drawing.Point(236, 305)
         Me.forestTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
@@ -694,7 +694,7 @@ Partial Class mainForm
         '
         Me.desertTile6PictureBox.BackgroundImage = CType(resources.GetObject("desertTile6PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile6PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.desertTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.desertTile6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile6PictureBox.Location = New System.Drawing.Point(312, 520)
         Me.desertTile6PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile6PictureBox.Name = "desertTile6PictureBox"
@@ -706,7 +706,7 @@ Partial Class mainForm
         '
         Me.icelandTile1PictureBox.BackgroundImage = CType(resources.GetObject("icelandTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.icelandTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.icelandTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.icelandTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icelandTile1PictureBox.InitialImage = CType(resources.GetObject("icelandTile1PictureBox.InitialImage"), System.Drawing.Image)
         Me.icelandTile1PictureBox.Location = New System.Drawing.Point(312, 235)
         Me.icelandTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
@@ -719,7 +719,7 @@ Partial Class mainForm
         '
         Me.desertTile2PictureBox.BackgroundImage = CType(resources.GetObject("desertTile2PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.desertTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.desertTile2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile2PictureBox.Location = New System.Drawing.Point(237, 445)
         Me.desertTile2PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile2PictureBox.Name = "desertTile2PictureBox"
@@ -731,7 +731,7 @@ Partial Class mainForm
         '
         Me.plainTile1PictureBox.BackgroundImage = CType(resources.GetObject("plainTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.plainTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.plainTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.plainTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.plainTile1PictureBox.InitialImage = CType(resources.GetObject("plainTile1PictureBox.InitialImage"), System.Drawing.Image)
         Me.plainTile1PictureBox.Location = New System.Drawing.Point(387, 305)
         Me.plainTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
@@ -744,7 +744,7 @@ Partial Class mainForm
         '
         Me.desertTile3PictureBox.BackgroundImage = CType(resources.GetObject("desertTile3PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile3PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.desertTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.desertTile3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile3PictureBox.Location = New System.Drawing.Point(387, 445)
         Me.desertTile3PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile3PictureBox.Name = "desertTile3PictureBox"
@@ -755,7 +755,7 @@ Partial Class mainForm
         'darkTowerTilePictureBox
         '
         Me.darkTowerTilePictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.DarkTowerCastle
-        Me.darkTowerTilePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.darkTowerTilePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.darkTowerTilePictureBox.Location = New System.Drawing.Point(312, 305)
         Me.darkTowerTilePictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.darkTowerTilePictureBox.Name = "darkTowerTilePictureBox"
@@ -767,7 +767,7 @@ Partial Class mainForm
         '
         Me.desertTile7PictureBox.BackgroundImage = CType(resources.GetObject("desertTile7PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile7PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.desertTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.desertTile7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile7PictureBox.Location = New System.Drawing.Point(387, 520)
         Me.desertTile7PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile7PictureBox.Name = "desertTile7PictureBox"
@@ -779,7 +779,7 @@ Partial Class mainForm
         '
         Me.desertTile1PictureBox.BackgroundImage = CType(resources.GetObject("desertTile1PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.desertTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.desertTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.desertTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.desertTile1PictureBox.Location = New System.Drawing.Point(312, 375)
         Me.desertTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.desertTile1PictureBox.Name = "desertTile1PictureBox"
@@ -792,7 +792,7 @@ Partial Class mainForm
         Me.castleTile1PictureBox.BackColor = System.Drawing.Color.Gray
         Me.castleTile1PictureBox.BackgroundImage = Global.DarkTower.My.Resources.Resources.castle
         Me.castleTile1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.castleTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.castleTile1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.castleTile1PictureBox.Location = New System.Drawing.Point(312, 445)
         Me.castleTile1PictureBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.castleTile1PictureBox.Name = "castleTile1PictureBox"
