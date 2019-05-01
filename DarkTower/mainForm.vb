@@ -2,9 +2,9 @@
 Option Explicit On
 'Program: DarkTower
 'Me: mainForm.vb
-'Date: TBD
+'Date: 4/30/2019
 'Author: Jason Welch
-'Purpose: 
+'Purpose: Main form for the Dark Tower Game
 
 Imports System.ComponentModel
 
