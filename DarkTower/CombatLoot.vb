@@ -52,6 +52,8 @@ Public Class CombatLoot
             If randomNumber Mod 2 = 0 Then
                 combatInventory.HaveDragonSword = True
             End If
+        Else
+            combatInventory.HaveDragonSword = True
         End If
 
         Return combatInventory
